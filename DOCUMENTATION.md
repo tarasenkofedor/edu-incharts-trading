@@ -1,6 +1,6 @@
 # InChart Project Documentation
 
-**Version:** 0.0.7 (as of 2025-05-22)
+**Version:** 0.0.9 (as of 2025-05-24)
 **Author:** Fyodor Tarasenka (GitHub: tarasenkofedor)
 **GitHub Repository:** [Placeholder for InChart GitHub Repository URL]
 
@@ -105,12 +105,12 @@ This section details major architectural solutions and significant technical imp
 
 *   **Kline Data Ingestion Service (`backend/data_ingestion_service/main.py`):**
     *   Standalone asynchronous Python service.
-    *   Fetches live kline data from Binance via WebSockets (`websockets` library).
+    *   Fetches live kline data from Binance via WebSockets (`websockets` library). This includes both finalized (closed) klines and real-time updates to the currently forming (unclosed) kline (ticks).
     *   Fetches historical kline data from Binance REST API (`httpx`).
     *   Performs gap detection and backfilling.
     *   Processes and stores klines in TimescaleDB (`klines` table).
     *   Caches recent klines in Redis (sorted set).
-    *   Publishes live kline updates to a Redis Pub/Sub channel.
+    *   Publishes live kline updates to a Redis Pub/Sub channel. Closed klines are published with `{"type": "kline_closed", "data": ...}` and unclosed kline ticks are published with `{"type": "kline_tick", "data": ...}`.
 *   **News Fetcher Service (`backend/news_fetcher_service/main.py`):**
     *   Standalone asynchronous Python service.
     *   Fetches news articles from Marketaux API (or others like NewsData.io, CoinDesk, configurable).
@@ -138,6 +138,8 @@ This section details major architectural solutions and significant technical imp
 *   **Charting & Data Display:**
     *   Handles OHLCV and signal data from user uploads.
     *   Integrates live kline data from backend (historical API + WebSocket).
+        *   Displays finalized (closed) klines.
+        *   Dynamically updates the current (unclosed) candle in real-time based on incoming tick data from the WebSocket.
     *   "Live" vs. "Custom" chart modes.
     *   Performance optimizations (crosshair throttling, signal overlay culling).
     *   Interactive asset and timeframe selectors that update chart data and context for other panels (News, Perflogs).
@@ -322,50 +324,4 @@ This service is responsible for periodically fetching news articles.
 ## 5. Key Environment Variables (`.env` file in project root)
 
 *   `DATABASE_URL`: SQLAlchemy connection string for PostgreSQL/TimescaleDB (e.g., `postgresql://inchart_admin:p3ace-0f-ouR-t!me@localhost:5433/inchart_db`)
-*   `REDIS_HOST`: Redis server hostname (e.g., `localhost`)
-*   `REDIS_PORT`: Redis server port (e.g., `6379`)
-*   `SECRET_KEY`: Secret key for JWT token generation (a long random string).
-*   `ALGORITHM`: Algorithm for JWT (e.g., `HS256`).
-*   `ACCESS_TOKEN_EXPIRE_MINUTES`: JWT access token expiry time in minutes.
-*   `BINANCE_API_KEY`: (Optional) Binance API key for historical data fetching.
-*   `BINANCE_SECRET_KEY`: (Optional) Binance API secret key.
-*   `PROACTIVE_SYMBOLS`: Comma-separated list of symbols for live kline ingestion (e.g., `BTCUSDT,ETHUSDT`).
-*   `PROACTIVE_TIMEFRAMES`: Comma-separated list of timeframes for live kline ingestion (e.g., `1m,5m,1h`).
-*   `INITIAL_BACKFILL_DAYS`: Number of days to backfill for new symbols (e.g., `90`).
-*   `MAX_KLINES_IN_REDIS`: Max number of klines to keep in Redis cache per symbol/timeframe (e.g., `2000`).
-*   `API_REDIS_LOOKBACK_MS`: How far back (in ms) the API should check Redis for klines (e.g., `86400000` for 1 day).
-*   `MARKETAUX_API_TOKEN`: API token for Marketaux news service.
-*   (Other API tokens like `NEWSDATA_IO_API_TOKEN`, `COINDESK_API_TOKEN` if those services are used by `news_fetcher_service`).
-
-## 6. Database Inspection and Management
-
-### 6.1. Accessing Dockerized PostgreSQL/TimescaleDB CLI
-
-To directly interact with the PostgreSQL database running in the `inchart_postgres_timescaledb` Docker container (e.g., for manual queries or inspection), you can use `psql`:
-
-1.  **Ensure the container is running:** `docker-compose ps` should show `inchart_postgres_timescaledb` as "Up".
-2.  **Connect using `docker exec`:**
-    ```bash
-    docker exec -it inchart_postgres_timescaledb psql -U inchart_admin -d inchart_db
-    ```
-    *   Replace `inchart_admin` with your database username and `inchart_db` with your database name if they differ from the common project defaults (check your `.env` or `docker-compose.yml`).
-    *   You will be prompted for the `inchart_admin`'s password.
-    *   You are now in the `psql` interactive terminal.
-
-3.  **Example: Inspecting an Enum Type (e.g., `tradedirectionenum`):**
-    ```sql
-    SELECT unnest(enum_range(NULL::tradedirectionenum));
-    ```
-    This will list the labels defined for the `tradedirectionenum` type.
-
-4.  **Listing all ENUM types and their labels:**
-    ```sql
-    SELECT t.typname AS enum_name, e.enumlabel AS enum_value
-    FROM pg_type t 
-    JOIN pg_enum e ON t.oid = e.enumtypid  
-    JOIN pg_catalog.pg_namespace n ON n.oid = t.typnamespace
-    WHERE n.nspname = 'public' -- Or your specific schema if not public
-    ORDER BY enum_name, e.enumsortorder;
-    ```
-
-5.  **Exiting `psql`:** Type `\q` and press Enter.
+*   `

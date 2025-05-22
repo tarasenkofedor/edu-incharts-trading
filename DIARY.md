@@ -1444,3 +1444,36 @@ to - **Status:** `done`
 - Task 12.2.4: Chart Reactivity and Performance (Manual testing and monitoring post-deployment of these changes).
 - Consider committing changes to Git.
 - Proceed with general testing (Task 7.2, 7.3) and other pending tasks.
+
+### Action: Task 12.0 - Real-time Current Candle Updates (Live Ticks)
+- **Status:** `done` (except for Task 12.2.4: Chart Reactivity and Performance - pending manual testing)
+- **Date:** 2025-05-24
+- **Goal:** Modify the data ingestion pipeline and frontend to display real-time price ticks, dynamically updating the current (unclosed) candle on the chart.
+- **Result:**
+    - **Backend (Data Ingestion Service & API - Task 12.1):**
+        - **12.1.1 (Research):** Confirmed Binance Kline/Candlestick streams (`<symbol>@kline_<interval>`) are suitable as they provide updates for unclosed klines (identified by `k.x: false` in the payload).
+        - **12.1.2 (Binance Connector):** Modified `_parse_kline_message` in `backend/data_ingestion_service/binance_connector.py` to parse and return kline data regardless of the `k.x` (is_closed) flag, including the `is_closed` status in its output dictionary.
+        - **12.1.3 - 12.1.5 (Kline Processor):** Updated `kline_data_processor` in `backend/data_ingestion_service/main.py`:
+            - If `is_closed` is true (final kline): Existing logic is used (save to TimescaleDB, update Redis ZSET cache `klines:<symbol>:<timeframe>`, publish to Redis Pub/Sub `kline_updates:<symbol>:<timeframe>` with `type: "kline_closed"`). The Redis ZSET trimming logic was also corrected to properly maintain the `MAX_KLINES_IN_REDIS` newest entries.
+            - If `is_closed` is false (tick update for unclosed kline): A kline object representing the current state of the forming candle is constructed. This tick data is then published to the same Redis Pub/Sub channel (`kline_updates:<symbol>:<timeframe>`) but with a distinct message structure: `{"type": "kline_tick", "data": {...tick_kline_object...}}`.
+        - **12.1.6 (Ingestion Loop Integration):** Verified that the existing main loop in `backend/data_ingestion_service/main.py` requires no changes, as the modified `BinanceWebSocketManager` and `kline_data_processor` seamlessly handle the new dual-type kline processing.
+    - **Backend (API - Task 12.2.1 - Backend part):**
+        - Reviewed the backend WebSocket API endpoint (`/ws/klines/{symbol}/{timeframe}` in `backend/app/routers/data.py`). Confirmed that it already relays raw JSON strings from Redis Pub/Sub. No changes were needed, as it will now naturally relay both `{"type": "kline_closed", ...}` and `{"type": "kline_tick", ...}` messages.
+    - **Frontend (Vuex & Home.vue - Task 12.2):**
+        - **12.2.2 & 12.2.3 (Vuex `chart.js`):**
+            - Added a new mutation `PROCESS_LIVE_KLINE_TICK` and a corresponding action `processLiveKlineTick`.
+            - The `PROCESS_LIVE_KLINE_TICK` mutation updates the `liveChartDataCube` (which holds live kline data for the chart). It intelligently handles the incoming tick data:
+                - If the tick's `open_time` matches the last kline in the `liveChartDataCube`, it updates that last kline's values (high, low, close, volume).
+                - If the tick's `open_time` is newer (indicating a new candle has started forming since the last *closed* kline was received), it appends a new kline array representing this forming candle.
+                - Ensures numeric string values from the tick payload are correctly parsed to numbers.
+                - Critically, it creates a new `DataCube` instance (passing existing `onchart` and `offchart` overlays) to ensure Vue's reactivity updates the chart. Addressed ESLint errors.
+        - **12.2.1 (Frontend WebSocket Handler in `Home.vue`):**
+            - Updated the `livePriceSocket.onmessage` event handler in `frontend/src/views/Home.vue`.
+            - The handler now parses the incoming JSON message from the WebSocket.
+            - It checks the `type` field in the parsed message.
+            - If `type` is `"kline_closed"`, it dispatches the existing `chart/updateLiveKline` action with `message.data`.
+            - If `type` is `"kline_tick"`, it dispatches the new `chart/processLiveKlineTick` action with `message.data`.
+            - Addressed ESLint errors.
+    - **Task 12.2.4 (Chart Reactivity/Performance):** This sub-task is marked as `to_do` and requires manual testing by the user to observe the chart's behavior with live ticks and assess performance.
+- **Git Commit:** All changes for Task 12.0 were successfully committed with the message "feat: Implement real-time current candle updates (live ticks)".
+- **Next Steps (as per user agreement):** User to perform manual testing for Task 7.2 (Frontend Interaction Testing) and Task 7.3 (Performance & Stability Monitoring), with a focus on the new live tick feature (related to Task 12.2.4), before proceeding to other main tasks like Task 10.0.

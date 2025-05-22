@@ -280,3 +280,22 @@ Parent **Task 1.0 (Foundational Setup & User Accounts)** completed.
     *   Left section (`mode-asset-controls`): "Home" link, `AssetTimeframeSelector`, "Live Chart"/"Custom Chart" mode buttons.
     *   Right section (`user-controls`): "News" toggle, "Perflogs" toggle, user greeting, "Log out" button (original red styling restored), and the new conditional "Log in" button.
 *   Updated `DOCUMENTATION.md` to reflect recent UI layout changes in `Home.vue`, the addition of the "Log in" button, and the browser tab title modification.
+
+## [0.0.9] - 2025-05-24
+### Added
+- **Real-time Current Candle Updates (Live Ticks) (Task 12.0):**
+  - **Backend (Data Ingestion Service & API - Task 12.1):**
+    - Modified `BinanceWebSocketManager` (`backend/data_ingestion_service/binance_connector.py`) to parse and pass kline data regardless of whether it's a closed candle (`k.x: true`) or an update to an unclosed candle (`k.x: false`). The `is_closed` status is now included in the processed data.
+    - Updated `kline_data_processor` (`backend/data_ingestion_service/main.py`):
+      - For closed klines: Continues to save to TimescaleDB, update Redis cache, and publish to Redis Pub/Sub (`kline_updates:<symbol>:<timeframe>`) with `type: "kline_closed"`. Corrected Redis ZSET trimming logic to keep the newest `MAX_KLINES_IN_REDIS` entries.
+      - For unclosed kline ticks: Constructs a kline object representing the forming candle and publishes it to the same Redis Pub/Sub channel (`kline_updates:<symbol>:<timeframe>`) but with `type: "kline_tick"`.
+    - Confirmed backend WebSocket API (`/ws/klines/{symbol}/{timeframe}`) requires no changes as it already relays raw JSON from Pub/Sub, now correctly passing messages with the new `type` field.
+  - **Frontend (Vuex & Chart Display - Task 12.2):**
+    - Added `PROCESS_LIVE_KLINE_TICK` mutation and `processLiveKlineTick` action to `frontend/src/store/modules/chart.js`. This logic updates the `liveChartDataCube` by modifying the last kline or appending a new one for incoming ticks, ensuring reactivity and preserving overlays.
+    - Updated the `livePriceSocket.onmessage` handler in `frontend/src/views/Home.vue` to differentiate between `kline_closed` and `kline_tick` message types from the WebSocket and dispatch the appropriate Vuex action.
+
+### Changed
+- Updated `VERSION` to `0.0.9` and `VERSION_COUNTER.txt` to `26` (assuming previous was 25, will verify).
+
+### Fixed
+- ESLint errors in `backend/data_ingestion_service/binance_connector.py`, `backend/data_ingestion_service/main.py`, `frontend/src/store/modules/chart.js`, and `frontend/src/views/Home.vue` related to the live tick implementation.

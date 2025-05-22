@@ -1,7 +1,24 @@
+# Python virtual environment
+.venv/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
-*$py.class
+*.pyc
+*.pyo
+*.pyd
+
+# Pytest cache
+.pytest_cache/
+
+# Log files
+*.log
+
+# Local environment variables (if ever placed here, though root .env is standard)
+.env
+
+# SQLite databases (if used for local testing directly in backend)
+*.sqlite3
+*.db
 
 # C extensions
 *.so
@@ -30,11 +47,7 @@ MANIFEST
 *.manifest
 *.spec
 
-# Installer logs
-*.log
-
 # Unit test / coverage reports
-.pytest_cache/
 .coverage
 .coverage.*
 .cache
@@ -47,7 +60,6 @@ htmlcov/
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -69,7 +81,6 @@ target/
 .env
 
 # Virtual environment
-.venv/
 venv/
 ENV/
 

@@ -32,3 +32,5 @@ tasks.json
 tasks/ 
 rules/
 node_modules
+
+.cursor/

@@ -1,0 +1,5486 @@
+How to make your first request
+Once you get the access of the API key, you can fetch the data using the API key in the request URL.
+
+You can use platforms like HTTP REST clients (such as Postman) or Curl to fetch the data in JSON format.
+
+Here is an example of a request to retrieve news articles:
+
+Get URL
+
+https://newsdata.io/api/1/latest?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&q=pizza
+
+This request will search for the latest news articles that contain the keyword "pizza". The apikey parameter is used to authenticate your account and is required in all requests.
+
+You can also use additional parameters to refine your search, such as specifying a language, category, domain name etc.
+
+Get URL
+
+https://newsdata.io/api/1/archive?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&q=example&language=en&from_date=2025-05-14&to_date=2025-05-21
+
+This request will search for English language news articles published between May 14, 2025 and May 21, 2025 that contain the keyword "pizza".
+
+Once you've made a request, you will receive a response in JSON format containing the news articles that match your search criteria.
+
+For practical understanding visit - How to Make Your First Request With NewsData.io
+
+Authentication
+Newsdata.io uses API key authentication to access the platform's features and data. An API key is a unique string of characters that is generated for each account, and it is required in all requests to the API.
+
+When making requests to the API, you need to include the API key in the request URL. The API key can be passed as a request header as X-ACCESS-KEY or as a query parameter apikey.
+
+If the API key is not included in the request headers or it is invalid, the API will return a 403 Unauthorized error and the request will be denied.
+
+Response Object
+You will get the following data points in JSON response while requesting the API.
+
+Object	Description
+Status
+Status shows the status of your request. If the request was successful then it shows “success”, in case of error it shows “error”. In the case of error a code and message property will be displayed.
+totalResults
+The total number of results available for your request.
+article_id
+A unique id for each news article.
+title
+The title of the news article.
+link
+URL of the news article.
+source_id
+The name of the source this article came from.
+source_url
+The URL of the source from which a specific news article originated.
+source_icon
+URL of the logo associated with the news source.
+source_priority
+Shows the rank of news domains on the basis of their traffic and authenticity. The lower the source priority, the more authentic the domain.
+keywords
+Related keywords of the news article.
+creator
+The author of the news article
+image_url
+URL of image present in the news articles
+video_url
+URL of video present in the news articles
+description
+A small description of the news article
+pubDate
+The published date of the news article
+pubDateTZ
+The 'pubDateTZ' field will provide the time zone of the publication date mentioned in the news article. This is available in the Latest/News, Crypto, and Archive endpoints.
+content
+Full content of the news article
+country
+The country of the publisher
+category
+The category assigned to the news article by NewsData.io
+language
+The language of the news article
+ai_tag
+AI-classified tags or categories for a better understanding of the article. (Available only for Professional and Corporate users)
+sentiment
+The overall sentiment of the news article (positive, negative, neutral). (Available only for Professional and Corporate users)
+sentiment_stats
+Statistics on the distribution of positive, negative, and neutral sentiments of the news article. (Available only for Professional and Corporate users)
+ai_region
+AI-classified geographical region associated with a news article. ai_region could be a city, district, state, country, or continent. (Available only for corporate users)
+ai_org
+AI-classified organization to extract the name of the organization mentioned in the new article to offer a new level of detail and enhanced insights. (Available only for corporate users)
+duplicate
+This response object will help identify whether the article is duplicate or not. duplicate = False: This indicates that the article is recognized as unique duplicate = True: This signifies that the article is identified as a duplicate of an article already present(The duplicate response object is defined on the basis of Newsdata.io's internal algorithm . It doesn't imply that the article which has a duplicate=true response object is actually a duplicate article.)
+Coin
+The 'coin' field will provide the symbol of the cryptocurrencies mentioned in the article. It is exclusively available in the Crypto endpoint.
+nextPage
+To go to the next page, copy the next page code (without quotes), which can be found at the bottom of the page, and add a new parameter with page and paste the next page code in the API URL: https://newsdata.io/api/1/latest?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&q=pizza%20OR%20social&page=Your_next_page_id
+Sample Response
+
+{
+status: "success"
+totalResults: 1936
+results: [
+0: {
+article_id: "8d7f01f005f50c1668b263b2a5085214"
+title: "Nicusor Dan reaffirms Romania's strong ties with the U.S."
+link: "https://www.stiripesurse.ro/nicusor-dan-reaffirms-romanias-strong-ties-with-the-us_3692176.html"
+keywords: [
+0: "stiri"
+]
+creator: null
+description: "President-elect Nicusor Dan on Tuesday evening sent a message assuring that Romania is keeping its ..."
+content: "President-elect Nicusor Dan on Tuesday evening sent a message assuring that Romania is keeping its ..."
+pubDate: "2025-05-21 06:02:08"
+pubDateTZ: "UTC"
+image_url: "https://media.stiripesurse.ro/image/202505/w460/media-174759139766290100.png"
+video_url: null
+source_id: "stiripesurse_ro"
+source_name: "Stiri Pe Surse"
+source_priority: 8545
+source_url: "https://www.stiripesurse.ro"
+source_icon: "https://i.bytvi.com/domain_icons/stiripesurse_ro.png"
+language: "english"
+country: [
+0: "romania"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 98.04
+neutral: 1.64
+negative: 0.32
+}
+ai_tag: [
+0: "government"
+]
+ai_region: [
+0: "united states of america,north america"
+1: "romania,europe"
+]
+ai_org: null
+duplicate: false
+}
+1: {
+article_id: "c0451773c45c2b1cdffd1aa5309423c0"
+title: "Counts in Bradfield and Calwell become clearer, while Jacqui Lambie faces a possible problem in the..."
+link: "https://theconversation.com/counts-in-bradfield-and-calwell-become-clearer-while-jacqui-lambie-face..."
+keywords: null
+creator: [
+0: "Adrian Beaumont, Election Analyst (Psephologist) at The Conversation; and Honorary Associate, Schoo..."
+]
+description: "Some seats are so close they may qualify for a re-count."
+content: "Counting in several extremely close seats continues, but some results have become clearer. In Liber..."
+pubDate: "2025-05-21 05:54:46"
+pubDateTZ: "UTC"
+image_url: "https://counter.theconversation.com/content/257122/count.gif"
+video_url: null
+source_id: "theconversation"
+source_name: "The Conversation"
+source_priority: 1694
+source_url: "https://theconversation.com"
+source_icon: "https://i.bytvi.com/domain_icons/theconversation.png"
+language: "english"
+country: [
+0: "australia"
+]
+category: [
+0: "politics"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.25
+neutral: 96.13
+negative: 3.63
+}
+ai_tag: [
+0: "elections"
+]
+ai_region: [
+0: "calwell,australian capital territory,australia,australia/oceania"
+1: "bradfield,england,united kingdom,europe"
+]
+ai_org: [
+0: "senate"
+]
+duplicate: false
+}
+2: {
+article_id: "87aff70c580c21fdac1de5522802be19"
+title: "Union blames council for lack of bin strike deal"
+link: "https://ca.news.yahoo.com/union-blames-council-lack-bin-054747132.html"
+keywords: [
+0: "news"
+]
+creator: [
+0: "BBC"
+]
+description: "Unite accuses Birmingham City Council of failing to meet a promised deadline to present a pay offer..."
+content: "The union representing Birmingham's striking bin workers has broken its near-three-week silence on ..."
+pubDate: "2025-05-21 05:47:47"
+pubDateTZ: "UTC"
+image_url: "https://media.zenfs.com/en/bbc_us_articles_995/ad63a77534fd39bbb35f7eb2d4330285"
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "canada"
+]
+category: [
+0: "sports"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.09
+neutral: 0.12
+negative: 99.79
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: [
+0: "unite"
+1: "birmingham city council"
+]
+duplicate: false
+}
+3: {
+article_id: "d5342a5a2391a3e50cbda2a37e3e222f"
+title: "Rahul Gandhi Called Mir Jafar As BJP Reveals Pakistan Spy Network, Political Uproar Follows"
+link: "https://news.abplive.com/videos/news/india-rahul-gandhi-called-mir-jafar-as-bjp-reveals-pakistan-sp..."
+keywords: [
+0: "india"
+]
+creator: [
+0: "ABP News Bureau"
+]
+description: "Rahul Gandhi recently stirred controversy by referring to Mir Jafar in a heated political exchange ..."
+content: "Rahul Gandhi recently stirred controversy by referring to Mir Jafar in a heated political exchange ..."
+pubDate: "2025-05-21 05:43:22"
+pubDateTZ: "UTC"
+image_url: "https://feeds.abplive.com/onecms/images/uploaded-images/2025/05/21/6084e5d1d6aab0a8b987278b4b881b3c..."
+video_url: null
+source_id: "abplive"
+source_name: "Abp News"
+source_priority: 7754
+source_url: "http://abplive.com"
+source_icon: "https://i.bytvi.com/domain_icons/abplive.jpg"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.1
+neutral: 0.15
+negative: 99.75
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: [
+0: "pakistan spy network"
+]
+duplicate: false
+}
+4: {
+article_id: "7db302512cbc5db9aa983ed86e548457"
+title: "Palace: Marcos to choose law over friendship in Duterte’s ICC case"
+link: "https://newsinfo.inquirer.net/2062067/palace-marcos-to-choose-law-over-friendship-in-dutertes-icc-c..."
+keywords: [
+0: "latest news stories"
+1: "palace"
+2: "ferdinand marcos jr."
+3: "rodrigo duterte"
+4: "nation"
+]
+creator: null
+description: "MANILA, Philippines — “Friend or the law? The President will still choose the law.” This was Malaca..."
+content: "President Ferdinand Marcos Jr. and former President Rodrigo Duterte — Photos from the Presidential ..."
+pubDate: "2025-05-21 05:31:40"
+pubDateTZ: "UTC"
+image_url: "https://newsinfo.inquirer.net/files/2025/01/President-Marcos-Rodrigo-Duterte-21January2025-1200x740..."
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.1
+neutral: 99.75
+negative: 0.15
+}
+ai_tag: [
+0: "government"
+]
+ai_region: [
+0: "manila,metro manila,philippines,asia"
+1: "philippines,asia"
+]
+ai_org: [
+0: "icc"
+]
+duplicate: false
+}
+5: {
+article_id: "bf66d264f9f0ae7070e92421a42c2253"
+title: "Congress Leader Sachin Pilot Pays Tribute To Rajiv Gandhi On His Death Anniversary"
+link: "https://www.ndtv.com/india-news/congress-leader-sachin-pilot-pays-tribute-to-rajiv-gandhi-on-his-de..."
+keywords: null
+creator: null
+description: "Congress leader Sachin Pilot paid homage to former Prime Minister Rajiv Gandhi on his 34th death an..."
+content: "Congress leader Sachin Pilot paid homage to former Prime Minister Rajiv Gandhi on his 34th death an..."
+pubDate: "2025-05-21 05:29:39"
+pubDateTZ: "UTC"
+image_url: "https://c.ndtvimg.com/2024-08/iabat6u_rajiv-gandhi_625x300_20_August_24.jpeg?im=FitAndFill%2Calgori..."
+video_url: null
+source_id: "ndtv"
+source_name: "Ndtv"
+source_priority: 1204
+source_url: "http://www.ndtv.com"
+source_icon: "https://i.bytvi.com/domain_icons/ndtv.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 3.98
+neutral: 95.72
+negative: 0.3
+}
+ai_tag: [
+0: "awards and recognitions"
+1: "politics"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+6: {
+article_id: "06db2d31de03f24a4dbaa0c0f00011d1"
+title: "Flex LNG - First Quarter 2025 Earnings Release"
+link: "https://www.benzinga.com/pressreleases/25/05/n45534995/flex-lng-first-quarter-2025-earnings-release"
+keywords: [
+0: "press releases"
+1: "maritime/shipbuilding"
+2: "earnings"
+3: "transportation/trucking/railroad"
+4: "flngo"
+5: "flng"
+]
+creator: [
+0: "PRNewswire"
+]
+description: "HAMILTON, Bermuda, May 21, 2025 /PRNewswire/ -- Flex LNG Ltd. ("Flex LNG" or the "Company") today a..."
+content: "HAMILTON, Bermuda , May 21, 2025 /PRNewswire/ -- Flex LNG Ltd. ("Flex LNG" or the "Company") today ..."
+pubDate: "2025-05-21 05:26:00"
+pubDateTZ: "UTC"
+image_url: null
+video_url: null
+source_id: "benzinga"
+source_name: "Benzinga"
+source_priority: 3903
+source_url: "https://www.benzinga.com"
+source_icon: "https://i.bytvi.com/domain_icons/benzinga.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "business"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.08
+neutral: 99.85
+negative: 0.08
+}
+ai_tag: [
+0: "corporate news"
+]
+ai_region: [
+0: "hamilton,hamilton,bermuda,north america"
+1: "bermuda,north america"
+2: "hamilton,bermuda,north america"
+]
+ai_org: [
+0: "flex lng ltd"
+]
+duplicate: true
+}
+7: {
+article_id: "6fb9ecf4fa74a6d6d0585fc0997004bb"
+title: "☕️🥐 FC Ptit Dej: Guardiola in tears, epic finals, Reina farewell"
+link: "https://onefootball.com/en/news/fc-ptit-dej-guardiola-in-tears-epic-finals-reina-farewell-41140846"
+keywords: [
+0: "soccer"
+]
+creator: [
+0: "OneFootball"
+]
+description: "This article was translated into English by Artificial Intelligence. You can read the original vers..."
+content: "☕️🥐 FC Ptit Dej: Guardiola in tears, epic finals, Reina farewellThis article was translated into E..."
+pubDate: "2025-05-21 05:26:00"
+pubDateTZ: "UTC"
+image_url: "https://media.zenfs.com/en/onefootball_articles_802/14ed95686e3f5398a81e9083e2e723b5"
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "sports"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 1.04
+neutral: 98.78
+negative: 0.18
+}
+ai_tag: [
+0: "artificial intelligence"
+]
+ai_region: null
+ai_org: [
+0: "artificial intelligence"
+1: "fc ptit dej"
+]
+duplicate: false
+}
+8: {
+article_id: "c3eeddad4b5cd0788a85df529fef226d"
+title: "Flex LNG - First Quarter 2025 Earnings Release"
+link: "https://www.prnewswire.com/news-releases/flex-lng--first-quarter-2025-earnings-release-302461505.ht..."
+keywords: [
+0: "computer & electronics"
+1: "trn"
+2: "scl"
+3: "supply chain/logistics"
+4: "transportation, trucking & railroad"
+5: "maritime & shipbuilding"
+6: "mar"
+7: "cpr"
+]
+creator: null
+description: "HAMILTON, Bermuda, May 21, 2025 /PRNewswire/ -- Flex LNG Ltd. ("Flex LNG" or the "Company") today a..."
+content: "HAMILTON, Bermuda , May 21, 2025 /PRNewswire/ -- Flex LNG Ltd. ("Flex LNG" or the "Company") today ..."
+pubDate: "2025-05-21 05:26:00"
+pubDateTZ: "UTC"
+image_url: null
+video_url: null
+source_id: "cision"
+source_name: "Pr Newswire"
+source_priority: 1625
+source_url: "https://www.prnewswire.com"
+source_icon: "https://i.bytvi.com/domain_icons/cision.jpg"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "business"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.08
+neutral: 99.85
+negative: 0.08
+}
+ai_tag: [
+0: "corporate news"
+]
+ai_region: [
+0: "hamilton,hamilton,bermuda,north america"
+1: "bermuda,north america"
+2: "hamilton,bermuda,north america"
+]
+ai_org: [
+0: "flex lng ltd"
+]
+duplicate: false
+}
+9: {
+article_id: "99dde5e86964f735ab0f854a13102aef"
+title: "Julian Assange’s T-Shirt at Cannes 2025 Lists Names of 4,986 Palestinian Children Killed in Israel-..."
+link: "https://www.timesnownews.com/lifestyle/fashion/julian-assanges-t-shirt-at-cannes-2025-lists-names-o..."
+keywords: null
+creator: [
+0: "Namya Sinha"
+]
+description: "At the Cannes Film Festival 2025, WikiLeaks founder Julian Assange made a powerful statement by wea..."
+content: "This year's Cannes Film Festival has not just been about the power of cinema and women dressed in t..."
+pubDate: "2025-05-21 05:22:52"
+pubDateTZ: "UTC"
+image_url: "https://images.timesnownews.com/thumb/msid-151686111,imgsize-97122,width-1280,height-720/151686111...."
+video_url: null
+source_id: "timesnownews"
+source_name: "Times Now News"
+source_priority: 2243
+source_url: "https://www.timesnownews.com"
+source_icon: "https://i.bytvi.com/domain_icons/timesnownews.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 3.52
+neutral: 2.03
+negative: 94.45
+}
+ai_tag: [
+0: "celebrity"
+1: "movies"
+]
+ai_region: [
+0: "cannes,provence-alpes-côte-d’azur,france,europe"
+]
+ai_org: [
+0: "wikileaks"
+]
+duplicate: false
+}
+10: {
+article_id: "8079e55df0ba697381c9f56e5791c7ea"
+title: "Kerry Stokes’ cabinet dinner was the first of its kind for Roger Cook"
+link: "https://www.smh.com.au/politics/western-australia/kerry-stokes-cabinet-dinner-was-the-first-of-its-..."
+keywords: [
+0: "politics / wa"
+]
+creator: [
+0: "Hamish Hastie"
+]
+description: "The premier said the December dinner was the first time in his career he’d attended such an event, ..."
+content: "A cabinet dinner hosted at media billionaire Kerry Stokes’ riverside mansion in December was the fi..."
+pubDate: "2025-05-21 05:17:29"
+pubDateTZ: "UTC"
+image_url: "https://static.ffx.io/images/$zoom_0.7413,$multiply_0.7554,$ratio_1.777778,$width_1059,$x_148,$y_0/..."
+video_url: null
+source_id: "smh"
+source_name: "The Sydney Morning Herald"
+source_priority: 2251
+source_url: "https://www.smh.com.au"
+source_icon: "https://i.bytvi.com/domain_icons/smh.png"
+language: "english"
+country: [
+0: "australia"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 1.04
+neutral: 10.13
+negative: 88.83
+}
+ai_tag: [
+0: "awards and recognitions"
+1: "politics"
+]
+ai_region: null
+ai_org: null
+duplicate: true
+}
+11: {
+article_id: "bbf4349a9a01e14e7ff9eacf2c725c3a"
+title: "PNP ready for disaster response as rainy season expected in June"
+link: "https://newsinfo.inquirer.net/2062072/fwd-pnp-ready-for-disaster-response-as-rainy-season-expected-..."
+keywords: [
+0: "disaster response"
+1: "nation"
+2: "latest news stories"
+3: "pnp‎"
+4: "rainy season"
+]
+creator: null
+description: "MANILA, Philippines — The Philippine National Police (PNP) assured the public that it was ready to ..."
+content: "Philippine National Police chief Gen. Rommel Marbil inspects the PNP’s disaster response equipment ..."
+pubDate: "2025-05-21 05:16:37"
+pubDateTZ: "UTC"
+image_url: "https://newsinfo.inquirer.net/files/2025/05/IMG_5751-1200x740.jpg"
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 88.4
+neutral: 10.66
+negative: 0.94
+}
+ai_tag: [
+0: "natural disasters"
+]
+ai_region: [
+0: "manila,metro manila,philippines,asia"
+1: "philippines,asia"
+]
+ai_org: [
+0: "philippine national police"
+1: "pnp"
+]
+duplicate: false
+}
+12: {
+article_id: "4c8100e030ab12f628ea6ebc778c01b9"
+title: "Populist vs Popstars: Why Donald Trump is at war with Taylor Swift, Beyonce, and Bruce Springsteen"
+link: "https://timesofindia.indiatimes.com/world/us/populist-vs-popstars-why-donald-trump-is-at-war-with-t..."
+keywords: null
+creator: [
+0: "TOI World Desk"
+]
+description: null
+content: "Donald Trump ’s rise from New York real estate notoriety to right-wing demigod has always danced aw..."
+pubDate: "2025-05-21 05:14:41"
+pubDateTZ: "UTC"
+image_url: "https://static.toiimg.com/thumb/msid-121307129,imgsize-195750,width-400,resizemode-4/121307129.jpg"
+video_url: null
+source_id: "toi"
+source_name: "The Times Of India"
+source_priority: 239
+source_url: "https://timesofindia.indiatimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/toi.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 2.93
+neutral: 8.62
+negative: 88.45
+}
+ai_tag: [
+0: "celebrity"
+]
+ai_region: [
+0: "new york,new york,united states of america,north america"
+1: "new york,united states of america,north america"
+]
+ai_org: [
+0: "popstars"
+]
+duplicate: false
+}
+13: {
+article_id: "0a43c0005a2a55798f1fa00fdd69038d"
+title: "Donald Trump announces historic Golden Dome missile defense project, its cost will be..., it is ins..."
+link: "https://www.india.com/news/world/donald-trump-announces-historic-golden-dome-missile-defense-projec..."
+keywords: [
+0: "president donald trump"
+1: "world"
+2: "golden dome project"
+3: "us golden dome"
+4: "us news"
+5: "us shield golden dome"
+6: "foreign missile attacks"
+]
+creator: null
+description: ""Ronald Reagan (40th US President) wanted it many years ago, but he did not have the technology. Bu..."
+content: ""Ronald Reagan (40th US President) wanted it many years ago, but he did not have the technology. Bu..."
+pubDate: "2025-05-21 05:09:43"
+pubDateTZ: "UTC"
+image_url: "https://static.india.com/wp-content/themes/icom/images/default-big.svg"
+video_url: null
+source_id: "india"
+source_name: "India"
+source_priority: 8067
+source_url: "https://www.india.com"
+source_icon: "https://i.bytvi.com/domain_icons/india.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "world"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 8.31
+neutral: 89.25
+negative: 2.44
+}
+ai_tag: [
+0: "government"
+1: "national security"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: false
+}
+14: {
+article_id: "4189e1df6db34987e881d4e15a58e06e"
+title: "Solon hails Marcos move to reach out, reconcile with Dutertes"
+link: "https://newsinfo.inquirer.net/2062068/fwd-marcos-extending-olive-branch-to-dutertes-expected-of-a-d..."
+keywords: [
+0: "bongbong marcos jr."
+1: "nation"
+2: "latest news stories"
+3: "sara duterte impeachement"
+]
+creator: null
+description: "MANILA, Philippines — President Ferdinand R. Marcos Jr.’s openness to reconciling with the Duterte ..."
+content: "President Ferdinand R. Marcos Jr (L) and Vice President Sara Duterte (PHOTOS: Official Facebook pag..."
+pubDate: "2025-05-21 05:03:26"
+pubDateTZ: "UTC"
+image_url: "https://newsinfo.inquirer.net/files/2024/10/bongbong-marcos-sara-duterte-FILE.png"
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 3.7
+neutral: 87.98
+negative: 8.32
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "manila,metro manila,philippines,asia"
+1: "philippines,asia"
+]
+ai_org: null
+duplicate: false
+}
+15: {
+article_id: "7a9b5f319a5c4fa15008420ab0149c17"
+title: "The secrets of Albo's massive election win REVEALED: PM's 'quiet genius' details five reasons Labor..."
+link: "https://www.dailymail.co.uk/news/article-14733933/Paul-Erickson-Labor-election-guru-Anthony-Albanes..."
+keywords: null
+creator: null
+description: "Paul Erickson, the ALP's National Secretary, told the National Press Club in Canberra on Wednesday ..."
+content: "The secrets of Albo's massive election win REVEALED: PM's 'quiet genius' details five reasons Labor..."
+pubDate: "2025-05-21 05:03:10"
+pubDateTZ: "UTC"
+image_url: "https://i.dailymail.co.uk/1s/2025/05/21/05/98594705-0-image-a-5_1747802483991.jpg"
+video_url: null
+source_id: "dailymailuk"
+source_name: "Mail Online"
+source_priority: 309
+source_url: "https://www.dailymail.co.uk/home/index.html"
+source_icon: "https://i.bytvi.com/domain_icons/dailymailuk.png"
+language: "english"
+country: [
+0: "united kingdom"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 3.18
+neutral: 70.71
+negative: 26.11
+}
+ai_tag: [
+0: "elections"
+]
+ai_region: [
+0: "canberra,australian capital territory,australia,australia/oceania"
+]
+ai_org: [
+0: "labor"
+1: "national press club"
+]
+duplicate: false
+}
+16: {
+article_id: "f8af6b1bf8abbc3df5017432d1231fcb"
+title: "A day after the Coalition split, a backroom push is underway to reunite the Nationals and Liberals"
+link: "https://www.abc.net.au/news/2025-05-21/national-liberal-coalition-push-reunite-after-split/10531936..."
+keywords: [
+0: "government and politics"
+1: "federal parliament"
+2: "federal government"
+3: "liberal party of australia"
+4: "national party of australia"
+5: "political parties and movements"
+]
+creator: [
+0: "Lucy Barbour"
+]
+description: "Just a day after they filed for divorce, there is a backroom push underway to get the Liberals and ..."
+content: "Just a day after they filed for divorce, there is a backroom push underway to get the Liberals and ..."
+pubDate: "2025-05-21 05:00:23"
+pubDateTZ: "UTC"
+image_url: "https://live-production.wcms.abc-cdn.net.au/b7cf9bb3b591502546eae29147ea07a9?cropH=2287&cropW=4066&..."
+video_url: null
+source_id: "abc_net"
+source_name: "Abc"
+source_priority: 3795
+source_url: "https://www.abc.net.au"
+source_icon: "https://i.bytvi.com/domain_icons/abc_net.png"
+language: "english"
+country: [
+0: "australia"
+]
+category: [
+0: "lifestyle"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 2
+neutral: 97.29
+negative: 0.71
+}
+ai_tag: [
+0: "elections"
+1: "government"
+]
+ai_region: null
+ai_org: [
+0: "coalition"
+]
+duplicate: false
+}
+17: {
+article_id: "77c8b68bac12ba4483859914f761ee69"
+title: "Michael McDowell: Migration is the Achilles heel of centrist Europe and Trump is ready to exploit i..."
+link: "https://www.irishtimes.com/opinion/2025/05/21/michael-mcdowell-migration-policy-is-the-eus-biggest-..."
+keywords: [
+0: "opinion"
+]
+creator: [
+0: "Michael McDowell"
+]
+description: "Across the member states, there is growing recognition that the much-vaunted EU migration pact is t..."
+content: "The possibility that Romania would turn away from the EU and towards some engagement with Trumpism,..."
+pubDate: "2025-05-21 05:00:01"
+pubDateTZ: "UTC"
+image_url: "https://www.irishtimes.com/resizer/v2/MUB5TGDW2ZHTHEVZFEJABN6VEU.jpg?auth=f7e60e1795254820f258963c0..."
+video_url: null
+source_id: "irishtimes"
+source_name: "The Irish Times"
+source_priority: 9425
+source_url: "https://www.irishtimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/irishtimes.png"
+language: "english"
+country: [
+0: "ireland"
+]
+category: [
+0: "politics"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 25.24
+neutral: 1.7
+negative: 73.06
+}
+ai_tag: [
+0: "government"
+1: "immigration and migrant issues"
+]
+ai_region: [
+0: "europe"
+]
+ai_org: null
+duplicate: false
+}
+18: {
+article_id: "327d7434b8174b1325906e2e229af70e"
+title: "Suad Aldarra: ‘KatKot’ chocolate and ‘Ugarit Cola’: What life was like under US sanctions"
+link: "https://www.irishtimes.com/opinion/2025/05/21/katkot-chocolate-and-ugarit-cola-what-life-in-syria-w..."
+keywords: [
+0: "opinion"
+]
+creator: [
+0: "Suad Aldarra"
+]
+description: "It felt like the more ways we learned to survive the sanctions regime, the more creative ways it fo..."
+content: "Last week brought another turning point for the country as Donald Trump announced the lifting of lo..."
+pubDate: "2025-05-21 05:00:01"
+pubDateTZ: "UTC"
+image_url: "https://www.irishtimes.com/resizer/v2/EHDYBFEW34UPNURYKNICYI5S6Y.jpg?auth=52bce4402bdbe32757f8e0e45..."
+video_url: null
+source_id: "irishtimes"
+source_name: "The Irish Times"
+source_priority: 9425
+source_url: "https://www.irishtimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/irishtimes.png"
+language: "english"
+country: [
+0: "ireland"
+]
+category: [
+0: "politics"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 2.32
+neutral: 97.43
+negative: 0.25
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: false
+}
+19: {
+article_id: "262bb34a300520b2ab889d56eb72f180"
+title: "Losing friends, fast"
+link: "https://www.politico.eu/newsletter/brussels-playbook/losing-friends-fast/"
+keywords: null
+creator: [
+0: "Tim Ross"
+]
+description: "KIDS SAY THE DARNDEST THINGS: If you’re contemplating a new job as a world leader, like, say, Roman..."
+content: "Presented by Hydrogen EuropeBy TIM ROSSwith ZOYA SHEFTALOVICHPRESENTED BY Send tips here | Tweet @N..."
+pubDate: "2025-05-21 05:00:00"
+pubDateTZ: "UTC"
+image_url: "https://www.politico.eu/wp-content/uploads/2024/09/30/nl-header_politico_brussels-playbook.png"
+video_url: null
+source_id: "politico_eu"
+source_name: "Politico Europe"
+source_priority: 3686
+source_url: "https://www.politico.eu"
+source_icon: "https://i.bytvi.com/domain_icons/politico_eu.png"
+language: "english"
+country: [
+0: "united kingdom"
+1: "ireland"
+2: "spain"
+3: "france"
+4: "germany"
+5: "switzerland"
+6: "poland"
+7: "netherland"
+8: "hungary"
+9: "italy"
+10: "belgium"
+11: "austria"
+12: "greece"
+13: "sweden"
+14: "norway"
+15: "portugal"
+16: "romania"
+17: "czech republic"
+18: "finland"
+19: "denmark"
+]
+category: [
+0: "politics"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 51
+neutral: 9.18
+negative: 39.82
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "romania,europe"
+]
+ai_org: null
+duplicate: false
+}
+20: {
+article_id: "97266106f2ced0ffaeb4e8e0d10edb24"
+title: "Merz’ Nullnummer"
+link: "https://www.politico.eu/newsletter/berlin-playbook/merz-nullnummer/"
+keywords: null
+creator: [
+0: "Hans von der Burchard"
+]
+description: "Moin Berlin, hier schreibt Hans von der Burchard. Gleich ziehe ich mit Gordon Repinski ein paar Bah..."
+content: "Präsentiert von Fuchs & Cie.Von HANS VON DER BURCHARDMit PAULINE VON PEZOLDPRÄSENTIERT VON Schick..."
+pubDate: "2025-05-21 05:00:00"
+pubDateTZ: "UTC"
+image_url: "https://www.politico.eu/wp-content/uploads/2024/09/30/nl-header_politico_berlin-playbook.png"
+video_url: null
+source_id: "politico_eu"
+source_name: "Politico Europe"
+source_priority: 3686
+source_url: "https://www.politico.eu"
+source_icon: "https://i.bytvi.com/domain_icons/politico_eu.png"
+language: "german"
+country: [
+0: "germany"
+]
+category: [
+0: "politics"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.09
+neutral: 99.78
+negative: 0.13
+}
+ai_tag: [
+0: "awards and recognitions"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+21: {
+article_id: "761e08f683e17eae619ed9f64a82449d"
+title: "Japan farm minister resigns over free rice gaffe"
+link: "https://sg.news.yahoo.com/japan-farm-minister-resigns-over-045716038.html"
+keywords: null
+creator: [
+0: "AFP News"
+]
+description: null
+content: "Japan's farm minister resigned Wednesday after a gaffe about rice drew public fury in a country exp..."
+pubDate: "2025-05-21 04:57:16"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/7_b74xsp.PUxJuGH_JSlpg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04Mjg-..."
+video_url: null
+source_id: "yahoo_sg"
+source_name: "Yahoo!news"
+source_priority: 17
+source_url: "https://sg.news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo_sg.png"
+language: "english"
+country: [
+0: "singapore"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.1
+neutral: 0.14
+negative: 99.76
+}
+ai_tag: null
+ai_region: [
+0: "japan,asia"
+]
+ai_org: null
+duplicate: true
+}
+22: {
+article_id: "479fbf6bbeb363a1ada93758da70a6a0"
+title: "How Biden's prostate cancer diagnosis went undetected for so long"
+link: "https://www.firstpost.com/explainers/how-bidens-prostate-cancer-diagnosis-went-undetected-for-so-lo..."
+keywords: [
+0: "explainers"
+]
+creator: [
+0: "Firstpost"
+]
+description: "Former US President Joe Biden has been diagnosed with 'aggressive' prostate cancer. But, how did th..."
+content: "Former United States President Joe Biden has been diagnosed with aggressive prostate cancer on Sund..."
+pubDate: "2025-05-21 04:57:07"
+pubDateTZ: "UTC"
+image_url: "https://images.firstpost.com/uploads/2025/05/History-1-22-2025-05-84d8e312be1270853dc9aeacfacdfc3e...."
+video_url: null
+source_id: "firstpost"
+source_name: "Firstpost"
+source_priority: 5906
+source_url: "https://www.firstpost.com"
+source_icon: "https://i.bytvi.com/domain_icons/firstpost.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.1
+neutral: 0.29
+negative: 99.61
+}
+ai_tag: [
+0: "diseases"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: false
+}
+23: {
+article_id: "0f27418718d91d4f0390c6e1f88a6034"
+title: "Donald Trump's 'tough guy' once celebrated 9/11 attacks, old video surfaces"
+link: "https://timesofindia.indiatimes.com/world/us/donald-trumps-syrian-tough-guy-ahmad-al-sharaa-once-ce..."
+keywords: null
+creator: null
+description: "A controversial video of Syrian President Ahmad al-Sharaa, formerly a jihadist, resurfaced, showing..."
+content: "In this photo released by the Saudi Royal Palace, US President Donald Trump shakes hands with Syria..."
+pubDate: "2025-05-21 04:56:51"
+pubDateTZ: "UTC"
+image_url: "https://static.toiimg.com/thumb/msid-121306647,imgsize-1355742,width-400,resizemode-4/121306647.jpg"
+video_url: null
+source_id: "toi"
+source_name: "The Times Of India"
+source_priority: 239
+source_url: "https://timesofindia.indiatimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/toi.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.15
+neutral: 0.15
+negative: 99.7
+}
+ai_tag: [
+0: "conflicts & war"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+24: {
+article_id: "0b1fff3eca99339414d77500200bb59c"
+title: "Hospital waits 'affecting lives' - watchdog"
+link: "https://ca.news.yahoo.com/hospital-waits-affecting-lives-watchdog-045341906.html"
+keywords: [
+0: "health"
+]
+creator: [
+0: "BBC"
+]
+description: "Healthwatch Suffolk says: "We are seeing an epidemic of pain that needs to be addressed.""
+content: "Waits for hospital treatment "are seriously affecting people's lives", a health watchdog has said. ..."
+pubDate: "2025-05-21 04:53:41"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/chTLIA.m1IZQ4hC5S34ItA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-..."
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "canada"
+]
+category: [
+0: "sports"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.08
+neutral: 99.79
+negative: 0.13
+}
+ai_tag: [
+0: "diseases"
+]
+ai_region: null
+ai_org: [
+0: "healthwatch suffolk"
+]
+duplicate: false
+}
+25: {
+article_id: "038ded617d7faf4b32e4deb4ac77e095"
+title: "Nashik Guardian Minister Race Heats Up After Chhagan Bhujbal’s Return To Cabinet"
+link: "https://www.news18.com/politics/nashik-guardian-minister-race-heats-up-after-chhagan-bhujbals-retur..."
+keywords: [
+0: "latest"
+]
+creator: null
+description: null
+content: "Bhujbal has said he is ready to take on any responsibility assigned by the Chief Minister. However,..."
+pubDate: "2025-05-21 04:42:47"
+pubDateTZ: "UTC"
+image_url: "https://images.news18.com/ibnlive/uploads/2025/05/bhujbal-oath-2025-05-d5408a33dd2eacbdf545f0631fc6..."
+video_url: null
+source_id: "news18"
+source_name: "News 18"
+source_priority: 1063
+source_url: "https://www.news18.com"
+source_icon: "https://i.bytvi.com/domain_icons/news18.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.4
+neutral: 99.44
+negative: 0.16
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: [
+0: "nashik guardian"
+]
+duplicate: false
+}
+26: {
+article_id: "faa236980fef96ea3be5a9bc87ae6765"
+title: "Dennis Padilla has accepted his election defeat, says brother Gene"
+link: "https://entertainment.inquirer.net/611321/dennis-padilla-has-accepted-his-election-defeat-says-brot..."
+keywords: [
+0: "dennis padilla"
+1: "latest stories"
+2: "celebrities and showbiz"
+]
+creator: null
+description: "Gene Padilla shared that his brother Dennis Padilla remains in good spirits and has accepted his de..."
+content: "Gene Padilla at the premiere night of “Isang Komedya sa Langit” on Tuesday, May 20. Image: INQUIRER..."
+pubDate: "2025-05-21 04:32:28"
+pubDateTZ: "UTC"
+image_url: "https://entertainment.inquirer.net/files/2025/05/WhatsApp-Image-2025-05-21-at-11.06.57-1200x675.jpe..."
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "entertainment"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 2.91
+neutral: 96.58
+negative: 0.51
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+27: {
+article_id: "02982e2803704c7098a4db9f724dc113"
+title: "Justice Department is investigating NYC mayoral candidate Andrew Cuomo over testimony to Congress"
+link: "https://www.cnbc.com/2025/05/21/justice-department-is-investigating-nyc-mayoral-candidate-andrew-cu..."
+keywords: null
+creator: null
+description: "The move comes after the Trump administration helped get corruption charges dropped against Eric Ad..."
+content: "Former New York Gov. Andrew Cuomo. Pool | Getty Images News | Getty Images The Justice Department i..."
+pubDate: "2025-05-21 04:29:45"
+pubDateTZ: "UTC"
+image_url: "https://image.cnbcfm.com/api/v1/image/108148470-1747800862316-gettyimages-1231769342-Virus_Outbreak..."
+video_url: null
+source_id: "cnbc"
+source_name: "Cnbc"
+source_priority: 379
+source_url: "http://cnbc.com"
+source_icon: "https://i.bytvi.com/domain_icons/cnbc.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "business"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.16
+neutral: 0.73
+negative: 99.11
+}
+ai_tag: [
+0: "elections"
+1: "government"
+]
+ai_region: null
+ai_org: [
+0: "justice department"
+1: "nyc"
+]
+duplicate: true
+}
+28: {
+article_id: "14571ff8959b257ef71a1edeb4a50fb5"
+title: "Spy allegations, heart attacks and Chevron gripes as departing MPs take aim"
+link: "https://www.abc.net.au/news/2025-05-21/outgoing-wa-upper-house-mps-eventful-valedictorian-speeches/..."
+keywords: [
+0: "ministers and parliamentary secretaries"
+1: "state and territory government"
+2: "government and politics"
+3: "parliament"
+4: "state and territory parliament"
+]
+creator: [
+0: "Keane Bourke"
+]
+description: "The usually docile Legislatie Council hears a series of explosive claims from departing members."
+content: "The WA Parliament's typically docile upper house has seen an eventful penultimate sitting, with one..."
+pubDate: "2025-05-21 04:26:23"
+pubDateTZ: "UTC"
+image_url: "https://live-production.wcms.abc-cdn.net.au/53daf974f29d9ecd15735045c64289e4?cropH=1080&cropW=1920&..."
+video_url: null
+source_id: "abc_net"
+source_name: "Abc"
+source_priority: 3795
+source_url: "https://www.abc.net.au"
+source_icon: "https://i.bytvi.com/domain_icons/abc_net.png"
+language: "english"
+country: [
+0: "australia"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.11
+neutral: 0.08
+negative: 99.82
+}
+ai_tag: [
+0: "politics"
+1: "accidents"
+]
+ai_region: null
+ai_org: [
+0: "wa parliament"
+1: "chevron"
+2: "legislatie council"
+]
+duplicate: false
+}
+29: {
+article_id: "4d47db7689fff0f7863bd654ccbfead3"
+title: "JD Vance Names One of His and Trump’s Favorite World Leaders"
+link: "https://www.thedailybeast.com/jd-vance-names-one-of-his-and-trumps-favorite-world-leaders/"
+keywords: [
+0: "story"
+]
+creator: [
+0: "Julia Ornedo"
+]
+description: "Jeff Swensen/Getty ImagesJD Vance has pinpointed one of the world leaders whose company he and the ..."
+content: "JD Vance has pinpointed one of the world leaders whose company he and the president enjoy the most...."
+pubDate: "2025-05-21 04:26:11"
+pubDateTZ: "UTC"
+image_url: "https://thedailybeast-thedailybeast-prod.web.arc-cdn.net/resizer/v2//W34E7TGUWJFBBF4DBXHRLQT5D4.jpg..."
+video_url: null
+source_id: "thedailybeast"
+source_name: "The Daily Beast"
+source_priority: 1258
+source_url: "https://www.thedailybeast.com"
+source_icon: "https://i.bytvi.com/domain_icons/thedailybeast.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 21.39
+neutral: 78.03
+negative: 0.58
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+30: {
+article_id: "73f52b9e913e73c383e767ec4b71cb8e"
+title: "Trump Judge Slams Supreme Court, Says Courts Are ‘Not a Denny’s’"
+link: "https://www.rollingstone.com/politics/politics-news/trump-judge-supreme-court-deportation-immigrant..."
+keywords: [
+0: "immigrants"
+1: "supreme court"
+2: "alien enemies act"
+3: "politics news"
+4: "fifth circuit"
+5: "donald trump"
+6: "deportation"
+7: "politics"
+]
+creator: [
+0: "Andrew Perez"
+]
+description: "Judge James Ho auditions for Trump, clapping back at the justices for demanding judges block Trump’..."
+content: "Last week, the Supreme Court blocked Donald Trump from continuing to use an archaic wartime law to ..."
+pubDate: "2025-05-21 04:25:01"
+pubDateTZ: "UTC"
+image_url: "https://www.rollingstone.com/wp-content/uploads/2025/05/james-ho-trump-one.jpg?crop=1&h=900&w=1600"
+video_url: null
+source_id: "rollingstone"
+source_name: "Rolling Stone"
+source_priority: 2114
+source_url: "https://www.rollingstone.com"
+source_icon: "https://i.bytvi.com/domain_icons/rollingstone.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "entertainment"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.14
+neutral: 0.39
+negative: 99.47
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: [
+0: "slams supreme court"
+]
+duplicate: true
+}
+31: {
+article_id: "4478721fb6f7776f6d31fd5a1d88e065"
+title: "Trump Judge Slams Supreme Court, Says Courts Are ‘Not a Denny’s’"
+link: "https://ca.news.yahoo.com/trump-judge-slams-supreme-court-042501618.html"
+keywords: [
+0: "news"
+]
+creator: [
+0: "Rolling Stone"
+]
+description: "Judge James Ho auditions for Trump, clapping back at the justices for demanding judges block Trump’..."
+content: "Last week, the Supreme Court blocked Donald Trump from continuing to use an archaic wartime law to ..."
+pubDate: "2025-05-21 04:25:01"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/nPPGgmeMqWY0EvUhFxpKNg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-..."
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "canada"
+]
+category: [
+0: "sports"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.14
+neutral: 0.39
+negative: 99.47
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: [
+0: "slams supreme court"
+]
+duplicate: false
+}
+32: {
+article_id: "2af7fb77693419005d28a66f293d0ef5"
+title: "US Justice Department probes ex-New York governor Cuomo over 'false' statements during pandemic tes..."
+link: "https://timesofindia.indiatimes.com/world/us/us-justice-department-probes-ex-new-york-governor-cuom..."
+keywords: null
+creator: null
+description: "Former New York Governor Andrew Cuomo is under investigation by the US Justice Department for alleg..."
+content: "Andrew Cuomo (File) The United States Department of Justice (DoJ) has opened a probe against New Yo..."
+pubDate: "2025-05-21 04:24:32"
+pubDateTZ: "UTC"
+image_url: "https://static.toiimg.com/thumb/msid-121305445,imgsize-43284,width-400,resizemode-4/121305445.jpg"
+video_url: null
+source_id: "toi"
+source_name: "The Times Of India"
+source_priority: 239
+source_url: "https://timesofindia.indiatimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/toi.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.08
+neutral: 0.13
+negative: 99.79
+}
+ai_tag: [
+0: "politics"
+1: "government"
+]
+ai_region: [
+0: "new york,new york,united states of america,north america"
+1: "new york,united states of america,north america"
+]
+ai_org: [
+0: "us justice department"
+]
+duplicate: false
+}
+33: {
+article_id: "8bab2618f6d8db6772797e6e82449f78"
+title: "Q&A with Senior Minister Teo Chee Hean ahead of his retirement"
+link: "https://www.channelnewsasia.com/singapore/teo-chee-hean-retirement-interview-education-ministries-n..."
+keywords: [
+0: "singapore"
+]
+creator: null
+description: "Mr Teo, who is also Coordinating Minister for National Security, spoke to the media about the need ..."
+content: "SINGAPORE: Senior Minister Teo Chee Hean announced last month that he is stepping down after 53 yea..."
+pubDate: "2025-05-21 04:21:00"
+pubDateTZ: "UTC"
+image_url: "https://dam.mediacorp.sg/image/upload/s--AMMEbknU--/c_crop,h_829,w_1474,x_0,y_1/f_auto,q_auto/c_fil..."
+video_url: null
+source_id: "channelnewsasia"
+source_name: "Channel Newsasia"
+source_priority: 4142
+source_url: "https://www.channelnewsasia.com"
+source_icon: "https://i.bytvi.com/domain_icons/channelnewsasia.jpg"
+language: "english"
+country: [
+0: "georgia"
+1: "yemen"
+2: "afghanistan"
+3: "cyprus"
+4: "india"
+5: "singapore"
+6: "saudi arabia"
+7: "maldives"
+8: "japan"
+9: "united arab emirates"
+10: "malaysia"
+11: "china"
+12: "south korea"
+13: "north korea"
+14: "taiwan"
+15: "thailand"
+16: "pakistan"
+17: "mongolia"
+18: "brunei"
+19: "lebanon"
+20: "indonesia"
+21: "kyrgyzstan"
+22: "syria"
+23: "israel"
+24: "bhutan"
+25: "iran"
+26: "turkey"
+27: "armenia"
+28: "qatar"
+29: "philippines"
+30: "hong kong"
+31: "kazakhstan"
+32: "iraq"
+33: "bangladesh"
+34: "laos"
+35: "vietnam"
+36: "timor-leste"
+37: "kuwait"
+38: "myanmar"
+39: "azerbaijan"
+40: "jordan"
+41: "nepal"
+42: "sri lanka"
+43: "uzbekistan"
+44: "turkmenistan"
+45: "macau"
+46: "bahrain"
+47: "cambodia"
+48: "tajikistan"
+49: "oman"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.13
+neutral: 99.79
+negative: 0.08
+}
+ai_tag: [
+0: "government"
+]
+ai_region: null
+ai_org: [
+0: "national security"
+]
+duplicate: false
+}
+34: {
+article_id: "259bcb1ca4006f1c73ec81b32967e0fc"
+title: "4-term senator remembered for training a generation of Missouri leaders"
+link: "https://www.yahoo.com/news/4-term-senator-remembered-training-042000582.html"
+keywords: null
+creator: [
+0: "Politico"
+]
+description: null
+content: "JEFFERSON CITY, Missouri — Christopher “Kit” Bond, a Republican who was Missouri’s youngest governo..."
+pubDate: "2025-05-21 04:20:00"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/iWwQwBI1JW7_GUlj1Ivo0w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD05MzI-..."
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 97.68
+neutral: 1.95
+negative: 0.37
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "jefferson city,missouri,united states of america,north america"
+1: "missouri,united states of america,north america"
+]
+ai_org: null
+duplicate: false
+}
+35: {
+article_id: "390debeef9a6ee4965b6844eecd3b646"
+title: "Goodyear ballot questions get mixed results in early returns"
+link: "https://www.yahoo.com/news/goodyear-ballot-questions-mixed-results-041845793.html"
+keywords: null
+creator: [
+0: "AZCentral | The Arizona Republic"
+]
+description: null
+content: "Goodyear voters weighed in on a handful of changes to the city’s charter and utility franchise deal..."
+pubDate: "2025-05-21 04:18:45"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/vRlk8cFjeu3uPUjTlGE8Yg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04Mjg-..."
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 2.58
+neutral: 97.02
+negative: 0.4
+}
+ai_tag: [
+0: "corporate news"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+36: {
+article_id: "33f97d39f78d2804819cbefb6911c62a"
+title: "Larry Krasner wins Philadelphia's Democratic primary for a third term as district attorney"
+link: "https://timesofindia.indiatimes.com/world/us/larry-krasner-wins-philadelphias-democratic-primary-fo..."
+keywords: null
+creator: null
+description: "Larry Krasner, a progressive district attorney, secured victory in Philadelphia's Democratic primar..."
+content: "Democratic Philadelphia District Attorney Larry Krasner (AP) PHILADELPHIA: Progressive stalwart Lar..."
+pubDate: "2025-05-21 04:17:48"
+pubDateTZ: "UTC"
+image_url: "https://static.toiimg.com/thumb/msid-121306250,imgsize-917835,width-400,resizemode-4/121306250.jpg"
+video_url: null
+source_id: "toi"
+source_name: "The Times Of India"
+source_priority: 239
+source_url: "https://timesofindia.indiatimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/toi.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 75.87
+neutral: 22.77
+negative: 1.36
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "philadelphia,saint ann parish,jamaica,north america"
+1: "philadelphia,pennsylvania,united states of america,north america"
+2: "philadelphia,mississippi,united states of america,north america"
+3: "philadelphia,new york,united states of america,north america"
+]
+ai_org: null
+duplicate: true
+}
+37: {
+article_id: "d9dce2fa9c88e62ef96cb73292a771a7"
+title: "Hontiveros’ goal: Get Senate minority leadership or form independent bloc"
+link: "https://newsinfo.inquirer.net/2062039/hontiveros-goal-get-senate-minority-leadership-or-form-indepe..."
+keywords: [
+0: "latest news stories"
+1: "nation"
+2: "senate"
+3: "risa hontiveros"
+]
+creator: null
+description: "MANILA, Philippines — Sen. Risa Hontiveros has openly declared her interest to become the next Sena..."
+content: "Sen. Risa Hontiveros listens to resource persons during a hearing in the Senate. (Photo from Senate..."
+pubDate: "2025-05-21 04:17:38"
+pubDateTZ: "UTC"
+image_url: "https://newsinfo.inquirer.net/files/2025/03/IMG-6580c6a955781b3685ddce46abc2937b-V-1200x800.jpg"
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 99.39
+neutral: 0.37
+negative: 0.24
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "manila,metro manila,philippines,asia"
+1: "sen"
+2: "philippines,asia"
+]
+ai_org: [
+0: "senate"
+]
+duplicate: false
+}
+38: {
+article_id: "84d2bdcdda6db1a9cc8c9cc16bc1f9de"
+title: "PNP Chief Marbil hopes successor will continue police reforms"
+link: "https://newsinfo.inquirer.net/2062046/pnp-chief-marbil-hopes-successor-will-continue-police-reforms"
+keywords: [
+0: "latest news stories"
+1: "nation"
+2: "rommel marbil"
+3: "pnp chief"
+]
+creator: null
+description: "MANILA, Philippines—Philippine National Police (PNP) Chief Gen. Rommel Marbil hopes his successor w..."
+content: "Philippine National Police chief Gen. Rommel Francisco Marbil —PNP FB PAGE MANILA, Philippines—Phil..."
+pubDate: "2025-05-21 04:17:38"
+pubDateTZ: "UTC"
+image_url: "https://newsinfo.inquirer.net/files/2024/09/Rommel-Francisco-Marbil-02september2024.jpg"
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 26.89
+neutral: 72.57
+negative: 0.54
+}
+ai_tag: [
+0: "politics"
+1: "law and justice"
+]
+ai_region: [
+0: "manila,metro manila,philippines,asia"
+1: "philippines,asia"
+]
+ai_org: [
+0: "philippine national police"
+1: "pnp"
+]
+duplicate: false
+}
+39: {
+article_id: "fd7b2352821c8fef25ba67f84077e881"
+title: "Elon Musk Vows to Stay Tesla CEO For 5 More Years: 'No Doubt About That'"
+link: "https://www.timesnownews.com/business-economy/companies/elon-musk-vows-to-stay-tesla-ceo-for-5-more..."
+keywords: null
+creator: [
+0: "AP"
+]
+description: "At the Qatar Economic Forum, Elon Musk confirmed he plans to remain Tesla CEO for the next five yea..."
+content: "Billionaire Elon Musk said on Tuesday he’s committed to becoming CEO of Tesla in five years’ time a..."
+pubDate: "2025-05-21 04:08:24"
+pubDateTZ: "UTC"
+image_url: "https://images.timesnownews.com/thumb/msid-151686140,thumbsize-817598,width-1280,height-720,resizem..."
+video_url: null
+source_id: "timesnownews"
+source_name: "Times Now News"
+source_priority: 2243
+source_url: "https://www.timesnownews.com"
+source_icon: "https://i.bytvi.com/domain_icons/timesnownews.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 55.58
+neutral: 42.41
+negative: 2.01
+}
+ai_tag: [
+0: "automotive"
+]
+ai_region: null
+ai_org: [
+0: "tesla"
+1: "qatar economic forum"
+]
+duplicate: false
+}
+40: {
+article_id: "954237f7663ab9aeac682c465e2729e5"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.hindustantimes.com/world-news/us-news/they-crossed-the-border-for-better-schools-now-so..."
+keywords: [
+0: "latest"
+]
+creator: null
+description: "They crossed the border for better schools. Now, some families are leaving the US"
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:04:43"
+pubDateTZ: "UTC"
+image_url: "https://www.hindustantimes.com/ht-img/img/2024/12/18/1600x900/World_4_1734523380663_1734523416539.j..."
+video_url: null
+source_id: "hindustantimes"
+source_name: "Hindustan Times"
+source_priority: 933
+source_url: "http://www.hindustantimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/hindustantimes.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.11
+neutral: 99.73
+negative: 0.16
+}
+ai_tag: [
+0: "education"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: true
+}
+41: {
+article_id: "12ffa946da53abb99630f7a85cc20082"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://ca.news.yahoo.com/crossed-border-better-schools-now-040427568.html"
+keywords: [
+0: "news"
+]
+creator: [
+0: "The Canadian Press"
+]
+description: "For the last two months of their life in the United States, José Alberto González and his family ..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:04:27"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/rXLrIfsYikWjqkBvRFODdw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-..."
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "canada"
+]
+category: [
+0: "sports"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.7
+neutral: 99.1
+negative: 0.2
+}
+ai_tag: [
+0: "education"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: true
+}
+42: {
+article_id: "0265b11bb1d4f08acd90b45e8621afe8"
+title: "Japan's minister resigns over rice comment"
+link: "https://www.bangkokpost.com/world/3030885/japans-farm-minister-quits-over-rice-gaffe-in-hit-to-ishi..."
+keywords: null
+creator: null
+description: "TOKYO — Japan's farm minister quit Wednesday after saying he has never needed to buy rice, a commen..."
+content: "TOKYO — Japan's farm minister quit Wednesday after saying he has never needed to buy rice, a commen..."
+pubDate: "2025-05-21 04:04:00"
+pubDateTZ: "UTC"
+image_url: "https://static.bangkokpost.com/media/content/20250521/c1_3030885.jpg"
+video_url: null
+source_id: "bangkokpost"
+source_name: "Bangkok Post"
+source_priority: 7679
+source_url: "http://BangkokPost.com"
+source_icon: "https://i.bytvi.com/domain_icons/bangkokpost.png"
+language: "english"
+country: [
+0: "thailand"
+]
+category: [
+0: "world"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.11
+neutral: 0.1
+negative: 99.8
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "japan,asia"
+1: "tokyo,japan,asia"
+2: "tokyo,tokyo,japan,asia"
+]
+ai_org: null
+duplicate: false
+}
+43: {
+article_id: "9f38af5449c218976bec1bcb916d8ef6"
+title: "Cuomo probe will add to fears Trump is politicizing justice"
+link: "https://www.cnn.com/2025/05/21/politics/trump-cuomo-politicize-justice-department-comey-mciver"
+keywords: null
+creator: null
+description: null
+content: "A new criminal investigation into Andrew Cuomo will fuel concerns that President Donald Trump is li..."
+pubDate: "2025-05-21 04:00:50"
+pubDateTZ: "UTC"
+image_url: "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1232560272.jpg?c=16x9&q=w_800%2Cc_fill"
+video_url: null
+source_id: "cnn"
+source_name: "Cnn"
+source_priority: 165
+source_url: "https://edition.cnn.com"
+source_icon: "https://i.bytvi.com/domain_icons/cnn.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+1: "sports"
+2: "technology"
+3: "business"
+4: "science"
+5: "entertainment"
+6: "health"
+7: "world"
+8: "politics"
+9: "environment"
+10: "tourism"
+11: "education"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.25
+neutral: 0.19
+negative: 99.57
+}
+ai_tag: [
+0: "law and justice"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+44: {
+article_id: "34569defdf2782bcb7111eb726be8a6b"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.independent.co.uk/news/donald-trump-denver-venezuela-el-paso-english-b2754941.html"
+keywords: null
+creator: [
+0: "Bianca Vzquez Toness,Neal Morton,Ariel Gilreath,Sarah Whites-Koditschek and Rebecca Griesbach"
+]
+description: "Even as immigrants in the U.S. avoid going out in public, terrified of encountering immigration aut..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:00:30"
+pubDateTZ: "UTC"
+image_url: "https://static.independent.co.uk/2025/05/21/05/Education_Immigrants_in_School_25713.jpg?crop=1200%3..."
+video_url: null
+source_id: "independentuk"
+source_name: "The Independent"
+source_priority: 290
+source_url: "https://www.independent.co.uk"
+source_icon: "https://i.bytvi.com/domain_icons/independentuk.png"
+language: "english"
+country: [
+0: "united kingdom"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.12
+neutral: 0.09
+negative: 99.79
+}
+ai_tag: [
+0: "immigration and migrant issues"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: true
+}
+45: {
+article_id: "8e9c5200f5ff2c1cd2b91c7dc4130dc1"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.abc4.com/news/national/ap-they-crossed-the-border-for-better-schools-now-some-families-..."
+keywords: [
+0: "national"
+1: "ap u.s. news"
+]
+creator: [
+0: "BIANCA VÁZQUEZ TONESS of The Associated Press, NEAL MORTON and ARIEL GILREATH of The Hechinger Repo..."
+]
+description: "For the last two months of their life in the United States, José Alberto González and his family ..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:00:30"
+pubDateTZ: "UTC"
+image_url: "https://www.abc4.com/wp-content/uploads/sites/4/2025/05/682d512bbbc350.63281005.jpeg?w=900"
+video_url: null
+source_id: "abc4"
+source_name: "Salt Lake City"
+source_priority: 9171
+source_url: "https://www.abc4.com"
+source_icon: "https://i.bytvi.com/domain_icons/abc4.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.7
+neutral: 99.1
+negative: 0.2
+}
+ai_tag: [
+0: "education"
+]
+ai_region: null
+ai_org: null
+duplicate: true
+}
+46: {
+article_id: "24b0694a405355197318e17370a9c4c9"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.kxan.com/news/national-news/ap-they-crossed-the-border-for-better-schools-now-some-fami..."
+keywords: [
+0: "national news"
+1: "ap u.s. news"
+]
+creator: [
+0: "BIANCA VÁZQUEZ TONESS of The Associated Press, NEAL MORTON and ARIEL GILREATH of The Hechinger Repo..."
+]
+description: "For the last two months of their life in the United States, José Alberto González and his family ..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:00:30"
+pubDateTZ: "UTC"
+image_url: "https://www.kxan.com/wp-content/uploads/sites/40/2025/05/682d512ebe46c0.09926855.jpeg?w=900"
+video_url: null
+source_id: "kxan"
+source_name: "Kxan"
+source_priority: 2725
+source_url: "https://www.kxan.com"
+source_icon: "https://i.bytvi.com/domain_icons/kxan.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.7
+neutral: 99.1
+negative: 0.2
+}
+ai_tag: [
+0: "education"
+]
+ai_region: null
+ai_org: null
+duplicate: true
+}
+47: {
+article_id: "3ec5f00892b54e5289b1f19352fd435d"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.wivb.com/news/u-s-headlines/ap-they-crossed-the-border-for-better-schools-now-some-fami..."
+keywords: [
+0: "latest ap news"
+1: "national"
+2: "ap u.s. news"
+3: "u.s. headlines"
+]
+creator: [
+0: "BIANCA VÁZQUEZ TONESS of The Associated Press, NEAL MORTON and ARIEL GILREATH of The Hechinger Repo..."
+]
+description: "For the last two months of their life in the United States, José Alberto González and his family ..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:00:30"
+pubDateTZ: "UTC"
+image_url: "https://www.wivb.com/wp-content/uploads/sites/97/2025/05/682d5131618e17.83590789.jpeg?w=900"
+video_url: null
+source_id: "wivb"
+source_name: "Wivb"
+source_priority: 7165
+source_url: "https://www.wivb.com"
+source_icon: "https://i.bytvi.com/domain_icons/wivb.jpg"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.7
+neutral: 99.1
+negative: 0.2
+}
+ai_tag: [
+0: "education"
+]
+ai_region: null
+ai_org: null
+duplicate: true
+}
+48: {
+article_id: "4003bb7858970156a375f61692932665"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.clickondetroit.com/news/politics/2025/05/21/they-crossed-the-border-for-better-schools-..."
+keywords: null
+creator: [
+0: "Bianca Vázquez Toness Of The Associated Press, Neal Morton And Ariel Gilreath Of The Hechinger Repo..."
+]
+description: "Even as immigrants in the U.S. avoid going out in public, terrified of encountering immigration aut..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:00:30"
+pubDateTZ: "UTC"
+image_url: "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg..."
+video_url: null
+source_id: "clickondetroit"
+source_name: "Clickondetroit"
+source_priority: 3621
+source_url: "https://www.clickondetroit.com"
+source_icon: "https://i.bytvi.com/domain_icons/clickondetroit.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.12
+neutral: 0.09
+negative: 99.79
+}
+ai_tag: [
+0: "immigration and migrant issues"
+]
+ai_region: null
+ai_org: null
+duplicate: true
+}
+49: {
+article_id: "dba6e6501050745718e49fd0470aa85a"
+title: "Portland voters pick longtime school safety advocate Virginia La Forte for Zone 5 school board seat"
+link: "https://www.oregonlive.com/education/2025/05/portland-voters-appear-to-pick-longtime-school-safety-..."
+keywords: null
+creator: [
+0: "Julia Silverman"
+]
+description: "Virginia La Forte, a marketing and communications strategist, won election to the Portland School B..."
+content: "Virginia La Forte , a marketing and communications strategist, won election to the Portland School ..."
+pubDate: "2025-05-21 03:58:16"
+pubDateTZ: "UTC"
+image_url: "https://www.oregonlive.com/resizer/v2/TAZMSKDP2ZASPJ6NF3Q3NZUSTI.png?auth=a07901f897437c94d5b6d45e7..."
+video_url: null
+source_id: "oregonlive"
+source_name: "Oregon Local News"
+source_priority: 2111
+source_url: "https://www.oregonlive.com"
+source_icon: "https://i.bytvi.com/domain_icons/oregonlive.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 60.89
+neutral: 37.33
+negative: 1.78
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "portland,indiana,united states of america,north america"
+1: "portland,wisconsin,united states of america,north america"
+2: "portland,texas,united states of america,north america"
+3: "portland,maine,united states of america,north america"
+4: "portland,tennessee,united states of america,north america"
+5: "portland,oregon,united states of america,north america"
+6: "portland,michigan,united states of america,north america"
+7: "portland,new york,united states of america,north america"
+8: "portland,connecticut,united states of america,north america"
+]
+ai_org: [
+0: "portland school"
+]
+duplicate: false
+}
+]
+nextPage: "1747799896029817692"
+response_headers: {
+Date: "Wed, 21 May 2025 06:16:49 GMT"
+Server: "Apache/2.4.41 (Ubuntu)"
+x_rate_limit_remaining: "179979"
+x_api_limit_remaining: "6745044"
+Access-Control-Allow-Origin: "*"
+Vary: "Accept-Encoding"
+Content-Encoding: "gzip"
+Keep-Alive: "timeout=5, max=100"
+Connection: "Keep-Alive"
+Transfer-Encoding: "chunked"
+Content-Type: "application/json"
+}
+}
+For a comprehensive look, visit our detailed article - Response Objects: Data you receive from NewsData.io News API
+
+Security
+Secure login and authentication: Newsdata.io uses secure methods for user authentication.
+
+Data encryption: Newsdata.io uses encryption to protect user data, both in transit and at rest, to prevent unauthorized access to sensitive information.
+
+Access controls: Newsdata.io may implement strict access controls to prevent unauthorized access to user data and ensure that only authorized personnel can access sensitive information.
+
+Regular security updates and patches: Newsdata.io regularly update their systems and software to fix any discovered vulnerabilities and ensure the security of user data.
+
+Compliance with industry-standard security regulations: Newsdata.io complies with industry-standard security and data protection regulations such as General Data Protection Regulation (GDPR) and the Payment Card Industry Data Security Standard (PCI DSS) to protect user data.
+
+Incident management and incident response: Newsdata.io has a process in place to detect and respond to security incidents, such as data breaches or system failures, to minimize the impact on users.
+
+Regular backups and disaster recovery plans: Newsdata.io maintains regular backups and disaster recovery plans to ensure data availability in case of an incident.
+
+Strict access controls on the part of the company to their own systems and data: Newsdata.io has strict controls on their own systems and data to prevent any unauthorized access.
+
+As a user, you should also take your own security measures such as keeping your API key secure and not sharing it with anyone, use unique and complex passwords and keep your software updated.
+
+API Integration: Newsdata.io has strict controls on how their APIs are integrated into third-party apps to ensure that user data is protected. This could include rate limiting, IP whitelisting, and encryption of data in transit.
+
+Regular Audits: Newsdata.io conducts regular security audits and penetration testing to identify and address vulnerabilities in their systems and third-party apps that integrate with their APIs.
+
+Security awareness and training: Newsdata.io provides the necessary security awareness training to their employees to ensure they are aware of the security threats and how to handle them.
+
+In summary, to maintain security and safety for users at Newsdata.io, the platform should have strict controls on the level of access that third-party apps have to user data, a vetting process for third-party apps, strict controls on API integration, regular security audits and penetration testing, compliance with industry-standard security regulations, incident management process, and security awareness and training for the employees.
+
+Pagination
+Pagination is the process of breaking down a large set of results into smaller, manageable chunks, known as pages. Newsdata.io API supports pagination to allow you to retrieve a large number of articles in smaller chunks.
+
+When you make a request, the default page size is 10 articles per page for free plan and 50 articles per page for paid plans. You can customize the number of articles you get per request.
+
+For example:
+
+Get URL
+
+https://newsdata.io/api/1/latest?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&q=YOUR_QUERY
+
+This request will retrieve 10 articles per page if you are a free user and 50 articles per page for paid plans.
+
+To go to the next page, you need to use next page string given at the bottom of the page
+
+
+Get URL
+
+https://newsdata.io/api/1/latest?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&q=YOUR-QUERY&page=XXXPPPXXXXXXXXXX
+
+This request will retrieve the next page of the request.
+
+Please note that you can only go to the next page from your current page. In case you want to go back to the previous page, you need to save the "nextPage" variable in your database.
+
+For practical understanding visit - All About Pagination in NewsData.io News API
+
+"q", "qInTitle" and "qInMeta" Advanced Search
+There are various ways to search for a topic or an event at Newsdata.io. These filters enable the users to narrow down the search and get accurate results. Please refer the table below to understand all the filters you can use with "q", "qInTitle" or "qInMeta" parameters:
+
+Description	Example
+While searching for a single keyword
+q=social
+While searching for an exact phrase
+q=”social pizza”
+While searching for two keywords or more in the same news article
+q=social AND pizza AND pasta
+When searching for a keyword but need to exclude another keyword
+q=social NOT pizza
+while searching for a keyword but need to exclude multiple keywords
+q=social NOT (pizza AND wildfire)
+While searching for articles containing any one of the keywords.
+q=social OR pizza OR pasta
+The NOT parameter can be used in the OR operators as well. While searching any one of the keywords between two keywords and excluding one keyword.
+q=(pizza OR social) NOT pasta
+"Please note that the maximum character limit for a single query (q", "qInTitle" and "qInMeta") is 100. If the number of characters exceeds this limit, the API will show error. Additionally, please note that the operators AND, OR, NOT, as well as brackets and spaces, are included in the character count."
+
+For practical understanding and use cases of "q", "qInTitle" and "qInMeta" kindly visit - How to use "q", "qInTitle" and "qInMeta" parameters
+
+Rate Limit
+Newsdata.io API has a rate limit, which is the number of requests that can be made to the API within a certain time period. The rate limit is in place to ensure that the API is available for all users and to prevent any one user from overloading the system.
+
+The specific rate limit for the API varies depending on the plan you have subscribed to. For example, a free plan may have a lower rate limit than a paid plan.
+
+The API limit you get for different plans is as follows:
+
+Free Plan: 30 credits every 15 minutes.
+
+Paid plans: 1800 credits every 15 minutes.
+
+If you exceed the rate limit for your plan, the API will return a "Rate Limit Exceeded" error and you will not be able to make any further requests until the rate limit resets after 15 minutes.
+
+For detailed understanding visit - Rate Limit of NewsData.io
+
+API credit limit for different plans
+Newsdata.io API has a credit limit for different subscription plans. The credit limit is a way to control the amount of usage of the API by the users.
+
+The free plan gives access to 200 API credits on a daily basis. The paid plan has an API credit of 20,000 per month for Basic plan, 50,000 per month for Professional plan and 300,000 per month for Corporate plan.
+
+You can opt any of the subscription plans as per your requirements.
+
+Please refer the table below to check the API Credit limit for different Subscription plans:
+
+Plan Type	API Credit	Maximum results via API credit
+Free
+200/day
+10
+basic
+20,000/month
+50
+professional
+50,000/month
+50
+Corporate
+300,000/month
+50
+You can customize the number of articles you get per request from 1 to 50.
+
+For example:
+
+https://newsdata.io/api/1/latest?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&q=YOUR_QUERY&size=15
+
+This request will retrieve 15 articles per page or per request if you are a paid user and if you are a free user then you need to define the size between 1 to 10.
+
+How API credits get consumed
+API credit at Newsdata.io gets consumed each time a request is made to the API. The number of credits consumed do not depend on the type of request made and the data returned.
+
+You can track the API credit limit and monitor the usage of the API at your NewsData.io account.
+
+For detailed understanding visit - How NewsData.io Credits Are Consumed
+
+HTTP response codes
+Newsdata.io API returns various HTTP response codes depending on the request. Below are all the HTTP response codes:
+
+HTTP_response_code	Result	Description
+200
+Successful operation
+This error code is returned when the API request is successful.
+400
+Parameter missing
+This error code is returned when the API request is malformed or contains invalid parameters. For example, if you forget to include the apikey parameter in your request, the API will return a 400 Bad Request error or parameter missing.
+401
+Unauthorized
+This error code is returned when the API key is invalid or missing. Make sure you have a valid API key and that it is included in the request.
+403
+CORS policy failed. IP/Domain restricted
+This error can occur when the client making the API request is trying to access a resource on a different domain or IP address, and the server has not been configured to allow cross-origin resource sharing (CORS) from that domain or IP.
+409
+Parameter duplicate
+This error code can occur when a parameter is passed to the API with a duplicate value. To avoid this error, ensure that all parameters passed have unique values, and only include each parameter once in your request.
+415
+Unsupported type
+This error code can occur when the API is unable to process a request because the request is in a format that is not supported by the API.
+422
+Unprocessable entity
+422 Unprocessable Entity error in Newsdata.io API can occur when the API is unable to process a request due to a semantic error in the request, typically indicating that the request is well-formed, but the server is unable to understand or fulfill it.
+429
+Too many requests
+This error code is returned when you have exceeded the rate limit for your plan. You will need to wait for the rate limit to reset before making further requests.
+500
+Internal server error
+This error code is returned when there is an unexpected error on the server. This is usually a temporary issue and you should try your request again later.
+Latest News ("latest" endpoint)
+The latest news endpoint provides access to the latest and breaking news. The news articles are sorted by the published date. With the "Latest" endpoint, you can access the news articles up to the past 48 hours.
+
+Retrieving the latest news allows you to build experience such as showcasing the latest news, breaking news tickers and analyzing News to better understand their content.
+
+Resource URL
+
+https://newsdata.io/api/1/latest?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&q=YOUR_QUERY
+
+Resource Information
+
+Response Format
+JSON
+Requires Authentication
+Yes
+Rate Limited
+Yes
+Requests per 15 min window
+1800 credits (paid plans)
+Parameters
+Below are the Request Parameters you need to put in your query to run the API.
+
+Name	Required	Description	Default Value	Example
+apikey
+Required
+You need to add your API Key while accessing the newsdata API. 
+How to get the NewsData.io API key.
+id
+Optional
+Search the specific news article from its unique article_id string. You can add up to 50 article id strings in a single query or as per your specified limit.
+id=article_id
+id=article_id_1,article_id_2,
+article_id_3
+q
+Optional
+Search news articles for specific keywords or phrases present in the news title, content, URL, meta keywords and meta description. The value must be URL-encoded and the maximum character limit permitted is 100 characters.
+Please refer Advanced Search for more details
+q=pizza
+qInTitle
+Optional
+Search news articles for specific keywords or phrases present in the news titles only. The value must be URL-encoded and the maximum character limit permitted is 100 characters.
+Note: qInTitle can't be used with q or qInMeta parameter in the same query.
+qInTitle=pizza
+qInMeta
+Optional
+Search news articles for specific keywords or phrases present in the news titles, URL, meta keywords and meta description only. The value must be URL-encoded and the maximum character limit permitted is 100 characters.
+Note: qInMeta can't be used with q or qInTitle parameter in the same query.
+qInMeta=pizza
+timeframe
+Optional
+Search the news articles for a specific timeframe (Minutes and Hours). For hours, you can set a timeframe of 1 to 48, and for minutes, you can define a timeframe of 1m to 2880m. For example, if you want to get the news for the past 6 hours then use timeframe=6 and if you want to get news for the last 15 min then use timeframe=15m.
+Note - You can only use timeframe either in hours or minutes.
+For Hours -
+timeframe=1
+timeframe=6
+timeframe=24
+For Minutes -
+timeframe=15m
+timeframe=45m
+timeframe=90m
+country
+Optional
+Search the news articles from a specific country. You can add up to 5 countries in a single query.
+Check the codes for all the countries here.
+country=au,jp
+category
+Optional
+Search the news articles for a specific category. You can add up to 5 categories in a single query.
+Check the codes for all the categories here.
+category=sports,top
+excludecategory
+Optional
+You can exclude specific categories to search for news articles. You can exclude up to 5 categories in a single query.
+Note: You can use either the 'category' parameter to include specific categories or the 'excludecategory' parameter to exclude them, but not both simultaneously.
+excludecategory=top
+language
+Optional
+Search the news articles for a specific language. You can add up to 5 languages in a single query. 
+Check the codes for all the languages here.
+language=fr,en
+tag
+Optional
+Search the news articles for specific AI-classified tags. You can add up to 5 tags in a single query.
+Check the codes for all the AI tags here.
+(Available only for Professional and Corporate users)
+tag=food,tourism
+sentiment
+Optional
+Search the news articles based on the sentiment of the news article (positive, negative, neutral).
+(Available only for Professional and Corporate users)
+sentiment=positive
+region
+Optional
+Search the news articles for specific geographical regions. The region could be a city, district, county, state, country, or continent. You can add up to 5 regions in a single query.
+(Available only for Corporate users).
+Check out NewsData.io Region blog for practical understanding.
+region=city1,city2
+region=city1-state1-country1,
+city2-country2
+region=state-country
+region=los
+angeles-california-usa
+region=new york,chicago
+domain
+Optional
+Search the news articles for specific domains or news sources. You can add up to 5 domains in a single query. 
+You can check the name of the domains here
+domain=nytimes,bbc
+domainurl
+Optional
+Search the news articles for specific domains or news sources. You can add up to 5 domains in a single query.
+Note: If the domain is incorrect, It will give suggestions in the response
+domainurl=nytimes.com,
+bbc.com,bbc.co.uk
+excludedomain
+Optional
+You can exclude specific domains or news sources to search the news articles. You can exclude up to 5 domains in a single query. Note: If the domain is incorrect, It will give suggestions in the response
+excludedomain=nytimes.com,
+bbc.com,bbc.co.uk
+excludefield
+Optional
+you can limit the response object to search for news articles. You can exclude multiple response objects in a single query.
+Note: You cannot exclude articles response field in the object
+excludefield=pubdate
+excludefield=source_icon,
+pubdate,link
+prioritydomain
+Optional
+Search the news articles only from top news domains. We have categorized prioritydomain in 3 categories.
+Top: Fetches news articles from the top 10% of the news domains
+Medium: Fetches news articles from the top 30% of the news domains. It means it already includes all the news articles of 'top' priority.
+Low: Fetches news articles from the top 50% of the news domains. It means it already includes all the news articles of 'top' and 'medium' priorities.
+prioritydomain=top
+prioritydomain=medium
+prioritydomain=low
+timezone
+Optional
+Search the news articles for a specific timezone. You can add any specific timezone.
+You can check the timezone here
+timezone=America/New_york
+timezone=Asia/Kolkata
+timezone=Asia/Qatar
+timezone=Europe/Berli
+full_content
+Optional
+Search the news articles with full content or without full content. Use '1' for news articles which contain the full_content response object and '0' for news articles which don't contain full_content response object.
+full_content=1
+full_content=0
+image
+Optional
+Search the news articles with featured image or without featured image. Use 1 for articles with featured image and 0 for articles without featured image.
+image=1
+image=0
+video
+Optional
+Search the news articles with videos or without videos. Use 1 for articles with videos and 0 for articles without videos.
+video=1
+video=0
+removeduplicate
+Optional
+The 'removeduplicate' parameter will allow users to filter out duplicate articles. Use 1 to remove duplicate articles.
+(Note: The overall 'removeduplicate' parameter functioning works on the basis of Newsdata.io's internal algorithm. It doesn't imply that the article which has a 'removeduplicate=1' parameter is actually a duplicate article.)
+removeduplicate=1
+size
+Optional
+You can customize the number of articles you get per API request from 1 to 50.
+Free user - 10
+Paid user - 50
+size=25
+page
+Optional
+Use page parameter to navigate to the next page. To know more:
+click here
+Example Queries
+
+1. News from Australia and United States
+
+https://newsdata.io/api/1/latest?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&country=de,hk
+
+{
+status: "success"
+totalResults: 1936
+results: [
+0: {
+article_id: "8d7f01f005f50c1668b263b2a5085214"
+title: "Nicusor Dan reaffirms Romania's strong ties with the U.S."
+link: "https://www.stiripesurse.ro/nicusor-dan-reaffirms-romanias-strong-ties-with-the-us_3692176.html"
+keywords: [
+0: "stiri"
+]
+creator: null
+description: "President-elect Nicusor Dan on Tuesday evening sent a message assuring that Romania is keeping its ..."
+content: "President-elect Nicusor Dan on Tuesday evening sent a message assuring that Romania is keeping its ..."
+pubDate: "2025-05-21 06:02:08"
+pubDateTZ: "UTC"
+image_url: "https://media.stiripesurse.ro/image/202505/w460/media-174759139766290100.png"
+video_url: null
+source_id: "stiripesurse_ro"
+source_name: "Stiri Pe Surse"
+source_priority: 8545
+source_url: "https://www.stiripesurse.ro"
+source_icon: "https://i.bytvi.com/domain_icons/stiripesurse_ro.png"
+language: "english"
+country: [
+0: "romania"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 98.04
+neutral: 1.64
+negative: 0.32
+}
+ai_tag: [
+0: "government"
+]
+ai_region: [
+0: "united states of america,north america"
+1: "romania,europe"
+]
+ai_org: null
+duplicate: false
+}
+1: {
+article_id: "c0451773c45c2b1cdffd1aa5309423c0"
+title: "Counts in Bradfield and Calwell become clearer, while Jacqui Lambie faces a possible problem in the..."
+link: "https://theconversation.com/counts-in-bradfield-and-calwell-become-clearer-while-jacqui-lambie-face..."
+keywords: null
+creator: [
+0: "Adrian Beaumont, Election Analyst (Psephologist) at The Conversation; and Honorary Associate, Schoo..."
+]
+description: "Some seats are so close they may qualify for a re-count."
+content: "Counting in several extremely close seats continues, but some results have become clearer. In Liber..."
+pubDate: "2025-05-21 05:54:46"
+pubDateTZ: "UTC"
+image_url: "https://counter.theconversation.com/content/257122/count.gif"
+video_url: null
+source_id: "theconversation"
+source_name: "The Conversation"
+source_priority: 1694
+source_url: "https://theconversation.com"
+source_icon: "https://i.bytvi.com/domain_icons/theconversation.png"
+language: "english"
+country: [
+0: "australia"
+]
+category: [
+0: "politics"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.25
+neutral: 96.13
+negative: 3.63
+}
+ai_tag: [
+0: "elections"
+]
+ai_region: [
+0: "calwell,australian capital territory,australia,australia/oceania"
+1: "bradfield,england,united kingdom,europe"
+]
+ai_org: [
+0: "senate"
+]
+duplicate: false
+}
+2: {
+article_id: "87aff70c580c21fdac1de5522802be19"
+title: "Union blames council for lack of bin strike deal"
+link: "https://ca.news.yahoo.com/union-blames-council-lack-bin-054747132.html"
+keywords: [
+0: "news"
+]
+creator: [
+0: "BBC"
+]
+description: "Unite accuses Birmingham City Council of failing to meet a promised deadline to present a pay offer..."
+content: "The union representing Birmingham's striking bin workers has broken its near-three-week silence on ..."
+pubDate: "2025-05-21 05:47:47"
+pubDateTZ: "UTC"
+image_url: "https://media.zenfs.com/en/bbc_us_articles_995/ad63a77534fd39bbb35f7eb2d4330285"
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "canada"
+]
+category: [
+0: "sports"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.09
+neutral: 0.12
+negative: 99.79
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: [
+0: "unite"
+1: "birmingham city council"
+]
+duplicate: false
+}
+3: {
+article_id: "d5342a5a2391a3e50cbda2a37e3e222f"
+title: "Rahul Gandhi Called Mir Jafar As BJP Reveals Pakistan Spy Network, Political Uproar Follows"
+link: "https://news.abplive.com/videos/news/india-rahul-gandhi-called-mir-jafar-as-bjp-reveals-pakistan-sp..."
+keywords: [
+0: "india"
+]
+creator: [
+0: "ABP News Bureau"
+]
+description: "Rahul Gandhi recently stirred controversy by referring to Mir Jafar in a heated political exchange ..."
+content: "Rahul Gandhi recently stirred controversy by referring to Mir Jafar in a heated political exchange ..."
+pubDate: "2025-05-21 05:43:22"
+pubDateTZ: "UTC"
+image_url: "https://feeds.abplive.com/onecms/images/uploaded-images/2025/05/21/6084e5d1d6aab0a8b987278b4b881b3c..."
+video_url: null
+source_id: "abplive"
+source_name: "Abp News"
+source_priority: 7754
+source_url: "http://abplive.com"
+source_icon: "https://i.bytvi.com/domain_icons/abplive.jpg"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.1
+neutral: 0.15
+negative: 99.75
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: [
+0: "pakistan spy network"
+]
+duplicate: false
+}
+4: {
+article_id: "7db302512cbc5db9aa983ed86e548457"
+title: "Palace: Marcos to choose law over friendship in Duterte’s ICC case"
+link: "https://newsinfo.inquirer.net/2062067/palace-marcos-to-choose-law-over-friendship-in-dutertes-icc-c..."
+keywords: [
+0: "latest news stories"
+1: "palace"
+2: "ferdinand marcos jr."
+3: "rodrigo duterte"
+4: "nation"
+]
+creator: null
+description: "MANILA, Philippines — “Friend or the law? The President will still choose the law.” This was Malaca..."
+content: "President Ferdinand Marcos Jr. and former President Rodrigo Duterte — Photos from the Presidential ..."
+pubDate: "2025-05-21 05:31:40"
+pubDateTZ: "UTC"
+image_url: "https://newsinfo.inquirer.net/files/2025/01/President-Marcos-Rodrigo-Duterte-21January2025-1200x740..."
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.1
+neutral: 99.75
+negative: 0.15
+}
+ai_tag: [
+0: "government"
+]
+ai_region: [
+0: "manila,metro manila,philippines,asia"
+1: "philippines,asia"
+]
+ai_org: [
+0: "icc"
+]
+duplicate: false
+}
+5: {
+article_id: "bf66d264f9f0ae7070e92421a42c2253"
+title: "Congress Leader Sachin Pilot Pays Tribute To Rajiv Gandhi On His Death Anniversary"
+link: "https://www.ndtv.com/india-news/congress-leader-sachin-pilot-pays-tribute-to-rajiv-gandhi-on-his-de..."
+keywords: null
+creator: null
+description: "Congress leader Sachin Pilot paid homage to former Prime Minister Rajiv Gandhi on his 34th death an..."
+content: "Congress leader Sachin Pilot paid homage to former Prime Minister Rajiv Gandhi on his 34th death an..."
+pubDate: "2025-05-21 05:29:39"
+pubDateTZ: "UTC"
+image_url: "https://c.ndtvimg.com/2024-08/iabat6u_rajiv-gandhi_625x300_20_August_24.jpeg?im=FitAndFill%2Calgori..."
+video_url: null
+source_id: "ndtv"
+source_name: "Ndtv"
+source_priority: 1204
+source_url: "http://www.ndtv.com"
+source_icon: "https://i.bytvi.com/domain_icons/ndtv.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 3.98
+neutral: 95.72
+negative: 0.3
+}
+ai_tag: [
+0: "awards and recognitions"
+1: "politics"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+6: {
+article_id: "06db2d31de03f24a4dbaa0c0f00011d1"
+title: "Flex LNG - First Quarter 2025 Earnings Release"
+link: "https://www.benzinga.com/pressreleases/25/05/n45534995/flex-lng-first-quarter-2025-earnings-release"
+keywords: [
+0: "press releases"
+1: "maritime/shipbuilding"
+2: "earnings"
+3: "transportation/trucking/railroad"
+4: "flngo"
+5: "flng"
+]
+creator: [
+0: "PRNewswire"
+]
+description: "HAMILTON, Bermuda, May 21, 2025 /PRNewswire/ -- Flex LNG Ltd. ("Flex LNG" or the "Company") today a..."
+content: "HAMILTON, Bermuda , May 21, 2025 /PRNewswire/ -- Flex LNG Ltd. ("Flex LNG" or the "Company") today ..."
+pubDate: "2025-05-21 05:26:00"
+pubDateTZ: "UTC"
+image_url: null
+video_url: null
+source_id: "benzinga"
+source_name: "Benzinga"
+source_priority: 3903
+source_url: "https://www.benzinga.com"
+source_icon: "https://i.bytvi.com/domain_icons/benzinga.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "business"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.08
+neutral: 99.85
+negative: 0.08
+}
+ai_tag: [
+0: "corporate news"
+]
+ai_region: [
+0: "hamilton,hamilton,bermuda,north america"
+1: "bermuda,north america"
+2: "hamilton,bermuda,north america"
+]
+ai_org: [
+0: "flex lng ltd"
+]
+duplicate: true
+}
+7: {
+article_id: "6fb9ecf4fa74a6d6d0585fc0997004bb"
+title: "☕️🥐 FC Ptit Dej: Guardiola in tears, epic finals, Reina farewell"
+link: "https://onefootball.com/en/news/fc-ptit-dej-guardiola-in-tears-epic-finals-reina-farewell-41140846"
+keywords: [
+0: "soccer"
+]
+creator: [
+0: "OneFootball"
+]
+description: "This article was translated into English by Artificial Intelligence. You can read the original vers..."
+content: "☕️🥐 FC Ptit Dej: Guardiola in tears, epic finals, Reina farewellThis article was translated into E..."
+pubDate: "2025-05-21 05:26:00"
+pubDateTZ: "UTC"
+image_url: "https://media.zenfs.com/en/onefootball_articles_802/14ed95686e3f5398a81e9083e2e723b5"
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "sports"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 1.04
+neutral: 98.78
+negative: 0.18
+}
+ai_tag: [
+0: "artificial intelligence"
+]
+ai_region: null
+ai_org: [
+0: "artificial intelligence"
+1: "fc ptit dej"
+]
+duplicate: false
+}
+8: {
+article_id: "c3eeddad4b5cd0788a85df529fef226d"
+title: "Flex LNG - First Quarter 2025 Earnings Release"
+link: "https://www.prnewswire.com/news-releases/flex-lng--first-quarter-2025-earnings-release-302461505.ht..."
+keywords: [
+0: "computer & electronics"
+1: "trn"
+2: "scl"
+3: "supply chain/logistics"
+4: "transportation, trucking & railroad"
+5: "maritime & shipbuilding"
+6: "mar"
+7: "cpr"
+]
+creator: null
+description: "HAMILTON, Bermuda, May 21, 2025 /PRNewswire/ -- Flex LNG Ltd. ("Flex LNG" or the "Company") today a..."
+content: "HAMILTON, Bermuda , May 21, 2025 /PRNewswire/ -- Flex LNG Ltd. ("Flex LNG" or the "Company") today ..."
+pubDate: "2025-05-21 05:26:00"
+pubDateTZ: "UTC"
+image_url: null
+video_url: null
+source_id: "cision"
+source_name: "Pr Newswire"
+source_priority: 1625
+source_url: "https://www.prnewswire.com"
+source_icon: "https://i.bytvi.com/domain_icons/cision.jpg"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "business"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.08
+neutral: 99.85
+negative: 0.08
+}
+ai_tag: [
+0: "corporate news"
+]
+ai_region: [
+0: "hamilton,hamilton,bermuda,north america"
+1: "bermuda,north america"
+2: "hamilton,bermuda,north america"
+]
+ai_org: [
+0: "flex lng ltd"
+]
+duplicate: false
+}
+9: {
+article_id: "99dde5e86964f735ab0f854a13102aef"
+title: "Julian Assange’s T-Shirt at Cannes 2025 Lists Names of 4,986 Palestinian Children Killed in Israel-..."
+link: "https://www.timesnownews.com/lifestyle/fashion/julian-assanges-t-shirt-at-cannes-2025-lists-names-o..."
+keywords: null
+creator: [
+0: "Namya Sinha"
+]
+description: "At the Cannes Film Festival 2025, WikiLeaks founder Julian Assange made a powerful statement by wea..."
+content: "This year's Cannes Film Festival has not just been about the power of cinema and women dressed in t..."
+pubDate: "2025-05-21 05:22:52"
+pubDateTZ: "UTC"
+image_url: "https://images.timesnownews.com/thumb/msid-151686111,imgsize-97122,width-1280,height-720/151686111...."
+video_url: null
+source_id: "timesnownews"
+source_name: "Times Now News"
+source_priority: 2243
+source_url: "https://www.timesnownews.com"
+source_icon: "https://i.bytvi.com/domain_icons/timesnownews.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 3.52
+neutral: 2.03
+negative: 94.45
+}
+ai_tag: [
+0: "celebrity"
+1: "movies"
+]
+ai_region: [
+0: "cannes,provence-alpes-côte-d’azur,france,europe"
+]
+ai_org: [
+0: "wikileaks"
+]
+duplicate: false
+}
+10: {
+article_id: "8079e55df0ba697381c9f56e5791c7ea"
+title: "Kerry Stokes’ cabinet dinner was the first of its kind for Roger Cook"
+link: "https://www.smh.com.au/politics/western-australia/kerry-stokes-cabinet-dinner-was-the-first-of-its-..."
+keywords: [
+0: "politics / wa"
+]
+creator: [
+0: "Hamish Hastie"
+]
+description: "The premier said the December dinner was the first time in his career he’d attended such an event, ..."
+content: "A cabinet dinner hosted at media billionaire Kerry Stokes’ riverside mansion in December was the fi..."
+pubDate: "2025-05-21 05:17:29"
+pubDateTZ: "UTC"
+image_url: "https://static.ffx.io/images/$zoom_0.7413,$multiply_0.7554,$ratio_1.777778,$width_1059,$x_148,$y_0/..."
+video_url: null
+source_id: "smh"
+source_name: "The Sydney Morning Herald"
+source_priority: 2251
+source_url: "https://www.smh.com.au"
+source_icon: "https://i.bytvi.com/domain_icons/smh.png"
+language: "english"
+country: [
+0: "australia"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 1.04
+neutral: 10.13
+negative: 88.83
+}
+ai_tag: [
+0: "awards and recognitions"
+1: "politics"
+]
+ai_region: null
+ai_org: null
+duplicate: true
+}
+11: {
+article_id: "bbf4349a9a01e14e7ff9eacf2c725c3a"
+title: "PNP ready for disaster response as rainy season expected in June"
+link: "https://newsinfo.inquirer.net/2062072/fwd-pnp-ready-for-disaster-response-as-rainy-season-expected-..."
+keywords: [
+0: "disaster response"
+1: "nation"
+2: "latest news stories"
+3: "pnp‎"
+4: "rainy season"
+]
+creator: null
+description: "MANILA, Philippines — The Philippine National Police (PNP) assured the public that it was ready to ..."
+content: "Philippine National Police chief Gen. Rommel Marbil inspects the PNP’s disaster response equipment ..."
+pubDate: "2025-05-21 05:16:37"
+pubDateTZ: "UTC"
+image_url: "https://newsinfo.inquirer.net/files/2025/05/IMG_5751-1200x740.jpg"
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 88.4
+neutral: 10.66
+negative: 0.94
+}
+ai_tag: [
+0: "natural disasters"
+]
+ai_region: [
+0: "manila,metro manila,philippines,asia"
+1: "philippines,asia"
+]
+ai_org: [
+0: "philippine national police"
+1: "pnp"
+]
+duplicate: false
+}
+12: {
+article_id: "4c8100e030ab12f628ea6ebc778c01b9"
+title: "Populist vs Popstars: Why Donald Trump is at war with Taylor Swift, Beyonce, and Bruce Springsteen"
+link: "https://timesofindia.indiatimes.com/world/us/populist-vs-popstars-why-donald-trump-is-at-war-with-t..."
+keywords: null
+creator: [
+0: "TOI World Desk"
+]
+description: null
+content: "Donald Trump ’s rise from New York real estate notoriety to right-wing demigod has always danced aw..."
+pubDate: "2025-05-21 05:14:41"
+pubDateTZ: "UTC"
+image_url: "https://static.toiimg.com/thumb/msid-121307129,imgsize-195750,width-400,resizemode-4/121307129.jpg"
+video_url: null
+source_id: "toi"
+source_name: "The Times Of India"
+source_priority: 239
+source_url: "https://timesofindia.indiatimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/toi.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 2.93
+neutral: 8.62
+negative: 88.45
+}
+ai_tag: [
+0: "celebrity"
+]
+ai_region: [
+0: "new york,new york,united states of america,north america"
+1: "new york,united states of america,north america"
+]
+ai_org: [
+0: "popstars"
+]
+duplicate: false
+}
+13: {
+article_id: "0a43c0005a2a55798f1fa00fdd69038d"
+title: "Donald Trump announces historic Golden Dome missile defense project, its cost will be..., it is ins..."
+link: "https://www.india.com/news/world/donald-trump-announces-historic-golden-dome-missile-defense-projec..."
+keywords: [
+0: "president donald trump"
+1: "world"
+2: "golden dome project"
+3: "us golden dome"
+4: "us news"
+5: "us shield golden dome"
+6: "foreign missile attacks"
+]
+creator: null
+description: ""Ronald Reagan (40th US President) wanted it many years ago, but he did not have the technology. Bu..."
+content: ""Ronald Reagan (40th US President) wanted it many years ago, but he did not have the technology. Bu..."
+pubDate: "2025-05-21 05:09:43"
+pubDateTZ: "UTC"
+image_url: "https://static.india.com/wp-content/themes/icom/images/default-big.svg"
+video_url: null
+source_id: "india"
+source_name: "India"
+source_priority: 8067
+source_url: "https://www.india.com"
+source_icon: "https://i.bytvi.com/domain_icons/india.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "world"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 8.31
+neutral: 89.25
+negative: 2.44
+}
+ai_tag: [
+0: "government"
+1: "national security"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: false
+}
+14: {
+article_id: "4189e1df6db34987e881d4e15a58e06e"
+title: "Solon hails Marcos move to reach out, reconcile with Dutertes"
+link: "https://newsinfo.inquirer.net/2062068/fwd-marcos-extending-olive-branch-to-dutertes-expected-of-a-d..."
+keywords: [
+0: "bongbong marcos jr."
+1: "nation"
+2: "latest news stories"
+3: "sara duterte impeachement"
+]
+creator: null
+description: "MANILA, Philippines — President Ferdinand R. Marcos Jr.’s openness to reconciling with the Duterte ..."
+content: "President Ferdinand R. Marcos Jr (L) and Vice President Sara Duterte (PHOTOS: Official Facebook pag..."
+pubDate: "2025-05-21 05:03:26"
+pubDateTZ: "UTC"
+image_url: "https://newsinfo.inquirer.net/files/2024/10/bongbong-marcos-sara-duterte-FILE.png"
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 3.7
+neutral: 87.98
+negative: 8.32
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "manila,metro manila,philippines,asia"
+1: "philippines,asia"
+]
+ai_org: null
+duplicate: false
+}
+15: {
+article_id: "7a9b5f319a5c4fa15008420ab0149c17"
+title: "The secrets of Albo's massive election win REVEALED: PM's 'quiet genius' details five reasons Labor..."
+link: "https://www.dailymail.co.uk/news/article-14733933/Paul-Erickson-Labor-election-guru-Anthony-Albanes..."
+keywords: null
+creator: null
+description: "Paul Erickson, the ALP's National Secretary, told the National Press Club in Canberra on Wednesday ..."
+content: "The secrets of Albo's massive election win REVEALED: PM's 'quiet genius' details five reasons Labor..."
+pubDate: "2025-05-21 05:03:10"
+pubDateTZ: "UTC"
+image_url: "https://i.dailymail.co.uk/1s/2025/05/21/05/98594705-0-image-a-5_1747802483991.jpg"
+video_url: null
+source_id: "dailymailuk"
+source_name: "Mail Online"
+source_priority: 309
+source_url: "https://www.dailymail.co.uk/home/index.html"
+source_icon: "https://i.bytvi.com/domain_icons/dailymailuk.png"
+language: "english"
+country: [
+0: "united kingdom"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 3.18
+neutral: 70.71
+negative: 26.11
+}
+ai_tag: [
+0: "elections"
+]
+ai_region: [
+0: "canberra,australian capital territory,australia,australia/oceania"
+]
+ai_org: [
+0: "labor"
+1: "national press club"
+]
+duplicate: false
+}
+16: {
+article_id: "f8af6b1bf8abbc3df5017432d1231fcb"
+title: "A day after the Coalition split, a backroom push is underway to reunite the Nationals and Liberals"
+link: "https://www.abc.net.au/news/2025-05-21/national-liberal-coalition-push-reunite-after-split/10531936..."
+keywords: [
+0: "government and politics"
+1: "federal parliament"
+2: "federal government"
+3: "liberal party of australia"
+4: "national party of australia"
+5: "political parties and movements"
+]
+creator: [
+0: "Lucy Barbour"
+]
+description: "Just a day after they filed for divorce, there is a backroom push underway to get the Liberals and ..."
+content: "Just a day after they filed for divorce, there is a backroom push underway to get the Liberals and ..."
+pubDate: "2025-05-21 05:00:23"
+pubDateTZ: "UTC"
+image_url: "https://live-production.wcms.abc-cdn.net.au/b7cf9bb3b591502546eae29147ea07a9?cropH=2287&cropW=4066&..."
+video_url: null
+source_id: "abc_net"
+source_name: "Abc"
+source_priority: 3795
+source_url: "https://www.abc.net.au"
+source_icon: "https://i.bytvi.com/domain_icons/abc_net.png"
+language: "english"
+country: [
+0: "australia"
+]
+category: [
+0: "lifestyle"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 2
+neutral: 97.29
+negative: 0.71
+}
+ai_tag: [
+0: "elections"
+1: "government"
+]
+ai_region: null
+ai_org: [
+0: "coalition"
+]
+duplicate: false
+}
+17: {
+article_id: "77c8b68bac12ba4483859914f761ee69"
+title: "Michael McDowell: Migration is the Achilles heel of centrist Europe and Trump is ready to exploit i..."
+link: "https://www.irishtimes.com/opinion/2025/05/21/michael-mcdowell-migration-policy-is-the-eus-biggest-..."
+keywords: [
+0: "opinion"
+]
+creator: [
+0: "Michael McDowell"
+]
+description: "Across the member states, there is growing recognition that the much-vaunted EU migration pact is t..."
+content: "The possibility that Romania would turn away from the EU and towards some engagement with Trumpism,..."
+pubDate: "2025-05-21 05:00:01"
+pubDateTZ: "UTC"
+image_url: "https://www.irishtimes.com/resizer/v2/MUB5TGDW2ZHTHEVZFEJABN6VEU.jpg?auth=f7e60e1795254820f258963c0..."
+video_url: null
+source_id: "irishtimes"
+source_name: "The Irish Times"
+source_priority: 9425
+source_url: "https://www.irishtimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/irishtimes.png"
+language: "english"
+country: [
+0: "ireland"
+]
+category: [
+0: "politics"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 25.24
+neutral: 1.7
+negative: 73.06
+}
+ai_tag: [
+0: "government"
+1: "immigration and migrant issues"
+]
+ai_region: [
+0: "europe"
+]
+ai_org: null
+duplicate: false
+}
+18: {
+article_id: "327d7434b8174b1325906e2e229af70e"
+title: "Suad Aldarra: ‘KatKot’ chocolate and ‘Ugarit Cola’: What life was like under US sanctions"
+link: "https://www.irishtimes.com/opinion/2025/05/21/katkot-chocolate-and-ugarit-cola-what-life-in-syria-w..."
+keywords: [
+0: "opinion"
+]
+creator: [
+0: "Suad Aldarra"
+]
+description: "It felt like the more ways we learned to survive the sanctions regime, the more creative ways it fo..."
+content: "Last week brought another turning point for the country as Donald Trump announced the lifting of lo..."
+pubDate: "2025-05-21 05:00:01"
+pubDateTZ: "UTC"
+image_url: "https://www.irishtimes.com/resizer/v2/EHDYBFEW34UPNURYKNICYI5S6Y.jpg?auth=52bce4402bdbe32757f8e0e45..."
+video_url: null
+source_id: "irishtimes"
+source_name: "The Irish Times"
+source_priority: 9425
+source_url: "https://www.irishtimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/irishtimes.png"
+language: "english"
+country: [
+0: "ireland"
+]
+category: [
+0: "politics"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 2.32
+neutral: 97.43
+negative: 0.25
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: false
+}
+19: {
+article_id: "262bb34a300520b2ab889d56eb72f180"
+title: "Losing friends, fast"
+link: "https://www.politico.eu/newsletter/brussels-playbook/losing-friends-fast/"
+keywords: null
+creator: [
+0: "Tim Ross"
+]
+description: "KIDS SAY THE DARNDEST THINGS: If you’re contemplating a new job as a world leader, like, say, Roman..."
+content: "Presented by Hydrogen EuropeBy TIM ROSSwith ZOYA SHEFTALOVICHPRESENTED BY Send tips here | Tweet @N..."
+pubDate: "2025-05-21 05:00:00"
+pubDateTZ: "UTC"
+image_url: "https://www.politico.eu/wp-content/uploads/2024/09/30/nl-header_politico_brussels-playbook.png"
+video_url: null
+source_id: "politico_eu"
+source_name: "Politico Europe"
+source_priority: 3686
+source_url: "https://www.politico.eu"
+source_icon: "https://i.bytvi.com/domain_icons/politico_eu.png"
+language: "english"
+country: [
+0: "united kingdom"
+1: "ireland"
+2: "spain"
+3: "france"
+4: "germany"
+5: "switzerland"
+6: "poland"
+7: "netherland"
+8: "hungary"
+9: "italy"
+10: "belgium"
+11: "austria"
+12: "greece"
+13: "sweden"
+14: "norway"
+15: "portugal"
+16: "romania"
+17: "czech republic"
+18: "finland"
+19: "denmark"
+]
+category: [
+0: "politics"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 51
+neutral: 9.18
+negative: 39.82
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "romania,europe"
+]
+ai_org: null
+duplicate: false
+}
+20: {
+article_id: "97266106f2ced0ffaeb4e8e0d10edb24"
+title: "Merz’ Nullnummer"
+link: "https://www.politico.eu/newsletter/berlin-playbook/merz-nullnummer/"
+keywords: null
+creator: [
+0: "Hans von der Burchard"
+]
+description: "Moin Berlin, hier schreibt Hans von der Burchard. Gleich ziehe ich mit Gordon Repinski ein paar Bah..."
+content: "Präsentiert von Fuchs & Cie.Von HANS VON DER BURCHARDMit PAULINE VON PEZOLDPRÄSENTIERT VON Schick..."
+pubDate: "2025-05-21 05:00:00"
+pubDateTZ: "UTC"
+image_url: "https://www.politico.eu/wp-content/uploads/2024/09/30/nl-header_politico_berlin-playbook.png"
+video_url: null
+source_id: "politico_eu"
+source_name: "Politico Europe"
+source_priority: 3686
+source_url: "https://www.politico.eu"
+source_icon: "https://i.bytvi.com/domain_icons/politico_eu.png"
+language: "german"
+country: [
+0: "germany"
+]
+category: [
+0: "politics"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.09
+neutral: 99.78
+negative: 0.13
+}
+ai_tag: [
+0: "awards and recognitions"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+21: {
+article_id: "761e08f683e17eae619ed9f64a82449d"
+title: "Japan farm minister resigns over free rice gaffe"
+link: "https://sg.news.yahoo.com/japan-farm-minister-resigns-over-045716038.html"
+keywords: null
+creator: [
+0: "AFP News"
+]
+description: null
+content: "Japan's farm minister resigned Wednesday after a gaffe about rice drew public fury in a country exp..."
+pubDate: "2025-05-21 04:57:16"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/7_b74xsp.PUxJuGH_JSlpg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04Mjg-..."
+video_url: null
+source_id: "yahoo_sg"
+source_name: "Yahoo!news"
+source_priority: 17
+source_url: "https://sg.news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo_sg.png"
+language: "english"
+country: [
+0: "singapore"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.1
+neutral: 0.14
+negative: 99.76
+}
+ai_tag: null
+ai_region: [
+0: "japan,asia"
+]
+ai_org: null
+duplicate: true
+}
+22: {
+article_id: "479fbf6bbeb363a1ada93758da70a6a0"
+title: "How Biden's prostate cancer diagnosis went undetected for so long"
+link: "https://www.firstpost.com/explainers/how-bidens-prostate-cancer-diagnosis-went-undetected-for-so-lo..."
+keywords: [
+0: "explainers"
+]
+creator: [
+0: "Firstpost"
+]
+description: "Former US President Joe Biden has been diagnosed with 'aggressive' prostate cancer. But, how did th..."
+content: "Former United States President Joe Biden has been diagnosed with aggressive prostate cancer on Sund..."
+pubDate: "2025-05-21 04:57:07"
+pubDateTZ: "UTC"
+image_url: "https://images.firstpost.com/uploads/2025/05/History-1-22-2025-05-84d8e312be1270853dc9aeacfacdfc3e...."
+video_url: null
+source_id: "firstpost"
+source_name: "Firstpost"
+source_priority: 5906
+source_url: "https://www.firstpost.com"
+source_icon: "https://i.bytvi.com/domain_icons/firstpost.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.1
+neutral: 0.29
+negative: 99.61
+}
+ai_tag: [
+0: "diseases"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: false
+}
+23: {
+article_id: "0f27418718d91d4f0390c6e1f88a6034"
+title: "Donald Trump's 'tough guy' once celebrated 9/11 attacks, old video surfaces"
+link: "https://timesofindia.indiatimes.com/world/us/donald-trumps-syrian-tough-guy-ahmad-al-sharaa-once-ce..."
+keywords: null
+creator: null
+description: "A controversial video of Syrian President Ahmad al-Sharaa, formerly a jihadist, resurfaced, showing..."
+content: "In this photo released by the Saudi Royal Palace, US President Donald Trump shakes hands with Syria..."
+pubDate: "2025-05-21 04:56:51"
+pubDateTZ: "UTC"
+image_url: "https://static.toiimg.com/thumb/msid-121306647,imgsize-1355742,width-400,resizemode-4/121306647.jpg"
+video_url: null
+source_id: "toi"
+source_name: "The Times Of India"
+source_priority: 239
+source_url: "https://timesofindia.indiatimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/toi.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.15
+neutral: 0.15
+negative: 99.7
+}
+ai_tag: [
+0: "conflicts & war"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+24: {
+article_id: "0b1fff3eca99339414d77500200bb59c"
+title: "Hospital waits 'affecting lives' - watchdog"
+link: "https://ca.news.yahoo.com/hospital-waits-affecting-lives-watchdog-045341906.html"
+keywords: [
+0: "health"
+]
+creator: [
+0: "BBC"
+]
+description: "Healthwatch Suffolk says: "We are seeing an epidemic of pain that needs to be addressed.""
+content: "Waits for hospital treatment "are seriously affecting people's lives", a health watchdog has said. ..."
+pubDate: "2025-05-21 04:53:41"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/chTLIA.m1IZQ4hC5S34ItA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-..."
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "canada"
+]
+category: [
+0: "sports"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.08
+neutral: 99.79
+negative: 0.13
+}
+ai_tag: [
+0: "diseases"
+]
+ai_region: null
+ai_org: [
+0: "healthwatch suffolk"
+]
+duplicate: false
+}
+25: {
+article_id: "038ded617d7faf4b32e4deb4ac77e095"
+title: "Nashik Guardian Minister Race Heats Up After Chhagan Bhujbal’s Return To Cabinet"
+link: "https://www.news18.com/politics/nashik-guardian-minister-race-heats-up-after-chhagan-bhujbals-retur..."
+keywords: [
+0: "latest"
+]
+creator: null
+description: null
+content: "Bhujbal has said he is ready to take on any responsibility assigned by the Chief Minister. However,..."
+pubDate: "2025-05-21 04:42:47"
+pubDateTZ: "UTC"
+image_url: "https://images.news18.com/ibnlive/uploads/2025/05/bhujbal-oath-2025-05-d5408a33dd2eacbdf545f0631fc6..."
+video_url: null
+source_id: "news18"
+source_name: "News 18"
+source_priority: 1063
+source_url: "https://www.news18.com"
+source_icon: "https://i.bytvi.com/domain_icons/news18.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.4
+neutral: 99.44
+negative: 0.16
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: [
+0: "nashik guardian"
+]
+duplicate: false
+}
+26: {
+article_id: "faa236980fef96ea3be5a9bc87ae6765"
+title: "Dennis Padilla has accepted his election defeat, says brother Gene"
+link: "https://entertainment.inquirer.net/611321/dennis-padilla-has-accepted-his-election-defeat-says-brot..."
+keywords: [
+0: "dennis padilla"
+1: "latest stories"
+2: "celebrities and showbiz"
+]
+creator: null
+description: "Gene Padilla shared that his brother Dennis Padilla remains in good spirits and has accepted his de..."
+content: "Gene Padilla at the premiere night of “Isang Komedya sa Langit” on Tuesday, May 20. Image: INQUIRER..."
+pubDate: "2025-05-21 04:32:28"
+pubDateTZ: "UTC"
+image_url: "https://entertainment.inquirer.net/files/2025/05/WhatsApp-Image-2025-05-21-at-11.06.57-1200x675.jpe..."
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "entertainment"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 2.91
+neutral: 96.58
+negative: 0.51
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+27: {
+article_id: "02982e2803704c7098a4db9f724dc113"
+title: "Justice Department is investigating NYC mayoral candidate Andrew Cuomo over testimony to Congress"
+link: "https://www.cnbc.com/2025/05/21/justice-department-is-investigating-nyc-mayoral-candidate-andrew-cu..."
+keywords: null
+creator: null
+description: "The move comes after the Trump administration helped get corruption charges dropped against Eric Ad..."
+content: "Former New York Gov. Andrew Cuomo. Pool | Getty Images News | Getty Images The Justice Department i..."
+pubDate: "2025-05-21 04:29:45"
+pubDateTZ: "UTC"
+image_url: "https://image.cnbcfm.com/api/v1/image/108148470-1747800862316-gettyimages-1231769342-Virus_Outbreak..."
+video_url: null
+source_id: "cnbc"
+source_name: "Cnbc"
+source_priority: 379
+source_url: "http://cnbc.com"
+source_icon: "https://i.bytvi.com/domain_icons/cnbc.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "business"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.16
+neutral: 0.73
+negative: 99.11
+}
+ai_tag: [
+0: "elections"
+1: "government"
+]
+ai_region: null
+ai_org: [
+0: "justice department"
+1: "nyc"
+]
+duplicate: true
+}
+28: {
+article_id: "14571ff8959b257ef71a1edeb4a50fb5"
+title: "Spy allegations, heart attacks and Chevron gripes as departing MPs take aim"
+link: "https://www.abc.net.au/news/2025-05-21/outgoing-wa-upper-house-mps-eventful-valedictorian-speeches/..."
+keywords: [
+0: "ministers and parliamentary secretaries"
+1: "state and territory government"
+2: "government and politics"
+3: "parliament"
+4: "state and territory parliament"
+]
+creator: [
+0: "Keane Bourke"
+]
+description: "The usually docile Legislatie Council hears a series of explosive claims from departing members."
+content: "The WA Parliament's typically docile upper house has seen an eventful penultimate sitting, with one..."
+pubDate: "2025-05-21 04:26:23"
+pubDateTZ: "UTC"
+image_url: "https://live-production.wcms.abc-cdn.net.au/53daf974f29d9ecd15735045c64289e4?cropH=1080&cropW=1920&..."
+video_url: null
+source_id: "abc_net"
+source_name: "Abc"
+source_priority: 3795
+source_url: "https://www.abc.net.au"
+source_icon: "https://i.bytvi.com/domain_icons/abc_net.png"
+language: "english"
+country: [
+0: "australia"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.11
+neutral: 0.08
+negative: 99.82
+}
+ai_tag: [
+0: "politics"
+1: "accidents"
+]
+ai_region: null
+ai_org: [
+0: "wa parliament"
+1: "chevron"
+2: "legislatie council"
+]
+duplicate: false
+}
+29: {
+article_id: "4d47db7689fff0f7863bd654ccbfead3"
+title: "JD Vance Names One of His and Trump’s Favorite World Leaders"
+link: "https://www.thedailybeast.com/jd-vance-names-one-of-his-and-trumps-favorite-world-leaders/"
+keywords: [
+0: "story"
+]
+creator: [
+0: "Julia Ornedo"
+]
+description: "Jeff Swensen/Getty ImagesJD Vance has pinpointed one of the world leaders whose company he and the ..."
+content: "JD Vance has pinpointed one of the world leaders whose company he and the president enjoy the most...."
+pubDate: "2025-05-21 04:26:11"
+pubDateTZ: "UTC"
+image_url: "https://thedailybeast-thedailybeast-prod.web.arc-cdn.net/resizer/v2//W34E7TGUWJFBBF4DBXHRLQT5D4.jpg..."
+video_url: null
+source_id: "thedailybeast"
+source_name: "The Daily Beast"
+source_priority: 1258
+source_url: "https://www.thedailybeast.com"
+source_icon: "https://i.bytvi.com/domain_icons/thedailybeast.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 21.39
+neutral: 78.03
+negative: 0.58
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+30: {
+article_id: "73f52b9e913e73c383e767ec4b71cb8e"
+title: "Trump Judge Slams Supreme Court, Says Courts Are ‘Not a Denny’s’"
+link: "https://www.rollingstone.com/politics/politics-news/trump-judge-supreme-court-deportation-immigrant..."
+keywords: [
+0: "immigrants"
+1: "supreme court"
+2: "alien enemies act"
+3: "politics news"
+4: "fifth circuit"
+5: "donald trump"
+6: "deportation"
+7: "politics"
+]
+creator: [
+0: "Andrew Perez"
+]
+description: "Judge James Ho auditions for Trump, clapping back at the justices for demanding judges block Trump’..."
+content: "Last week, the Supreme Court blocked Donald Trump from continuing to use an archaic wartime law to ..."
+pubDate: "2025-05-21 04:25:01"
+pubDateTZ: "UTC"
+image_url: "https://www.rollingstone.com/wp-content/uploads/2025/05/james-ho-trump-one.jpg?crop=1&h=900&w=1600"
+video_url: null
+source_id: "rollingstone"
+source_name: "Rolling Stone"
+source_priority: 2114
+source_url: "https://www.rollingstone.com"
+source_icon: "https://i.bytvi.com/domain_icons/rollingstone.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "entertainment"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.14
+neutral: 0.39
+negative: 99.47
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: [
+0: "slams supreme court"
+]
+duplicate: true
+}
+31: {
+article_id: "4478721fb6f7776f6d31fd5a1d88e065"
+title: "Trump Judge Slams Supreme Court, Says Courts Are ‘Not a Denny’s’"
+link: "https://ca.news.yahoo.com/trump-judge-slams-supreme-court-042501618.html"
+keywords: [
+0: "news"
+]
+creator: [
+0: "Rolling Stone"
+]
+description: "Judge James Ho auditions for Trump, clapping back at the justices for demanding judges block Trump’..."
+content: "Last week, the Supreme Court blocked Donald Trump from continuing to use an archaic wartime law to ..."
+pubDate: "2025-05-21 04:25:01"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/nPPGgmeMqWY0EvUhFxpKNg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-..."
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "canada"
+]
+category: [
+0: "sports"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.14
+neutral: 0.39
+negative: 99.47
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: null
+ai_org: [
+0: "slams supreme court"
+]
+duplicate: false
+}
+32: {
+article_id: "2af7fb77693419005d28a66f293d0ef5"
+title: "US Justice Department probes ex-New York governor Cuomo over 'false' statements during pandemic tes..."
+link: "https://timesofindia.indiatimes.com/world/us/us-justice-department-probes-ex-new-york-governor-cuom..."
+keywords: null
+creator: null
+description: "Former New York Governor Andrew Cuomo is under investigation by the US Justice Department for alleg..."
+content: "Andrew Cuomo (File) The United States Department of Justice (DoJ) has opened a probe against New Yo..."
+pubDate: "2025-05-21 04:24:32"
+pubDateTZ: "UTC"
+image_url: "https://static.toiimg.com/thumb/msid-121305445,imgsize-43284,width-400,resizemode-4/121305445.jpg"
+video_url: null
+source_id: "toi"
+source_name: "The Times Of India"
+source_priority: 239
+source_url: "https://timesofindia.indiatimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/toi.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.08
+neutral: 0.13
+negative: 99.79
+}
+ai_tag: [
+0: "politics"
+1: "government"
+]
+ai_region: [
+0: "new york,new york,united states of america,north america"
+1: "new york,united states of america,north america"
+]
+ai_org: [
+0: "us justice department"
+]
+duplicate: false
+}
+33: {
+article_id: "8bab2618f6d8db6772797e6e82449f78"
+title: "Q&A with Senior Minister Teo Chee Hean ahead of his retirement"
+link: "https://www.channelnewsasia.com/singapore/teo-chee-hean-retirement-interview-education-ministries-n..."
+keywords: [
+0: "singapore"
+]
+creator: null
+description: "Mr Teo, who is also Coordinating Minister for National Security, spoke to the media about the need ..."
+content: "SINGAPORE: Senior Minister Teo Chee Hean announced last month that he is stepping down after 53 yea..."
+pubDate: "2025-05-21 04:21:00"
+pubDateTZ: "UTC"
+image_url: "https://dam.mediacorp.sg/image/upload/s--AMMEbknU--/c_crop,h_829,w_1474,x_0,y_1/f_auto,q_auto/c_fil..."
+video_url: null
+source_id: "channelnewsasia"
+source_name: "Channel Newsasia"
+source_priority: 4142
+source_url: "https://www.channelnewsasia.com"
+source_icon: "https://i.bytvi.com/domain_icons/channelnewsasia.jpg"
+language: "english"
+country: [
+0: "georgia"
+1: "yemen"
+2: "afghanistan"
+3: "cyprus"
+4: "india"
+5: "singapore"
+6: "saudi arabia"
+7: "maldives"
+8: "japan"
+9: "united arab emirates"
+10: "malaysia"
+11: "china"
+12: "south korea"
+13: "north korea"
+14: "taiwan"
+15: "thailand"
+16: "pakistan"
+17: "mongolia"
+18: "brunei"
+19: "lebanon"
+20: "indonesia"
+21: "kyrgyzstan"
+22: "syria"
+23: "israel"
+24: "bhutan"
+25: "iran"
+26: "turkey"
+27: "armenia"
+28: "qatar"
+29: "philippines"
+30: "hong kong"
+31: "kazakhstan"
+32: "iraq"
+33: "bangladesh"
+34: "laos"
+35: "vietnam"
+36: "timor-leste"
+37: "kuwait"
+38: "myanmar"
+39: "azerbaijan"
+40: "jordan"
+41: "nepal"
+42: "sri lanka"
+43: "uzbekistan"
+44: "turkmenistan"
+45: "macau"
+46: "bahrain"
+47: "cambodia"
+48: "tajikistan"
+49: "oman"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.13
+neutral: 99.79
+negative: 0.08
+}
+ai_tag: [
+0: "government"
+]
+ai_region: null
+ai_org: [
+0: "national security"
+]
+duplicate: false
+}
+34: {
+article_id: "259bcb1ca4006f1c73ec81b32967e0fc"
+title: "4-term senator remembered for training a generation of Missouri leaders"
+link: "https://www.yahoo.com/news/4-term-senator-remembered-training-042000582.html"
+keywords: null
+creator: [
+0: "Politico"
+]
+description: null
+content: "JEFFERSON CITY, Missouri — Christopher “Kit” Bond, a Republican who was Missouri’s youngest governo..."
+pubDate: "2025-05-21 04:20:00"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/iWwQwBI1JW7_GUlj1Ivo0w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD05MzI-..."
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 97.68
+neutral: 1.95
+negative: 0.37
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "jefferson city,missouri,united states of america,north america"
+1: "missouri,united states of america,north america"
+]
+ai_org: null
+duplicate: false
+}
+35: {
+article_id: "390debeef9a6ee4965b6844eecd3b646"
+title: "Goodyear ballot questions get mixed results in early returns"
+link: "https://www.yahoo.com/news/goodyear-ballot-questions-mixed-results-041845793.html"
+keywords: null
+creator: [
+0: "AZCentral | The Arizona Republic"
+]
+description: null
+content: "Goodyear voters weighed in on a handful of changes to the city’s charter and utility franchise deal..."
+pubDate: "2025-05-21 04:18:45"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/vRlk8cFjeu3uPUjTlGE8Yg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD04Mjg-..."
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 2.58
+neutral: 97.02
+negative: 0.4
+}
+ai_tag: [
+0: "corporate news"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+36: {
+article_id: "33f97d39f78d2804819cbefb6911c62a"
+title: "Larry Krasner wins Philadelphia's Democratic primary for a third term as district attorney"
+link: "https://timesofindia.indiatimes.com/world/us/larry-krasner-wins-philadelphias-democratic-primary-fo..."
+keywords: null
+creator: null
+description: "Larry Krasner, a progressive district attorney, secured victory in Philadelphia's Democratic primar..."
+content: "Democratic Philadelphia District Attorney Larry Krasner (AP) PHILADELPHIA: Progressive stalwart Lar..."
+pubDate: "2025-05-21 04:17:48"
+pubDateTZ: "UTC"
+image_url: "https://static.toiimg.com/thumb/msid-121306250,imgsize-917835,width-400,resizemode-4/121306250.jpg"
+video_url: null
+source_id: "toi"
+source_name: "The Times Of India"
+source_priority: 239
+source_url: "https://timesofindia.indiatimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/toi.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 75.87
+neutral: 22.77
+negative: 1.36
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "philadelphia,saint ann parish,jamaica,north america"
+1: "philadelphia,pennsylvania,united states of america,north america"
+2: "philadelphia,mississippi,united states of america,north america"
+3: "philadelphia,new york,united states of america,north america"
+]
+ai_org: null
+duplicate: true
+}
+37: {
+article_id: "d9dce2fa9c88e62ef96cb73292a771a7"
+title: "Hontiveros’ goal: Get Senate minority leadership or form independent bloc"
+link: "https://newsinfo.inquirer.net/2062039/hontiveros-goal-get-senate-minority-leadership-or-form-indepe..."
+keywords: [
+0: "latest news stories"
+1: "nation"
+2: "senate"
+3: "risa hontiveros"
+]
+creator: null
+description: "MANILA, Philippines — Sen. Risa Hontiveros has openly declared her interest to become the next Sena..."
+content: "Sen. Risa Hontiveros listens to resource persons during a hearing in the Senate. (Photo from Senate..."
+pubDate: "2025-05-21 04:17:38"
+pubDateTZ: "UTC"
+image_url: "https://newsinfo.inquirer.net/files/2025/03/IMG-6580c6a955781b3685ddce46abc2937b-V-1200x800.jpg"
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 99.39
+neutral: 0.37
+negative: 0.24
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "manila,metro manila,philippines,asia"
+1: "sen"
+2: "philippines,asia"
+]
+ai_org: [
+0: "senate"
+]
+duplicate: false
+}
+38: {
+article_id: "84d2bdcdda6db1a9cc8c9cc16bc1f9de"
+title: "PNP Chief Marbil hopes successor will continue police reforms"
+link: "https://newsinfo.inquirer.net/2062046/pnp-chief-marbil-hopes-successor-will-continue-police-reforms"
+keywords: [
+0: "latest news stories"
+1: "nation"
+2: "rommel marbil"
+3: "pnp chief"
+]
+creator: null
+description: "MANILA, Philippines—Philippine National Police (PNP) Chief Gen. Rommel Marbil hopes his successor w..."
+content: "Philippine National Police chief Gen. Rommel Francisco Marbil —PNP FB PAGE MANILA, Philippines—Phil..."
+pubDate: "2025-05-21 04:17:38"
+pubDateTZ: "UTC"
+image_url: "https://newsinfo.inquirer.net/files/2024/09/Rommel-Francisco-Marbil-02september2024.jpg"
+video_url: null
+source_id: "inquirer"
+source_name: "Inquirer"
+source_priority: 9835
+source_url: "https://www.inquirer.net"
+source_icon: "https://i.bytvi.com/domain_icons/inquirer.png"
+language: "english"
+country: [
+0: "philippines"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 26.89
+neutral: 72.57
+negative: 0.54
+}
+ai_tag: [
+0: "politics"
+1: "law and justice"
+]
+ai_region: [
+0: "manila,metro manila,philippines,asia"
+1: "philippines,asia"
+]
+ai_org: [
+0: "philippine national police"
+1: "pnp"
+]
+duplicate: false
+}
+39: {
+article_id: "fd7b2352821c8fef25ba67f84077e881"
+title: "Elon Musk Vows to Stay Tesla CEO For 5 More Years: 'No Doubt About That'"
+link: "https://www.timesnownews.com/business-economy/companies/elon-musk-vows-to-stay-tesla-ceo-for-5-more..."
+keywords: null
+creator: [
+0: "AP"
+]
+description: "At the Qatar Economic Forum, Elon Musk confirmed he plans to remain Tesla CEO for the next five yea..."
+content: "Billionaire Elon Musk said on Tuesday he’s committed to becoming CEO of Tesla in five years’ time a..."
+pubDate: "2025-05-21 04:08:24"
+pubDateTZ: "UTC"
+image_url: "https://images.timesnownews.com/thumb/msid-151686140,thumbsize-817598,width-1280,height-720,resizem..."
+video_url: null
+source_id: "timesnownews"
+source_name: "Times Now News"
+source_priority: 2243
+source_url: "https://www.timesnownews.com"
+source_icon: "https://i.bytvi.com/domain_icons/timesnownews.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 55.58
+neutral: 42.41
+negative: 2.01
+}
+ai_tag: [
+0: "automotive"
+]
+ai_region: null
+ai_org: [
+0: "tesla"
+1: "qatar economic forum"
+]
+duplicate: false
+}
+40: {
+article_id: "954237f7663ab9aeac682c465e2729e5"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.hindustantimes.com/world-news/us-news/they-crossed-the-border-for-better-schools-now-so..."
+keywords: [
+0: "latest"
+]
+creator: null
+description: "They crossed the border for better schools. Now, some families are leaving the US"
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:04:43"
+pubDateTZ: "UTC"
+image_url: "https://www.hindustantimes.com/ht-img/img/2024/12/18/1600x900/World_4_1734523380663_1734523416539.j..."
+video_url: null
+source_id: "hindustantimes"
+source_name: "Hindustan Times"
+source_priority: 933
+source_url: "http://www.hindustantimes.com"
+source_icon: "https://i.bytvi.com/domain_icons/hindustantimes.png"
+language: "english"
+country: [
+0: "india"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.11
+neutral: 99.73
+negative: 0.16
+}
+ai_tag: [
+0: "education"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: true
+}
+41: {
+article_id: "12ffa946da53abb99630f7a85cc20082"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://ca.news.yahoo.com/crossed-border-better-schools-now-040427568.html"
+keywords: [
+0: "news"
+]
+creator: [
+0: "The Canadian Press"
+]
+description: "For the last two months of their life in the United States, José Alberto González and his family ..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:04:27"
+pubDateTZ: "UTC"
+image_url: "https://s.yimg.com/ny/api/res/1.2/rXLrIfsYikWjqkBvRFODdw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-..."
+video_url: null
+source_id: "yahoo"
+source_name: "Yahoo! News"
+source_priority: 17
+source_url: "https://news.yahoo.com"
+source_icon: "https://i.bytvi.com/domain_icons/yahoo.png"
+language: "english"
+country: [
+0: "canada"
+]
+category: [
+0: "sports"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.7
+neutral: 99.1
+negative: 0.2
+}
+ai_tag: [
+0: "education"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: true
+}
+42: {
+article_id: "0265b11bb1d4f08acd90b45e8621afe8"
+title: "Japan's minister resigns over rice comment"
+link: "https://www.bangkokpost.com/world/3030885/japans-farm-minister-quits-over-rice-gaffe-in-hit-to-ishi..."
+keywords: null
+creator: null
+description: "TOKYO — Japan's farm minister quit Wednesday after saying he has never needed to buy rice, a commen..."
+content: "TOKYO — Japan's farm minister quit Wednesday after saying he has never needed to buy rice, a commen..."
+pubDate: "2025-05-21 04:04:00"
+pubDateTZ: "UTC"
+image_url: "https://static.bangkokpost.com/media/content/20250521/c1_3030885.jpg"
+video_url: null
+source_id: "bangkokpost"
+source_name: "Bangkok Post"
+source_priority: 7679
+source_url: "http://BangkokPost.com"
+source_icon: "https://i.bytvi.com/domain_icons/bangkokpost.png"
+language: "english"
+country: [
+0: "thailand"
+]
+category: [
+0: "world"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.11
+neutral: 0.1
+negative: 99.8
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "japan,asia"
+1: "tokyo,japan,asia"
+2: "tokyo,tokyo,japan,asia"
+]
+ai_org: null
+duplicate: false
+}
+43: {
+article_id: "9f38af5449c218976bec1bcb916d8ef6"
+title: "Cuomo probe will add to fears Trump is politicizing justice"
+link: "https://www.cnn.com/2025/05/21/politics/trump-cuomo-politicize-justice-department-comey-mciver"
+keywords: null
+creator: null
+description: null
+content: "A new criminal investigation into Andrew Cuomo will fuel concerns that President Donald Trump is li..."
+pubDate: "2025-05-21 04:00:50"
+pubDateTZ: "UTC"
+image_url: "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1232560272.jpg?c=16x9&q=w_800%2Cc_fill"
+video_url: null
+source_id: "cnn"
+source_name: "Cnn"
+source_priority: 165
+source_url: "https://edition.cnn.com"
+source_icon: "https://i.bytvi.com/domain_icons/cnn.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+1: "sports"
+2: "technology"
+3: "business"
+4: "science"
+5: "entertainment"
+6: "health"
+7: "world"
+8: "politics"
+9: "environment"
+10: "tourism"
+11: "education"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.25
+neutral: 0.19
+negative: 99.57
+}
+ai_tag: [
+0: "law and justice"
+]
+ai_region: null
+ai_org: null
+duplicate: false
+}
+44: {
+article_id: "34569defdf2782bcb7111eb726be8a6b"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.independent.co.uk/news/donald-trump-denver-venezuela-el-paso-english-b2754941.html"
+keywords: null
+creator: [
+0: "Bianca Vzquez Toness,Neal Morton,Ariel Gilreath,Sarah Whites-Koditschek and Rebecca Griesbach"
+]
+description: "Even as immigrants in the U.S. avoid going out in public, terrified of encountering immigration aut..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:00:30"
+pubDateTZ: "UTC"
+image_url: "https://static.independent.co.uk/2025/05/21/05/Education_Immigrants_in_School_25713.jpg?crop=1200%3..."
+video_url: null
+source_id: "independentuk"
+source_name: "The Independent"
+source_priority: 290
+source_url: "https://www.independent.co.uk"
+source_icon: "https://i.bytvi.com/domain_icons/independentuk.png"
+language: "english"
+country: [
+0: "united kingdom"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.12
+neutral: 0.09
+negative: 99.79
+}
+ai_tag: [
+0: "immigration and migrant issues"
+]
+ai_region: [
+0: "united states of america,north america"
+]
+ai_org: null
+duplicate: true
+}
+45: {
+article_id: "8e9c5200f5ff2c1cd2b91c7dc4130dc1"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.abc4.com/news/national/ap-they-crossed-the-border-for-better-schools-now-some-families-..."
+keywords: [
+0: "national"
+1: "ap u.s. news"
+]
+creator: [
+0: "BIANCA VÁZQUEZ TONESS of The Associated Press, NEAL MORTON and ARIEL GILREATH of The Hechinger Repo..."
+]
+description: "For the last two months of their life in the United States, José Alberto González and his family ..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:00:30"
+pubDateTZ: "UTC"
+image_url: "https://www.abc4.com/wp-content/uploads/sites/4/2025/05/682d512bbbc350.63281005.jpeg?w=900"
+video_url: null
+source_id: "abc4"
+source_name: "Salt Lake City"
+source_priority: 9171
+source_url: "https://www.abc4.com"
+source_icon: "https://i.bytvi.com/domain_icons/abc4.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.7
+neutral: 99.1
+negative: 0.2
+}
+ai_tag: [
+0: "education"
+]
+ai_region: null
+ai_org: null
+duplicate: true
+}
+46: {
+article_id: "24b0694a405355197318e17370a9c4c9"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.kxan.com/news/national-news/ap-they-crossed-the-border-for-better-schools-now-some-fami..."
+keywords: [
+0: "national news"
+1: "ap u.s. news"
+]
+creator: [
+0: "BIANCA VÁZQUEZ TONESS of The Associated Press, NEAL MORTON and ARIEL GILREATH of The Hechinger Repo..."
+]
+description: "For the last two months of their life in the United States, José Alberto González and his family ..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:00:30"
+pubDateTZ: "UTC"
+image_url: "https://www.kxan.com/wp-content/uploads/sites/40/2025/05/682d512ebe46c0.09926855.jpeg?w=900"
+video_url: null
+source_id: "kxan"
+source_name: "Kxan"
+source_priority: 2725
+source_url: "https://www.kxan.com"
+source_icon: "https://i.bytvi.com/domain_icons/kxan.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.7
+neutral: 99.1
+negative: 0.2
+}
+ai_tag: [
+0: "education"
+]
+ai_region: null
+ai_org: null
+duplicate: true
+}
+47: {
+article_id: "3ec5f00892b54e5289b1f19352fd435d"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.wivb.com/news/u-s-headlines/ap-they-crossed-the-border-for-better-schools-now-some-fami..."
+keywords: [
+0: "latest ap news"
+1: "national"
+2: "ap u.s. news"
+3: "u.s. headlines"
+]
+creator: [
+0: "BIANCA VÁZQUEZ TONESS of The Associated Press, NEAL MORTON and ARIEL GILREATH of The Hechinger Repo..."
+]
+description: "For the last two months of their life in the United States, José Alberto González and his family ..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:00:30"
+pubDateTZ: "UTC"
+image_url: "https://www.wivb.com/wp-content/uploads/sites/97/2025/05/682d5131618e17.83590789.jpeg?w=900"
+video_url: null
+source_id: "wivb"
+source_name: "Wivb"
+source_priority: 7165
+source_url: "https://www.wivb.com"
+source_icon: "https://i.bytvi.com/domain_icons/wivb.jpg"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "neutral"
+sentiment_stats: {
+positive: 0.7
+neutral: 99.1
+negative: 0.2
+}
+ai_tag: [
+0: "education"
+]
+ai_region: null
+ai_org: null
+duplicate: true
+}
+48: {
+article_id: "4003bb7858970156a375f61692932665"
+title: "They crossed the border for better schools. Now, some families are leaving the US"
+link: "https://www.clickondetroit.com/news/politics/2025/05/21/they-crossed-the-border-for-better-schools-..."
+keywords: null
+creator: [
+0: "Bianca Vázquez Toness Of The Associated Press, Neal Morton And Ariel Gilreath Of The Hechinger Repo..."
+]
+description: "Even as immigrants in the U.S. avoid going out in public, terrified of encountering immigration aut..."
+content: "For the last two months of their life in the United States, José Alberto González and his family ..."
+pubDate: "2025-05-21 04:00:30"
+pubDateTZ: "UTC"
+image_url: "https://res.cloudinary.com/graham-media-group/image/upload/f_auto/q_auto/c_thumb,w_700/v1/media/gmg..."
+video_url: null
+source_id: "clickondetroit"
+source_name: "Clickondetroit"
+source_priority: 3621
+source_url: "https://www.clickondetroit.com"
+source_icon: "https://i.bytvi.com/domain_icons/clickondetroit.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "negative"
+sentiment_stats: {
+positive: 0.12
+neutral: 0.09
+negative: 99.79
+}
+ai_tag: [
+0: "immigration and migrant issues"
+]
+ai_region: null
+ai_org: null
+duplicate: true
+}
+49: {
+article_id: "dba6e6501050745718e49fd0470aa85a"
+title: "Portland voters pick longtime school safety advocate Virginia La Forte for Zone 5 school board seat"
+link: "https://www.oregonlive.com/education/2025/05/portland-voters-appear-to-pick-longtime-school-safety-..."
+keywords: null
+creator: [
+0: "Julia Silverman"
+]
+description: "Virginia La Forte, a marketing and communications strategist, won election to the Portland School B..."
+content: "Virginia La Forte , a marketing and communications strategist, won election to the Portland School ..."
+pubDate: "2025-05-21 03:58:16"
+pubDateTZ: "UTC"
+image_url: "https://www.oregonlive.com/resizer/v2/TAZMSKDP2ZASPJ6NF3Q3NZUSTI.png?auth=a07901f897437c94d5b6d45e7..."
+video_url: null
+source_id: "oregonlive"
+source_name: "Oregon Local News"
+source_priority: 2111
+source_url: "https://www.oregonlive.com"
+source_icon: "https://i.bytvi.com/domain_icons/oregonlive.png"
+language: "english"
+country: [
+0: "united states of america"
+]
+category: [
+0: "top"
+]
+sentiment: "positive"
+sentiment_stats: {
+positive: 60.89
+neutral: 37.33
+negative: 1.78
+}
+ai_tag: [
+0: "politics"
+]
+ai_region: [
+0: "portland,indiana,united states of america,north america"
+1: "portland,wisconsin,united states of america,north america"
+2: "portland,texas,united states of america,north america"
+3: "portland,maine,united states of america,north america"
+4: "portland,tennessee,united states of america,north america"
+5: "portland,oregon,united states of america,north america"
+6: "portland,michigan,united states of america,north america"
+7: "portland,new york,united states of america,north america"
+8: "portland,connecticut,united states of america,north america"
+]
+ai_org: [
+0: "portland school"
+]
+duplicate: false
+}
+]
+nextPage: "1747799896029817692"
+response_headers: {
+Date: "Wed, 21 May 2025 06:16:49 GMT"
+Server: "Apache/2.4.41 (Ubuntu)"
+x_rate_limit_remaining: "179979"
+x_api_limit_remaining: "6745044"
+Access-Control-Allow-Origin: "*"
+Vary: "Accept-Encoding"
+Content-Encoding: "gzip"
+Keep-Alive: "timeout=5, max=100"
+Connection: "Keep-Alive"
+Transfer-Encoding: "chunked"
+Content-Type: "application/json"
+}
+}
+2.News for domain BBC
+
+https://newsdata.io/api/1/latest?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&domain=bbc
+
+3. News for Category Science
+
+https://newsdata.io/api/1/latest?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&category=science
+
+To dive deeper with practical examples visit - Get Latest News using NewsData.io "News" Endpoint: In Detail
+
+Crypto News
+Search and Monitor Worldwide Cryptocurrency-related news and blog data from the most reliable News and Blog Websites.
+
+Retrieving the latest news allows you to build experience such as showcasing the latest news, breaking news tickers and analyzing News to better understand their content.
+
+Resource URL
+
+https://newsdata.io/api/1/crypto?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05
+
+Resource Information
+
+Response Format
+JSON
+Requires Authentication
+Yes
+Rate Limited
+Yes
+Requests per 15 min window
+1800 credits (paid plans)
+Parameters
+Below are the Request Parameters you need to put in your query to run the API.
+
+Name	Required	Description	Default Value	Example
+apikey
+Required
+You need to add your API Key while accessing the newsdata API. 
+How to get the NewsData.io API key.
+id
+Optional
+Search the specific news article from its unique article_id string. You can add up to 50 article id strings in a single query or as per your specified limit.
+id=article_id
+id=article_id_1,article_id_2,
+article_id_3
+coin
+Optional
+Search the news articles for specific crypto coins using their short forms only. You can add up to 5 coins in a single query.
+coin=btc
+coin=eth,usdt,bnb
+q
+Optional
+Search news articles for specific keywords or phrases present in the news title, content, URL, meta keywords and meta description. The value must be URL-encoded and the maximum character limit permitted is 100 characters.
+Please refer Advanced Search for more details
+q=pizza
+qInTitle
+Optional
+Search news articles for specific keywords or phrases present in the news titles only. The value must be URL-encoded and the maximum character limit permitted is 100 characters.
+Note: qInTitle can't be used with q or qInMeta parameter in the same query.
+qInTitle=pizza
+qInMeta
+Optional
+Search news articles for specific keywords or phrases present in the news titles, URL, meta keywords and meta description only. The value must be URL-encoded and the maximum character limit permitted is 100 characters.
+Note: qInMeta can't be used with q or qInTitle parameter in the same query.
+qInMeta=pizza
+timeframe
+Optional
+Search the news articles for a specific timeframe (Minutes and Hours). For hours, you can set a timeframe of 1 to 48, and for minutes, you can define a timeframe of 1m to 2880m. For example, if you want to get the news for the past 6 hours then use timeframe=6 and if you want to get news for the last 15 min then use timeframe=15m.
+Note - You can only use timeframe either in hours or minutes.
+For Hours -
+timeframe=1
+timeframe=6
+timeframe=24
+For Minutes -
+timeframe=15m
+timeframe=45m
+timeframe=90m
+from_date
+Optional
+Use from_date filter to get news data from a particular date in the past. Note: If you didn’t specify from_date then from_date will be considered as per your subscription plan. For example, if you have purchased the professional subscription plan and didn’t mention from_date then the API will automatically fetch the data from the past 1 year.
+from_date=YYYY-MM-DD
+from_date=2025-01-01
+from_date=YYYY-MM-DD HH:MM:SS
+from_date=2025-01-01 06:12:45
+to_date
+Optional
+This filter is used to set an end date for the search result.
+Note: If you didn't specify to_date then the API will fetch the data till today
+to_date=YYYY-MM-DD
+to_date=2025-01-30
+to_date=YYYY-MM-DD HH:MM:SS
+to_date=2025-01-30 06:12:45
+language
+Optional
+Search the news articles for a specific language. You can add up to 5 languages in a single query. 
+Check the codes for all the languages here.
+language=fr,en
+tag
+Optional
+Search the news articles for specific AI-classified tags. You can add up to 5 tags in a single query.
+Check the codes for all the crypto AI tags here.
+(Available only for Professional and Corporate users)
+tag=blockchain
+sentiment
+Optional
+Search the news articles based on the sentiment of the news article (positive, negative, neutral).
+(Available only for Professional and Corporate users)
+sentiment=positive
+domain
+Optional
+Search the news articles for specific domains or news sources. You can add up to 5 domains in a single query.
+You can check the name of the domains here
+domain=nytimes,bbc
+domainurl
+Optional
+Search the news articles for specific domains or news sources. You can add up to 5 domains in a single query.
+Note: If the domain is incorrect, It will give suggestions in the response
+domainurl=nytimes.com,
+bbc.com,bbc.co.uk
+excludedomain
+Optional
+You can exclude specific domains or news sources to search the news articles. You can exclude up to 5 domains in a single query. Note: If the domain is incorrect, It will give suggestions in the response
+excludedomain=nytimes.com,
+bbc.com,bbc.co.uk
+excludefield
+Optional
+you can limit the response object to search for news articles. You can exclude multiple response objects in a single query.
+Note: You cannot exclude articles response field in the object
+excludefield=pubdate
+excludefield=source_icon,
+pubdate,link
+prioritydomain
+Optional
+Search the news articles only from top news domains. We have categorized prioritydomain in 3 categories.
+Top: Fetches news articles from the top 10% of the news domains
+Medium: Fetches news articles from the top 30% of the news domains. It means it already includes all the news articles of 'top' priority.
+Low: Fetches news articles from the top 50% of the news domains. It means it already includes all the news articles of 'top' and 'medium' priorities.
+prioritydomain=top
+prioritydomain=medium
+prioritydomain=low
+timezone
+Optional
+Search the news articles for a specific timezone. You can add any specific timezone.
+You can check the timezone here
+timezone=America/New_york
+timezone=Asia/Kolkata
+timezone=Asia/Qatar
+timezone=Europe/Berli
+full_content
+Optional
+Search the news articles with full content or without full content. Use '1' for news articles which contain the full_content response object and '0' for news articles which don't contain full_content response object.
+full_content=1
+full_content=0
+image
+Optional
+Search the news articles with featured image or without featured image. Use 1 for articles with featured image and 0 for articles without featured image.
+image=1
+image=0
+video
+Optional
+Search the news articles with videos or without videos. Use 1 for articles with videos and 0 for articles without videos.
+video=1
+video=0
+removeduplicate
+Optional
+The 'removeduplicate' parameter will allow users to filter out duplicate articles. Use 1 to remove duplicate articles.
+(Note: The overall 'removeduplicate' parameter functioning works on the basis of Newsdata.io's internal algorithm. It doesn't imply that the article which has a 'removeduplicate=1' parameter is actually a duplicate article.)
+removeduplicate=1
+size
+Optional
+You can customize the number of articles you get per API request from 1 to 50.
+Free user - 10
+Paid user - 50
+size=25
+page
+Optional
+Use page parameter to navigate to the next page. To know more:
+click here
+Example Queries
+
+1. Crypto News related to Bitcoin only
+
+https://newsdata.io/api/1/crypto?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&coin=btc
+
+2. Crypto News in Italian and Japanese language
+
+https://newsdata.io/api/1/crypto?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&language=it,jp
+
+3. Crypto News from the domain coindesk
+
+https://newsdata.io/api/1/crypto?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&domainurl=coindesk.com
+
+To dive deeper with practical examples visit - Crypto News API Endpoints
+
+News Archive
+The news archive endpoint provides access to the old news data for a topic, event, country, for a specific category in a country, or for a single or multiple domains.
+
+Retrieving a piece of old news allows you to get the past news data for research and analysis purposes.
+
+The News Archive endpoint is available only in Paid plans. You can get news data for the past 2 years using the Archive endpoint.
+
+There is limited access to the news archive endpoint for each paid plan:
+
+Basic
+6 months of historical data
+Professional
+1 year of historical data
+Corporate
+2 years of historical data
+Under your plan, you will not be able to access news data beyond these limits. To get news beyond the past 2 years, click here
+
+Resource URL
+
+https://newsdata.io/api/1/archive?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&from_date=2025-03-13&to_date=2025-03-26&category=technology
+
+Resource Information
+
+Response Format
+JSON
+Requires Authentication
+Yes
+Rate Limited
+Yes
+Requests per 15 min window
+1800 credits (paid plans)
+Parameters
+Below are the Request Parameters you need to put in your query to run the API.
+
+Please note, your API query must contain atleast one of these parameters:
+
+['q','qInTitle','qInMeta','domain','country','category','language','full_content','image','video','prioritydomain','domainurl'],
+
+Otherwise the API query won't work.
+
+Name	Required	Description	Default Value	Example
+apikey
+Required
+You need to add your API Key while accessing the newsdata API.
+How to get the NewsData.io API key.
+id
+Optional
+Search the specific news article from its unique article_id string. You can add up to 50 article id strings in a single query or as per your specified limit.
+id=article_id
+id=article_id_1,article_id_2,
+article_id_3
+q
+Optional
+Search news articles for specific keywords or phrases present in the news title, content, URL, meta keywords and meta description. The value must be URL-encoded and the maximum character limit permitted is 100 characters.
+Please refer Advanced Search for more details
+q=pizza
+qInTitle
+Optional
+Search news articles for specific keywords or phrases present in the news titles only. The value must be URL-encoded and the maximum character limit permitted is 100 characters.
+Note: qInTitle can't be used with q or qInMeta parameter in the same query.
+qInTitle=pizza
+qInMeta
+Optional
+Search news articles for specific keywords or phrases present in the news titles, URL, meta keywords and meta description only. The value must be URL-encoded and the maximum character limit permitted is 100 characters.
+Note: qInMeta can't be used with q or qInTitle parameter in the same query.
+qInMeta=pizza
+from_date
+Optional
+Use from_date filter to get news data from a particular date in the past. Note: If you didn’t specify from_date then from_date will be considered as per your subscription plan. For example, if you have purchased the professional subscription plan and didn’t mention from_date then the API will automatically fetch the data from the past 1 year.
+from_date=YYYY-MM-DD
+from_date=2025-01-01
+from_date=YYYY-MM-DD HH:MM:SS
+from_date=2025-01-01 06:12:45
+to_date
+Optional
+This filter is used to set an end date for the search result.
+Note: If you didn't specify to_date then the API will fetch the data till today
+to_date=YYYY-MM-DD
+to_date=2025-01-30
+to_date=YYYY-MM-DD HH:MM:SS
+to_date=2025-01-30 06:12:45
+language
+Optional
+Search the news articles for a specific language. You can add up to 5 languages in a single query.
+Check the codes for all the languages here.
+language=fr,en
+country
+Optional
+Search the news articles from a specific country. You can add up to 5 countries in a single query.
+Check the codes for all the countries here.
+country=au,jp
+category
+Optional
+Search the news articles for a specific category. You can add up to 5 categories in a single query.
+Check the codes for all the categories here.
+category=sports,top
+excludecategory
+Optional
+You can exclude specific categories to search for news articles. You can exclude up to 5 categories in a single query.
+Note: You can use either the 'category' parameter to include specific categories or the 'excludecategory' parameter to exclude them, but not both simultaneously.
+excludecategory=top
+domain
+Optional
+Search the news articles for specific domains or news sources. You can add up to 5 domains in a single query.
+You can check the name of the domains here
+domain=nytimes,bbc
+domainurl
+Optional
+Search the news articles for specific domains or news sources. You can add up to 5 domains in a single query.
+Note: If the domain is incorrect, It will give suggestions in the response
+domainurl=nytimes.com,
+bbc.com,bbc.co.uk
+excludedomain
+Optional
+You can exclude specific domains or news sources to search the news articles. You can exclude up to 5 domains in a single query. Note: If the domain is incorrect, It will give suggestions in the response
+excludedomain=nytimes.com,
+bbc.com,bbc.co.uk
+excludefield
+Optional
+you can limit the response object to search for news articles. You can exclude multiple response objects in a single query.
+Note: You cannot exclude articles response field in the object
+excludefield=pubdate
+excludefield=source_icon,
+pubdate,link
+prioritydomain
+Optional
+Search the news articles only from top news domains. We have categorized prioritydomain in 3 categories.
+Top: Fetches news articles from the top 10% of the news domains
+Medium: Fetches news articles from the top 30% of the news domains. It means it already includes all the news articles of 'top' priority.
+Low: Fetches news articles from the top 50% of the news domains. It means it already includes all the news articles of 'top' and 'medium' priorities.
+prioritydomain=top
+prioritydomain=medium
+prioritydomain=low
+timezone
+Optional
+Search the news articles for a specific timezone. You can add any specific timezone.
+You can check the timezone here
+timezone=America/New_york
+timezone=Asia/Kolkata
+timezone=Asia/Qatar
+timezone=Europe/Berli
+full_content
+Optional
+Search the news articles with full content or without full content. Use '1' for news articles which contain the full_content response object and '0' for news articles which don't contain full_content response object.
+full_content=1
+full_content=0
+image
+Optional
+Search the news articles with featured image or without featured image. Use 1 for articles with featured image and 0 for articles without featured image.
+image=1
+image=0
+video
+Optional
+Search the news articles with videos or without videos. Use 1 for articles with videos and 0 for articles without videos.
+video=1
+video=0
+size
+Optional
+You can customize the number of articles you get per API request from 1 to 50.
+Free user - 10
+Paid user - 50
+size=25
+page
+Optional
+Use page parameter to navigate to the next page. To know more,
+click here
+Example Queries
+
+1. News from category technology and science
+
+https://newsdata.io/api/1/archive?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&category=technology,science
+
+2. News from_date May 7, 2025 to May 20, 2025
+
+https://newsdata.io/api/1/archive?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&from_date=2025-05-07&to_date=2025-05-20&category=technology
+
+3. News from April 21, 2025 till present date
+
+https://newsdata.io/api/1/archive?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&from_date=2025-04-21&category=science
+
+To dive deeper with practical examples visit - All about News "Archive" Endpoint
+
+News Sources
+Sources endpoint provides names of randomly selected 100 domains from a country, category or/and language.
+
+It is mainly a convenience endpoint that you can use to keep track of the publishers available on the API.
+
+Resource URL
+
+https://newsdata.io/api/1/sources?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05
+
+Resource Information
+
+Response Format
+JSON
+Requires Authentication
+Yes
+Rate Limited
+Yes
+Requests per 15 min window
+1800 credits (paid plans)
+Parameters
+Below are the Request Parameters you need to put in your query to run the API.
+
+Name	Required	Description	Default Value	Example
+apikey
+Required
+You need to add your API Key while accessing the newsdata API.
+How to get the NewsData.io API key.
+language
+Optional
+Search the news articles for a specific language. You can add up to 5 languages in a single query.
+Check the codes for all the languages here.
+language=fr,en
+country
+Optional
+Search the news articles from a specific country. You can add up to 5 countries in a single query.
+Check the codes for all the countries here.
+country=au,jp
+category
+Optional
+Search the news articles for a specific category. You can add up to 5 categories in a single query.
+Check the codes for all the categories here.
+category=sports,top
+domainurl
+Optional
+Search the news articles for specific domains or news sources. You can add up to 5 domains in a single query.
+Note: If the domain is incorrect, It will give suggestions in the response
+domainurl=nytimes.com,
+bbc.com,bbc.co.uk
+prioritydomain
+Optional
+Search the news articles only from top news domains. We have categorized prioritydomain in 3 categories.
+Top: Fetches news articles from the top 10% of the news domains
+Medium: Fetches news articles from the top 30% of the news domains. It means it already includes all the news articles of 'top' priority.
+Low: Fetches news articles from the top 50% of the news domains. It means it already includes all the news articles of 'top' and 'medium' priorities.
+prioritydomain=top
+prioritydomain=medium
+prioritydomain=low
+Response Object
+
+Name	Description
+status
+success/error
+Status shows the status of your request. If the request was successful then it shows success, in case of error it shows error. In the case of error, a code and message property will be displayed.
+id
+The identifier of the domain. You can use this with our other endpoints.
+name
+The name of the domain (As defined by the NewsData.io moderators).
+url
+The URL of the domain.
+category
+Categories of the domain (These categories are defined by NewsData.io moderators).
+language
+Language of the domain (The language is defined by NewsData.io moderators).
+country
+Countries of the domain (The countries are defined by NewsData.io moderators).
+Example Queries
+
+1. News sources that show from specific country
+
+https://newsdata.io/api/1/sources?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&country=ua
+
+2. News sources that show from specific category
+
+https://newsdata.io/api/1/sources?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&category=politics
+
+3. News sources that show from specific language
+
+https://newsdata.io/api/1/sources?apikey=pub_c2a11fd86fb84a6e8eb039def81fca05&language=nl
+
+To dive deeper with practical examples visit - News Sources Endpoints
+
+Newdata.io Python Client
+Use the Newsdata.io Python client library to integrate Newsdata.io API into your Python application without having to make HTTP requests directly.
+
+Source: Newsdata.io Python Client
+
+Installation:
+
+$ pip install newsdataapi
+
+Usage:
+
+from newsdataapi import NewsDataApiClient
+
+# API key authorization, Initialize the client with your API key
+
+api = NewsDataApiClient(apikey=pub_c2a11fd86fb84a6e8eb039def81fca05)
+
+# You can pass empty or with request parameters (ex. country = "us")
+
+response = api.news_api(q="ronaldo", country="us")
+
+Pagination:
+
+from newsdataapi import NewsDataApiClient
+
+# API key authorization, Initialize the client with your API key
+
+api = NewsDataApiClient(apikey=pub_c2a11fd86fb84a6e8eb039def81fca05)
+
+# You can paginate till last page by providing "page" parameter
+
+page=None
+
+while True:
+
+response = api.news_api(page = page)
+
+page = response.get('nextPage',None)
+
+if not page:
+
+break
+
+Get started with our comprehensive step-by-step blog -NewsData.io News API With Python Client

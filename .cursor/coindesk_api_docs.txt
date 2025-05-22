@@ -1,0 +1,788 @@
+News
+#Latest Articles
+GETCache: 10 seconds
+The Latest Articles endpoint serves as the pulse of the crypto news landscape, providing users with instant access to the most recent articles across the industry. By drawing from a wide array of reputable sources, this endpoint curates a fresh, real-time stream of information, insights, and developments, ensuring that users remain at the forefront of crypto news narratives. Whether you are an investor, enthusiast, or industry professional, this endpoint delivers a comprehensive and up-to-the-minute news digest, placing you at the heart of the ever-evolving crypto conversation.
+
+Use Cases
+Real-Time News Updates: Stay informed with the latest developments and news in the crypto industry.
+Market Analysis: Use up-to-date articles to analyse market trends and make informed investment decisions.
+Content Curation: Curate content for blogs, newsletters, or social media with the most recent crypto news.
+Industry Research: Conduct thorough research with access to the latest articles from various reputable sources.
+News Aggregation: Integrate the latest articles into news aggregation platforms or apps for continuous updates.
+Target Audiences
+Crypto Investors and Traders: Needing real-time news to make timely and informed trading decisions.
+Industry Professionals: Seeking the latest developments and insights in the crypto world.
+Content Creators and Curators: Looking for fresh content to share with their audience.
+Researchers and Analysts: Requiring up-to-date information for in-depth market and industry analysis.
+Crypto Enthusiasts: Wanting to stay updated with the latest news and trends in the crypto space.
+The Latest Articles endpoint is an essential tool for anyone needing immediate access to the freshest news and insights in the crypto industry. By utilising this endpoint, users can stay updated with real-time information, enhance their market analysis, curate content efficiently, and conduct thorough industry research. This ensures that you are always at the cutting edge of crypto developments and conversations. Start using the Latest Articles endpoint today to stay informed and ahead in the dynamic world of cryptocurrency.
+
+View less
+
+lang(string)
+lang
+lang
+EN
+
+source_ids(array)
+source_ids
+
+categories(array)
+categories
+
+exclude_categories(array)
+exclude_categories
+
+limit(integer)
+limit
+10
+
+to_ts(integer)
+
+to_ts
+Now
+schema
+response
+
+GET
+200
+203ms
+Refresh
+Copy
+{
+Data: [
+{
+TYPE: "121"
+ID: 44911170
+GUID: "https://www.cryptonewsz.com/asic-seeks-high-court-review-in-block-earner/"
+PUBLISHED_ON: 1747842683
+IMAGE_URL: "https://images.cryptocompare.com/news/default/cryptonewsz.png"
+TITLE: "ASIC Seeks High Court Review in Block Earner Crypto Yield Case"
+SUBTITLE: null
+AUTHORS: "Maxwell Mutuma"
+URL: "https://www.cryptonewsz.com/asic-seeks-high-court-review-in-block-earner/"
+SOURCE_ID: 40
+BODY: "Australia’s corporate regulator, the Australian Securities and Investments Commission (ASIC), has officially requested special leave from the High…"
+KEYWORDS: "Crypto Regulations"
+LANG: "EN"
+UPVOTES: 0
+DOWNVOTES: 0
+SCORE: 0
+SENTIMENT: "NEUTRAL"
+STATUS: "ACTIVE"
+CREATED_ON: 1747842781
+UPDATED_ON: null
+SOURCE_DATA: {
+TYPE: "120"
+ID: 40
+SOURCE_KEY: "cryptonewsz"
+NAME: "CryptoNewsZ"
+IMAGE_URL: "https://images.cryptocompare.com/news/default/cryptonewsz.png"
+URL: "https://www.cryptonewsz.com/feed/"
+LANG: "EN"
+SOURCE_TYPE: "RSS"
+LAUNCH_DATE: null
+SORT_ORDER: 0
+BENCHMARK_SCORE: 0
+STATUS: "ACTIVE"
+LAST_UPDATED_TS: 1747842149, // Wed May 21 2025 18:42:29 GMT+0300 (Москва, стандартное время)
+CREATED_ON: 1657730129
+UPDATED_ON: 1680683988
+}
+CATEGORY_DATA: [
+{
+TYPE: "122"
+ID: 63
+NAME: "OTHER"
+CATEGORY: "OTHER"
+}
+]
+}
+{
+TYPE: "121"
+ID: 44911146
+GUID: "https://coinpedia.org/?p=459066"
+PUBLISHED_ON: 1747842679
+IMAGE_URL: "https://images.cryptocompare.com/news/default/coinpedia.png"
+TITLE: "Cardano Price Targeting $1.50 After Growing Whale Accumulation; The Same Can Be Said For This $0.07 Crypto"
+SUBTITLE: null
+AUTHORS: "PR Manager"
+URL: "https://coinpedia.org/press-release/whales-dont-swim-they-wire-why-remittix-is-their-next-big-splash/"
+SOURCE_ID: 53
+BODY: "The post Cardano Price Targeting $1.50 After Growing Whale Accumulation; The Same Can Be Said For This $0.07 Crypto appeared first on Coinpedia Fintech News Cardano (ADA) has always played the long game. While flashier projects chased hype cycles, Cardano focused on building slowly, methodically and with purpose. Now, after months of quiet accumulation, the whales are back and the charts are whispering what long-time holders have waited to hear: $1.50 may finally be in sight. But ADA isn’t the only one catching the attention of deep-pocketed investors. Remittix (RTX) , a rising $0.0781 crypto in the PayFi space, is showing eerily similar accumulation patterns, except it’s doing so during its presale. With over $15.1 million raised and a real-world use case centered around instant crypto-to-fiat transfers, some are wondering if RTX is Cardano 2.0 in its early, high-upside days. As the smart money circles both projects, the big question isn’t just about ADA’s breakout; it’s whether Remittix is quietly preparing one of its own. Whales are circling as Cardano eyes $1.50 breakout Cardano’s never been the fastest mover in the crypto world, but it’s often one of the most deliberate. While others rush to market with half-baked promises, Cardano keeps building brick by brick. That patience may finally be paying off, as Cardano’s price targets $1.50, powered by a quiet surge in whale accumulation and solid network fundamentals. ADA monthly price movement. Source: CoinMarketCap As seen in the chart above, over the past month, ADA’s price action has been anything but boring. Starting at $0.6245 in late April, it climbed steadily, peaking near $0.85 on May 10, a 36% rally, before correcting to $0.74. While some see the drop as weakness, others see consolidation and preparation for the next leg up. Supporting this optimism is Cardano’s growing ecosystem. From Hydra, its Layer-2 scaling solution, to Mithril, a stake-based innovation for faster data verification, the tech under the hood is catching up to the platform’s ambitions. DeFi and NFTs continue to gain traction, adding real use cases to the chain. If Bitcoin approaches its $150K forecast, analysts believe altcoins like Cardano could ride the wave, and for ADA, that means a realistic push toward $1.50. The Cardano price may move slowly, but when it rallies, it tends to do so with conviction. Whales don’t swim, they wire. Why Remittix is their next big splash In a market flooded with hype and half-measures, whales are moving with precision and they’re moving toward Remittix. Why? Because Remittix isn’t just another crypto project. It’s a direct shot at the inefficiencies of traditional finance, bridging a $183 trillion banking sector with blockchain in a way that’s fast, cheap and built for the world, not just the privileged few. Source: Youtube While Stripe, Wise and Coinbase dabble in fiat and crypto, Remittix goes all-in on crypto-to-fiat remittances, integrating directly with local payment networks. That means instant or near-instant transactions, no middlemen and transparent fees that put banks to shame. For high-net-worth investors, that’s not just innovative, it’s irresistible. Then there’s the VIP Program. With annual staking rewards as high as 18%, platinum debit cards, and personal account managers, Remittix rewards conviction. The higher your investment, the greater your influence, literally. VIPs gain enhanced governance rights and insider access, making them architects of the ecosystem, not just passengers. Add in the Remittix Wallet; secure, non-custodial and sleekly designed and you’ve got a platform where whales don’t just park capital; they grow it. In a landscape where privacy, speed and control matter more than ever, Remittix is the smart money’s next move. Conclusion Cardano’s path to $1.50 is paved with strong fundamentals and growing whale appetite. Remittix is attracting the same kind of early interest from deep-pocketed investors, thanks to its bold vision for crypto-to-fiat remittances. With a real-world use case, a rewards-rich VIP program and growing momentum, RTX may be carving out a parallel success story. If ADA is the legacy builder, Remittix could be its high-speed, modern counterpart in the making. Discover the future of PayFi with Remittix by checking out their presale here: Website: https://remittix.io/ Socials: https://linktr.ee/remittix"
+KEYWORDS: "Press Release"
+LANG: "EN"
+UPVOTES: 0
+DOWNVOTES: 0
+SCORE: 0
+SENTIMENT: "POSITIVE"
+STATUS: "ACTIVE"
+CREATED_ON: 1747842757
+UPDATED_ON: null
+SOURCE_DATA: {
+TYPE: "120"
+ID: 53
+SOURCE_KEY: "coinpedia"
+NAME: "coinpedia"
+IMAGE_URL: "https://images.cryptocompare.com/news/default/coinpedia.png"
+URL: "https://coinpedia.org/feed/"
+LANG: "EN"
+SOURCE_TYPE: "RSS"
+LAUNCH_DATE: 1404691200
+SORT_ORDER: 0
+BENCHMARK_SCORE: 46
+STATUS: "ACTIVE"
+LAST_UPDATED_TS: 1747842126, // Wed May 21 2025 18:42:06 GMT+0300 (Москва, стандартное время)
+CREATED_ON: 1657730129
+UPDATED_ON: 1711621282
+}
+CATEGORY_DATA: [
+{
+TYPE: "122"
+ID: 3
+NAME: "ADA"
+CATEGORY: "ADA"
+}
+{
+TYPE: "122"
+ID: 13
+NAME: "BLOCKCHAIN"
+CATEGORY: "BLOCKCHAIN"
+}
+{
+TYPE: "122"
+ID: 15
+NAME: "BUSINESS"
+CATEGORY: "BUSINESS"
+}
+{
+TYPE: "122"
+ID: 37
+NAME: "MARKET"
+CATEGORY: "MARKET"
+}
+{
+TYPE: "122"
+ID: 50
+NAME: "TRADING"
+CATEGORY: "TRADING"
+}
+]
+}
+{
+TYPE: "121"
+ID: 44911227
+GUID: "70752585-0198-469b-a4a0-3e2821bd1dc1"
+PUBLISHED_ON: 1747842653
+IMAGE_URL: "https://resources.cryptocompare.com/news/102/default.png"
+TITLE: "Bitcoin passes January peak to hit new record high"
+SUBTITLE: null
+AUTHORS: ""
+URL: "https://www.ft.com/content/70752585-0198-469b-a4a0-3e2821bd1dc1"
+SOURCE_ID: 102
+BODY: "Price rises to $109,481 on hopes US lawmakers will soon agree first digital assets regulations"
+KEYWORDS: ""
+LANG: "EN"
+UPVOTES: 0
+DOWNVOTES: 0
+SCORE: 0
+SENTIMENT: "POSITIVE"
+STATUS: "ACTIVE"
+CREATED_ON: 1747842871
+UPDATED_ON: null
+SOURCE_DATA: {
+TYPE: "120"
+ID: 102
+SOURCE_KEY: "financialtimes_crypto_"
+NAME: "Financial Times (Crypto)"
+IMAGE_URL: "https://resources.cryptocompare.com/news/102/default.png"
+URL: "https://www.ft.com/cryptofinance?format=rss"
+LANG: "EN"
+SOURCE_TYPE: "RSS"
+LAUNCH_DATE: 1307318400
+SORT_ORDER: 0
+BENCHMARK_SCORE: 0
+STATUS: "ACTIVE"
+LAST_UPDATED_TS: 1747842150, // Wed May 21 2025 18:42:30 GMT+0300 (Москва, стандартное время)
+CREATED_ON: 1719248005
+UPDATED_ON: 1719248073
+}
+CATEGORY_DATA: [
+{
+TYPE: "122"
+ID: 14
+NAME: "BTC"
+CATEGORY: "BTC"
+}
+{
+TYPE: "122"
+ID: 50
+NAME: "TRADING"
+CATEGORY: "TRADING"
+}
+]
+}
+{
+TYPE: "121"
+ID: 44911115
+GUID: "https://en.coinotag.com/breakingnews/michael-saylor-urges-investors-to-buy-the-dip-on-bitcoin-amid-market-fluctuations/"
+PUBLISHED_ON: 1747842562
+IMAGE_URL: "https://resources.cryptocompare.com/news/77/44911115.jpeg"
+TITLE: "Michael Saylor Urges Investors to ‘Buy the Dip’ on Bitcoin Amid Market Fluctuations"
+SUBTITLE: null
+AUTHORS: "Sheila Belson"
+URL: "https://en.coinotag.com/breakingnews/michael-saylor-urges-investors-to-buy-the-dip-on-bitcoin-amid-market-fluctuations/"
+SOURCE_ID: 77
+BODY: "In a recent statement on social media, strategy founder Michael Saylor emphasized the importance of capitalizing on market fluctuations by advocating for investors to buy the dip. He highlighted a"
+KEYWORDS: "BTC"
+LANG: "EN"
+UPVOTES: 0
+DOWNVOTES: 0
+SCORE: 0
+SENTIMENT: "POSITIVE"
+STATUS: "ACTIVE"
+CREATED_ON: 1747842681
+UPDATED_ON: 1747842682
+SOURCE_DATA: {
+TYPE: "120"
+ID: 77
+SOURCE_KEY: "coinotag"
+NAME: "CoinOtag"
+IMAGE_URL: "https://resources.cryptocompare.com/news/77/default.png"
+URL: "https://en.coinotag.com/feed/"
+LANG: "EN"
+SOURCE_TYPE: "RSS"
+LAUNCH_DATE: null
+SORT_ORDER: 0
+BENCHMARK_SCORE: 0
+STATUS: "ACTIVE"
+LAST_UPDATED_TS: 1747842128, // Wed May 21 2025 18:42:08 GMT+0300 (Москва, стандартное время)
+CREATED_ON: 1686819961
+UPDATED_ON: 1717748924
+}
+CATEGORY_DATA: [
+{
+TYPE: "122"
+ID: 14
+NAME: "BTC"
+CATEGORY: "BTC"
+}
+{
+TYPE: "122"
+ID: 15
+NAME: "BUSINESS"
+CATEGORY: "BUSINESS"
+}
+{
+TYPE: "122"
+ID: 37
+NAME: "MARKET"
+CATEGORY: "MARKET"
+}
+]
+}
+{
+TYPE: "121"
+ID: 44910992
+GUID: "https://en.bitcoinsistemi.com/good-news-for-altcoin-on-the-radar-of-turks-from-vaneck-who-manages-billions-of-dollars-to-be-launched-in-june/"
+PUBLISHED_ON: 1747842427
+IMAGE_URL: "https://resources.cryptocompare.com/news/81/44910992.jpeg"
+TITLE: "Good News for Altcoin on the Radar of Turks from VanEck, Who Manages Billions of Dollars! "To Be Launched in June!""
+SUBTITLE: null
+AUTHORS: "Elif Azra Güven"
+URL: "https://en.bitcoinsistemi.com/good-news-for-altcoin-on-the-radar-of-turks-from-vaneck-who-manages-billions-of-dollars-to-be-launched-in-june/"
+SOURCE_ID: 81
+BODY: "Global investment giant VanEck has announced that it will launch its Avalanche-focused fund next June. VanEck announced plans to launch its VanEck PurposeBuilt fund in June, focused on investing in Avalanche (AVAX)-based projects. The AVAX-based fund, which will be managed by VanEck’s Digital Assets Alpha Fund, will focus on sectors such as gaming, financial services and artificial intelligence. Pranav Kanade, portfolio manager of VanEck Digital Assets Alpha Fund, said the fund is not looking to chase advertising or short-term trends but is thinking long-term. “The next wave of value in crypto will come not from more infrastructure, but from real businesses. Avalanche has become a magnet for thoughtful builders, and with the VanEck PurposeBuilt Fund, we bring capital and belief to founders, not chasing momentum, but creating enduring value.” Apart from VanEck, Grayscale also has Avalanche Trust, which launched in August 2024. However, Grayscale has filed with the SEC to convert Avalanche Trust into a spot ETF. At this point, institutional interest in Avalanche continues to grow, while Grayscale is still awaiting SEC approval. *This is not investment advice. Continue Reading: Good News for Altcoin on the Radar of Turks from VanEck, Who Manages Billions of Dollars! "To Be Launched in June!""
+KEYWORDS: "Altcoin|Avalanche|News"
+LANG: "EN"
+UPVOTES: 0
+DOWNVOTES: 0
+SCORE: 0
+SENTIMENT: "POSITIVE"
+STATUS: "ACTIVE"
+CREATED_ON: 1747842476
+UPDATED_ON: 1747842476
+SOURCE_DATA: {
+TYPE: "120"
+ID: 81
+SOURCE_KEY: "bitcoinsistemi"
+NAME: "BitcoinSistemi"
+IMAGE_URL: "https://resources.cryptocompare.com/news/81/default.png"
+URL: "https://en.bitcoinsistemi.com/feed/"
+LANG: "EN"
+SOURCE_TYPE: "RSS"
+LAUNCH_DATE: null
+SORT_ORDER: 0
+BENCHMARK_SCORE: 0
+STATUS: "ACTIVE"
+LAST_UPDATED_TS: 1747842131, // Wed May 21 2025 18:42:11 GMT+0300 (Москва, стандартное время)
+CREATED_ON: 1692873798
+UPDATED_ON: 1692873836
+}
+CATEGORY_DATA: [
+{
+TYPE: "122"
+ID: 5
+NAME: "ALTCOIN"
+CATEGORY: "ALTCOIN"
+}
+{
+TYPE: "122"
+ID: 41
+NAME: "REGULATION"
+CATEGORY: "REGULATION"
+}
+]
+}
+{
+TYPE: "121"
+ID: 44910893
+GUID: "https://en.coinotag.com/bitcoin-approaches-critical-breakout-zone-historical-trends-suggest-possible-rally-ahead/"
+PUBLISHED_ON: 1747842332
+IMAGE_URL: "https://resources.cryptocompare.com/news/77/default.png"
+TITLE: "Bitcoin Approaches Critical Breakout Zone, Historical Trends Suggest Possible Rally Ahead"
+SUBTITLE: null
+AUTHORS: "Jocelyn Blake"
+URL: "https://en.coinotag.com/bitcoin-approaches-critical-breakout-zone-historical-trends-suggest-possible-rally-ahead/"
+SOURCE_ID: 77
+BODY: "Bitcoin is entering a critical breakout zone, reminiscent of past periods that led to significant price rallies, as market indicators converge toward bullish signals. The sentiment among analysts is predominantly"
+KEYWORDS: "Analysis|Bitcoin|News"
+LANG: "EN"
+UPVOTES: 0
+DOWNVOTES: 0
+SCORE: 0
+SENTIMENT: "POSITIVE"
+STATUS: "ACTIVE"
+CREATED_ON: 1747842340
+UPDATED_ON: null
+SOURCE_DATA: {
+TYPE: "120"
+ID: 77
+SOURCE_KEY: "coinotag"
+NAME: "CoinOtag"
+IMAGE_URL: "https://resources.cryptocompare.com/news/77/default.png"
+URL: "https://en.coinotag.com/feed/"
+LANG: "EN"
+SOURCE_TYPE: "RSS"
+LAUNCH_DATE: null
+SORT_ORDER: 0
+BENCHMARK_SCORE: 0
+STATUS: "ACTIVE"
+LAST_UPDATED_TS: 1747842128, // Wed May 21 2025 18:42:08 GMT+0300 (Москва, стандартное время)
+CREATED_ON: 1686819961
+UPDATED_ON: 1717748924
+}
+CATEGORY_DATA: [
+{
+TYPE: "122"
+ID: 14
+NAME: "BTC"
+CATEGORY: "BTC"
+}
+{
+TYPE: "122"
+ID: 37
+NAME: "MARKET"
+CATEGORY: "MARKET"
+}
+{
+TYPE: "122"
+ID: 50
+NAME: "TRADING"
+CATEGORY: "TRADING"
+}
+]
+}
+{
+TYPE: "121"
+ID: 44911019
+GUID: "https://blog.tipranks.com/?p=2051162"
+PUBLISHED_ON: 1747842314
+IMAGE_URL: "https://images.cryptocompare.com/news/default/tipranks.png"
+TITLE: "Bitcoin Rally “Faster Than Expected” as $200K Targets Gain Steam"
+SUBTITLE: null
+AUTHORS: "Annika Masrani"
+URL: "https://www.tipranks.com/news/bitcoin-rally-faster-than-expected-as-200k-targets-gain-steam?utm_source=cryptocompare.com&utm_medium=referral"
+SOURCE_ID: 61
+BODY: "Bitcoin is back with a vengeance. After weeks of grinding upward, BTC blew past $108,000 on May 21 — its highest price since January — igniting a f..."
+KEYWORDS: "Market News"
+LANG: "EN"
+UPVOTES: 0
+DOWNVOTES: 0
+SCORE: 0
+SENTIMENT: "POSITIVE"
+STATUS: "ACTIVE"
+CREATED_ON: 1747842550
+UPDATED_ON: null
+SOURCE_DATA: {
+TYPE: "120"
+ID: 61
+SOURCE_KEY: "tipranks"
+NAME: "TipRanks"
+IMAGE_URL: "https://images.cryptocompare.com/news/default/tipranks.png"
+URL: "https://www.tipranks.com/news/cryptocompare-rss/"
+LANG: "EN"
+SOURCE_TYPE: "RSS"
+LAUNCH_DATE: null
+SORT_ORDER: 0
+BENCHMARK_SCORE: 0
+STATUS: "ACTIVE"
+LAST_UPDATED_TS: 1747842126, // Wed May 21 2025 18:42:06 GMT+0300 (Москва, стандартное время)
+CREATED_ON: 1657730129
+UPDATED_ON: 1673024097
+}
+CATEGORY_DATA: [
+{
+TYPE: "122"
+ID: 14
+NAME: "BTC"
+CATEGORY: "BTC"
+}
+{
+TYPE: "122"
+ID: 50
+NAME: "TRADING"
+CATEGORY: "TRADING"
+}
+]
+}
+{
+TYPE: "121"
+ID: 44910999
+GUID: "https://u.today/1388655-solana-suddenly-moves-on-chain-whats-happening"
+PUBLISHED_ON: 1747842240
+IMAGE_URL: "https://resources.cryptocompare.com/news/64/44910999.jpeg"
+TITLE: "1,388,655 Solana Suddenly Moves Onchain, What Is Happening?"
+SUBTITLE: null
+AUTHORS: "U.Today"
+URL: "https://u.today/1388655-solana-suddenly-moves-on-chain-whats-happening"
+SOURCE_ID: 64
+BODY: "Solana whales are on rampage amid unexpected funds distributed"
+KEYWORDS: "Solana"
+LANG: "EN"
+UPVOTES: 0
+DOWNVOTES: 0
+SCORE: 0
+SENTIMENT: "NEUTRAL"
+STATUS: "ACTIVE"
+CREATED_ON: 1747842543
+UPDATED_ON: 1747842544
+SOURCE_DATA: {
+TYPE: "120"
+ID: 64
+SOURCE_KEY: "utoday"
+NAME: "U.Today"
+IMAGE_URL: "https://images.cryptocompare.com/news/default/utoday.png"
+URL: "https://u.today/cryptocompare.php"
+LANG: "EN"
+SOURCE_TYPE: "RSS"
+LAUNCH_DATE: 1506816000
+SORT_ORDER: 0
+BENCHMARK_SCORE: 49
+STATUS: "ACTIVE"
+LAST_UPDATED_TS: 1747842120, // Wed May 21 2025 18:42:00 GMT+0300 (Москва, стандартное время)
+CREATED_ON: 1657730129
+UPDATED_ON: 1745920032
+}
+CATEGORY_DATA: [
+{
+TYPE: "122"
+ID: 46
+NAME: "SOL"
+CATEGORY: "SOL"
+}
+]
+}
+{
+TYPE: "121"
+ID: 44910867
+GUID: "https://en.coin-turk.com/?p=192848"
+PUBLISHED_ON: 1747842181
+IMAGE_URL: "https://resources.cryptocompare.com/news/79/44910867.jpeg"
+TITLE: "Bitcoin Soars to New Heights as Market Dynamics Strengthen"
+SUBTITLE: null
+AUTHORS: "Ömer Ergin"
+URL: "https://en.coin-turk.com/bitcoin-soars-to-new-heights-as-market-dynamics-strengthen/"
+SOURCE_ID: 79
+BODY: "Bitcoin achieved a historic price peak, driven by institutional interest and favorable regulations. Analysts highlight less speculative and more stable conditions supporting sustainable growth. Continue Reading: Bitcoin Soars to New Heights as Market Dynamics Strengthen The post Bitcoin Soars to New Heights as Market Dynamics Strengthen appeared first on COINTURK NEWS ."
+KEYWORDS: "Bitcoin (BTC)|Cryptocurrency News"
+LANG: "EN"
+UPVOTES: 0
+DOWNVOTES: 0
+SCORE: 0
+SENTIMENT: "POSITIVE"
+STATUS: "ACTIVE"
+CREATED_ON: 1747842265
+UPDATED_ON: 1747842266
+SOURCE_DATA: {
+TYPE: "120"
+ID: 79
+SOURCE_KEY: "cointurken"
+NAME: "CoinTurk News"
+IMAGE_URL: "https://resources.cryptocompare.com/news/79/default.png"
+URL: "https://en.coin-turk.com/feed/"
+LANG: "EN"
+SOURCE_TYPE: "RSS"
+LAUNCH_DATE: null
+SORT_ORDER: 0
+BENCHMARK_SCORE: 0
+STATUS: "ACTIVE"
+LAST_UPDATED_TS: 1747842130, // Wed May 21 2025 18:42:10 GMT+0300 (Москва, стандартное время)
+CREATED_ON: 1689939795
+UPDATED_ON: 1690273097
+}
+CATEGORY_DATA: [
+{
+TYPE: "122"
+ID: 14
+NAME: "BTC"
+CATEGORY: "BTC"
+}
+{
+TYPE: "122"
+ID: 37
+NAME: "MARKET"
+CATEGORY: "MARKET"
+}
+{
+TYPE: "122"
+ID: 50
+NAME: "TRADING"
+CATEGORY: "TRADING"
+}
+]
+}
+{
+TYPE: "121"
+ID: 44910804
+GUID: "https://cointelegraph.com/news/bitcoin-enters-acceleration-phase-resembling-btc-price-gains-seen-after-trump-election-victory"
+PUBLISHED_ON: 1747842171
+IMAGE_URL: "https://images.cryptocompare.com/news/default/cointelegraph.png"
+TITLE: "Bitcoin enters ‘acceleration phase’ resembling BTC price gains seen after Trump election victory"
+SUBTITLE: null
+AUTHORS: "Cointelegraph by Biraajmaan Tamuly"
+URL: "https://cointelegraph.com/news/bitcoin-enters-acceleration-phase-resembling-btc-price-gains-seen-after-trump-election-victory?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+SOURCE_ID: 16
+BODY: "Key takeaways: The Bitcoin Quantile Model shows “heat” with price on the verge of an “acceleration phase,” echoing Q4 2024 when BTC embarked on a 45% post-election rally. Bitcoin (BTC) price has formed a new intraday high on each daily candle this week, with the crypto asset slowly grinding toward a new all-time high. In line with its current trajectory, 21st Capital co-founder Sina noted that Bitcoin is approaching a pivotal moment around the $108,000 level. The Bitcoin Quantile Model update shows that BTC’s market reflects the same “heat” that was present after President Trump’s post-election rally and the spot ETF-driven highs during Q4 2024. The model, which uses quantile regression to map Bitcoin’s price phases on a logarithmic scale, indicates the cryptocurrency is in the Transition Zone, a critical juncture before the Acceleration Phase. Throughout Q4, 2024, Bitcoin rallied by 45% after entering a price discovery period above $74,500. Bitcoin Quantile Model. Source: X.com As illustrated in the chart, once it breaks into the "Acceleration" Phase, it could trigger BTC’s next leg or the mid-phase, typically between the 33% and 66% range. Based on the model, BTC is expected to progressively target price levels of $130,000 and $163,000 in the coming months. However, anonymous Bitcoin analyst apsk32 believed a price target above $200,000 is a “reasonable” expectation for 2025. Basing the projection on Bitcoin’s “power curve,” the analyst noted that BTC’s position relative to gold has significantly improved since April. From a technical standpoint, this view is supported by the recent convergence of the Sharpe ratios for Bitcoin and gold, suggesting that the two hard assets now offer comparable risk-to-reward profiles to their investors. Fidelity’s Director of Global Macro Jurrien Timmer shed light on this development, recommending a 4:1 goal-to-Bitcoin ratio from an allocation perspective. Related: Bitcoin 'blow-off top' set at $128K with new all-time highs in sight Strong Bitcoin volumes “final straw” before new highs Crypto researcher Aylo analyzed BTC’s historical price action when the crypto asset consolidates near its all-time high level. In an X post, the analyst explained, “The data shows when BTC gets close to its previous ATH during a strong, accelerating trend with high momentum, it has historically broken out to new ATHs within a short time (days to weeks).” However, weaker trends have led to stalls or retraces between March and May 2024. Currently, Bitcoin exhibits a strong trend but lacks the necessary trading volume, which remains the final straw to confirm a breakout, a factor that could delay upward movement. Alyo added that for Bitcoin to break its all-time highs, daily trading volume should exceed the previous 10 days, be at least 1.5 times the 20-day average, and ideally sustain a 3-day increase while the price holds steady or rises. Data from CryptoQuant has reinforced Aylo’s concerns about trading volume. On May 21, retail investor demand for Bitcoin, defined as wallets buying/selling between $0 and $10,000, remained low at just 3.2% over 30 days, despite BTC trading within $2,000 of its all-time high. Bitcoin’s retail investor volumes. Source: CryptoQuant For comparison, bullish retail demand accounted for approximately 30% in December 2024—nearly 10 times higher than current levels—even though Bitcoin was well below, at a price range of $96,000 to $97,000. Related: How high can Bitcoin price go? This article does not contain investment advice or recommendations. Every investment and trading move involves risk, and readers should conduct their own research when making a decision."
+KEYWORDS: ""
+LANG: "EN"
+UPVOTES: 0
+DOWNVOTES: 0
+SCORE: 0
+SENTIMENT: "POSITIVE"
+STATUS: "ACTIVE"
+CREATED_ON: 1747842220
+UPDATED_ON: null
+SOURCE_DATA: {
+TYPE: "120"
+ID: 16
+SOURCE_KEY: "cointelegraph"
+NAME: "CoinTelegraph"
+IMAGE_URL: "https://images.cryptocompare.com/news/default/cointelegraph.png"
+URL: "https://cointelegraph.com/rss"
+LANG: "EN"
+SOURCE_TYPE: "RSS"
+LAUNCH_DATE: 1382227200
+SORT_ORDER: 0
+BENCHMARK_SCORE: 66
+STATUS: "ACTIVE"
+LAST_UPDATED_TS: 1747842118, // Wed May 21 2025 18:41:58 GMT+0300 (Москва, стандартное время)
+CREATED_ON: 1657730129
+UPDATED_ON: 1711620813
+}
+CATEGORY_DATA: [
+{
+TYPE: "122"
+ID: 14
+NAME: "BTC"
+CATEGORY: "BTC"
+}
+{
+TYPE: "122"
+ID: 15
+NAME: "BUSINESS"
+CATEGORY: "BUSINESS"
+}
+{
+TYPE: "122"
+ID: 26
+NAME: "FIAT"
+CATEGORY: "FIAT"
+}
+{
+TYPE: "122"
+ID: 37
+NAME: "MARKET"
+CATEGORY: "MARKET"
+}
+{
+TYPE: "122"
+ID: 50
+NAME: "TRADING"
+CATEGORY: "TRADING"
+}
+]
+}
+]
+Err: {}
+}
+https://data-api.coindesk.com
+URL
+/news/v1/article/list?lang=EN&limit=10
+RUN
+
+API Key (Parameter)
+API key
+Select API key
+Manage
+
+## Parameters
+
+lang
+(string)
+The preferred language for the sources or articles - English (EN), Espanol (ES), Turkish (TR), French (FR), Japanese (JP), Portuguese (PT)
+
+minLength: 1type: string
+default:
+EN
+example:
+EN
+
+source_ids
+(array)
+Get articles from specific sources based on their keys. If left empty it will just return news from ACTIVE sources for the selected language, if you want to get inactive sources as well, please pass them in alongside the active ones in this array.
+
+type: array
+default:
+[]
+example:
+[]
+
+categories
+(array)
+List of news article categories to include in the results. If an article matches any of the specified categories, it will be included in the results. Articles must be associated with at least one of these categories to appear, unless no categories are specified, in which case articles from all categories are included.
+
+maxItems: 200type: array
+default:
+[]
+example:
+[]
+
+exclude_categories
+(array)
+List of news article categories to exclude from the results. If an article matches any of the specified categories, it will be excluded. This parameter ensures that articles associated with these categories are not included in the final results, even if they also match categories listed in the 'categories' parameter. Any category name or id that is in both exclude_categories and categories parameters will be removed from the exclude_categories parameter.
+
+maxItems: 200type: array
+default:
+[]
+example:
+[]
+
+limit
+(integer)
+Number of total news articles to return
+
+minimum: 1maximum: 100type: integer
+default:
+50
+example:
+10
+
+to_ts
+(integer)
+Articles published on or before this timestamp
+
+type: integer
+default:
+-1
+## Responses
+
+200
+(OK)
+Success response from the API.
+
+{
+Data: {}
+Err: {}
+}
+
+400
+(Bad Request)
+The 400 error occurs when some of the data sent is malformed.
+
+{
+Data: {}
+Err: {}
+}
+
+401
+(Unauthorized)
+The 401 error occurs when you don't use a valid API Key on an endpoint that requires authentication.
+
+{
+Data: {}
+Err: {}
+}
+
+403
+(Forbidden)
+The 403 error occurs when you don't use a valid API Key on an endpoint that requires authentication.
+
+{
+Data: {}
+Err: {}
+}
+
+404
+(Not Found)
+The 404 error can either be returned when some/all of parameters sent are not found within our system. This could be beacuse parameters like market, instrument, news source, symbol, asset_id etc. are invalid
+
+{
+Data: {}
+Err: {}
+}
+
+405
+(Method Not Allowed)
+The 405 error occurs the user tries to use a http method (GET,POST,PUT etc) that is not supported.
+
+{
+Data: {}
+Err: {}
+}
+
+429
+(Too Many Requests)
+The 429 error occurs when you go over the API Key limit. Rate limits are eforced on a second (resets every second), minute (resers every minute), hour (resets every hour), day (resets every day) and month (resets every month) granularity. You can upgrade your account and access higher rate limits.
+
+{
+Data: {}
+Err: {}
+}
+
+500
+(Internal Server Error)
+The 500 error occurs our API is up but does not know how to / can't handle the request.
+
+{
+Data: {}
+Err: {}
+}
+
+502
+(Bad Gateway)
+The 502 error occurs when our API is not running. This error is returned by our proxy / load balancer.
+
+{
+Data: {}
+Err: {}
+}
+
+503
+(Service Unavailable)
+The 503 error occurs when there is an issue with one of our data sources and we can't even return a partial answer.
+
+{
+Data: {}
+Err: {}
+}

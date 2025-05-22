@@ -1,0 +1,30 @@
+version: '3.8' # Specifies the version of the Docker Compose file format
+
+services:
+  redis:
+    image: "redis:alpine" # Use the official Redis image from Docker Hub, alpine version for smaller size
+    container_name: inchart_redis # A custom name for the container
+    ports:
+      - "6379:6379" # Map port 6379 on the host to port 6379 in the container
+    volumes:
+      - redis_data:/data # Persist Redis data using a named volume
+    restart: unless-stopped # Restart policy
+
+  postgres-timescaledb:
+    image: "timescale/timescaledb:latest-pg16" # Official TimescaleDB image with PostgreSQL 16
+    container_name: inchart_postgres_timescaledb
+    ports:
+      - "5433:5432" # Map host port 5433 to container port 5432
+    environment:
+      POSTGRES_USER: inchart_admin
+      POSTGRES_PASSWORD: p3ace-0f-ouR-t!me
+      POSTGRES_DB: inchart_db
+    volumes:
+      - postgres_timescaledb_data:/var/lib/postgresql/data # Persist PostgreSQL data
+    restart: unless-stopped
+
+volumes:
+  redis_data: # Defines the named volume for Redis data persistence
+    driver: local
+  postgres_timescaledb_data: # Defines the named volume for PostgreSQL/TimescaleDB data persistence
+    driver: local 

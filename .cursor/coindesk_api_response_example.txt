@@ -1,0 +1,649 @@
+{
+    "Data": [
+        {
+            "TYPE": "121",
+            "ID": 44911613,
+            "GUID": "https://timestabloid.com/?p=67927",
+            "PUBLISHED_ON": 1747843456,
+            "IMAGE_URL": "https://resources.cryptocompare.com/news/67/default.png",
+            "TITLE": "Analyst Says Shiba Inu (SHIB) Will Remain Bullish If This Happens, Sets Price Target",
+            "SUBTITLE": null,
+            "AUTHORS": "Zaccheaus Ogunjobi",
+            "URL": "https://timestabloid.com/analyst-says-shiba-inu-shib-will-remain-bullish-if-this-happens-sets-price-target/",
+            "SOURCE_ID": 67,
+            "BODY": "Shiba Inu (SHIB), one of the most popular memecoins in the crypto market, is once again drawing attention from analysts and investors alike. A recent technical breakdown from prominent crypto analyst Seyma suggests that SHIB may be poised to maintain its bullish trajectory if key structural conditions are met. The insight outlines a pivotal short-term setup that could fuel SHIB’s next major move. Bullish Structure Hinges on Critical Breakout Levels Seyma’s analysis, which focuses on the 4-hour chart (W-4h timeframe), reveals a finely balanced scenario. She explains that a weekly close above a critical resistance level—marked by a red line—will be the first indication of sustained bullish strength. However, that alone won’t be enough to confirm the continuation of the uptrend. #SHIB $SHIB | W-4h If the week closes above the red line and then breaks the purple line with a breakout candle, the bullish market structure will continue.. otherwise the grey box and the purple line below it are the demand zones. If all these positive expectations come true… pic.twitter.com/4q4kpXWkdn — Şeyma (@traderseyma) May 18, 2025 The real test lies in SHIB’s ability to decisively break above the purple line immediately following that close. This line represents a dynamic resistance level, likely formed by a descending trendline or consolidation zone. According to Seyma, a clear breakout candle through this purple line will serve as the definitive signal of a bullish market structure. In such a case, momentum traders and bulls could re-enter the market with confidence, targeting higher price levels with renewed optimism. Should this breakout pattern unfold as predicted, Seyma projects a long-term price target of $0.030 on the weekly chart—a level that would mark a significant rally from current prices. Downside Risk: Demand Zones Await if Breakout Fails Despite the optimistic outlook, Seyma also highlights a scenario that would invalidate the bullish continuation. If SHIB fails to close above the red line or gets rejected at the purple resistance level without producing a breakout candle, downside pressure may return. In such a case, SHIB could retreat into the grey box and the lower purple line region, identified as demand zones where buying interest is historically concentrated. These demand zones represent strong accumulation areas that have previously supported SHIB’s price during downtrends. Should the bearish scenario play out, traders may look to these zones for potential re-entry or stabilization points. Broader Market Context and Community Sentiment Seyma’s forecast arrives at a time when the memecoin sector is experiencing renewed interest, driven by a broader rebound in crypto market sentiment. Shiba Inu, in particular, continues to stand out due to its large and dedicated community, ongoing ecosystem development, and integration into emerging technologies such as Shibarium, the project’s Layer-2 blockchain. We are on twitter, follow us to connect with us :- @TimesTabloid1 — TimesTabloid (@TimesTabloid1) July 15, 2023 On-chain metrics have shown a recent uptick in SHIB transaction volumes and wallet activity, further supporting the case for a potential upward move. Meanwhile, social media sentiment remains predominantly bullish, with many traders eagerly watching for confirmation of Seyma’s outlined conditions. While the road to $0.030 may seem ambitious, it’s not entirely out of reach if momentum continues to build and macro conditions remain favorable. The memecoin has surprised the market before, and with analysts like Seyma providing clear frameworks for technical validation, traders are more equipped than ever to navigate SHIB’s next major phase. As always, market participants are advised to combine technical analysis with risk management and macro awareness, especially in assets as volatile and sentiment-driven as Shiba Inu. In conclusion, SHIB’s short-term direction hinges on a confluence of technical events. If the red resistance level is breached and a breakout candle confirms the break above the purple line, Seyma’s bullish vision could begin to play out. If not, traders may need to watch the demand zones below for clues on the next move. Either way, all eyes are now on SHIB’s weekly close. Disclaimer : This content is meant to inform and should not be considered financial advice. The views expressed in this article may include the author’s personal opinions and do not represent Times Tabloid’s opinion. Readers are urged to do in-depth research before making any investment decisions. Any action taken by the reader is strictly at their own risk. Times Tabloid is not responsible for any financial losses. Follow us on Twitter , Facebook , Telegram , and Google News The post Analyst Says Shiba Inu (SHIB) Will Remain Bullish If This Happens, Sets Price Target appeared first on Times Tabloid .",
+            "KEYWORDS": "Cryptocurrency|News|SHIB|SHIB Price|SHIB Price Prediction|Shiba Inu",
+            "LANG": "EN",
+            "UPVOTES": 0,
+            "DOWNVOTES": 0,
+            "SCORE": 0,
+            "SENTIMENT": "POSITIVE",
+            "STATUS": "ACTIVE",
+            "CREATED_ON": 1747843514,
+            "UPDATED_ON": null,
+            "SOURCE_DATA": {
+                "TYPE": "120",
+                "ID": 67,
+                "SOURCE_KEY": "timestabloid",
+                "NAME": "TimesTabloid",
+                "IMAGE_URL": "https://resources.cryptocompare.com/news/67/default.png",
+                "URL": "https://timestabloid.com/feed/",
+                "LANG": "EN",
+                "SOURCE_TYPE": "RSS",
+                "LAUNCH_DATE": null,
+                "SORT_ORDER": 0,
+                "BENCHMARK_SCORE": 0,
+                "STATUS": "ACTIVE",
+                "LAST_UPDATED_TS": 1747841941,
+                "CREATED_ON": 1664381507,
+                "UPDATED_ON": 1673235440
+            },
+            "CATEGORY_DATA": [
+                {
+                    "TYPE": "122",
+                    "ID": 13,
+                    "NAME": "BLOCKCHAIN",
+                    "CATEGORY": "BLOCKCHAIN"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 15,
+                    "NAME": "BUSINESS",
+                    "CATEGORY": "BUSINESS"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 37,
+                    "NAME": "MARKET",
+                    "CATEGORY": "MARKET"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 44,
+                    "NAME": "SHIB",
+                    "CATEGORY": "SHIB"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 50,
+                    "NAME": "TRADING",
+                    "CATEGORY": "TRADING"
+                }
+            ]
+        },
+        {
+            "TYPE": "121",
+            "ID": 44911448,
+            "GUID": "https://www.newsbtc.com/?p=755814",
+            "PUBLISHED_ON": 1747843253,
+            "IMAGE_URL": "https://resources.cryptocompare.com/news/21/44911448.jpeg",
+            "TITLE": "Is The XRP Price Mirroring The 2017 Rally? Analyst Points Out Similarities",
+            "SUBTITLE": null,
+            "AUTHORS": "Scott Matherson",
+            "URL": "https://www.newsbtc.com/analysis/xrp/xrp-price-mirroring-the-2017-rally/",
+            "SOURCE_ID": 21,
+            "BODY": "Crypto analyst Galaxy has drawn similarities between the current XRP price action and the 2017 bull run, when the altcoin recorded significant gains. He predicts the altcoin could soon rally to double digits, mirroring the 2017 rally. XRP Price To Rally To Double Digits As It Mirrors 2017 Rally In an X post, Galaxy indicated that the XRP price could rally to double digits as it mirrors the 2017 rally. He stated that XRP is almost perfectly following the breakout pattern of 2017 after 6 years of consolidation. The analyst added that the longer the consolidation, the bigger the price move. Related Reading: XRP Reaching Oversold Levels As Net Flows Turn Negative, What’s Next? His accompanying chart showed that the XRP price could rally to almost $40 on this breakout. The analyst seems convinced that the altcoin could witness such a parabolic move, considering that XRP surged by 61,000% in 280 days in 2017. The chart also showed that the altcoin will likely reach this target sometime next year. Crypto analyst Egrag Crypto has also stated that he expects the XRP price to reach between $27 and $33 in this market cycle. He believes that a repeat of the 2017 historical performance makes these price targets achievable for the altcoin. The analyst has also alluded to factors such as the XRP ETFs and Ripple’s expansion as factors that could drive this price surge. Meanwhile, crypto veteran Raoul Pal also affirmed that the XRP price has enough room to rally to the upside from its current level. He highlighted a bull flag that had formed for the altcoin, following its consolidation phase after last year’s rally. The veteran expects XRP to witness a bullish continuation after this consolidation phase, possibly rallying to as high as $5. This would mark a new all-time high (ATH) for the token. The Altcoin In A Bullish Phase Crypto analyst CobraVanguard asserted that the XRP price is in a bullish phase, while highlighting a falling wedge pattern that was forming for the altcoin. He remarked that this pattern indicates the altcoin’s potential to reach $3. However, the analyst warned that this setup could be invalidated if the wedge pattern is broken downwards with the strength of bearish candles. Related Reading: XRP Price Explosion To $5.9: Current Consolidation Won’t Stop XRP From Growing Meanwhile, crypto analyst Dark Defender noted that the XRP price is currently in Wave B of its Wave 2 corrective move. He predicts that the altcoin could rally to its current all-time high once the B and C waves are completed in this corrective wave. The analyst is also confident that the altcoin can rally to double digits in the long term. He once predicted that the altcoin could reach $18 based on his Elliott Wave Theory analysis. At the time of writing, the XRP price is trading at around $2.38, up in the last 24 hours, according to data from CoinMarketCap. Featured image from iStock, chart from Tradingview.com",
+            "KEYWORDS": "XRP|altcoin|CobraVanguard|Dark Defender|Egrag Crypto|elliot wave theory|falling wedge pattern|galaxy|Raoul Pal|Spot XRP ETFs|xrp|xrp news|XRP Price|XRPUSD|xrpusdt",
+            "LANG": "EN",
+            "UPVOTES": 0,
+            "DOWNVOTES": 0,
+            "SCORE": 0,
+            "SENTIMENT": "POSITIVE",
+            "STATUS": "ACTIVE",
+            "CREATED_ON": 1747843282,
+            "UPDATED_ON": 1747843282,
+            "SOURCE_DATA": {
+                "TYPE": "120",
+                "ID": 21,
+                "SOURCE_KEY": "newsbtc",
+                "NAME": "NewsBTC",
+                "IMAGE_URL": "https://images.cryptocompare.com/news/default/newsbtc.png",
+                "URL": "https://www.newsbtc.com/feed/",
+                "LANG": "EN",
+                "SOURCE_TYPE": "RSS",
+                "LAUNCH_DATE": 1380585600,
+                "SORT_ORDER": 0,
+                "BENCHMARK_SCORE": 50,
+                "STATUS": "ACTIVE",
+                "LAST_UPDATED_TS": 1747841913,
+                "CREATED_ON": 1657730129,
+                "UPDATED_ON": 1711620962
+            },
+            "CATEGORY_DATA": [
+                {
+                    "TYPE": "122",
+                    "ID": 5,
+                    "NAME": "ALTCOIN",
+                    "CATEGORY": "ALTCOIN"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 37,
+                    "NAME": "MARKET",
+                    "CATEGORY": "MARKET"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 47,
+                    "NAME": "SPONSORED",
+                    "CATEGORY": "SPONSORED"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 50,
+                    "NAME": "TRADING",
+                    "CATEGORY": "TRADING"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 58,
+                    "NAME": "XRP",
+                    "CATEGORY": "XRP"
+                }
+            ]
+        },
+        {
+            "TYPE": "121",
+            "ID": 44911495,
+            "GUID": "https://ambcrypto.com/?p=493711",
+            "PUBLISHED_ON": 1747843212,
+            "IMAGE_URL": "https://images.cryptocompare.com/news/default/ambcrypto.png",
+            "TITLE": "Tron: How a 714% whale inflow surge may push TRX past $0.2752",
+            "SUBTITLE": null,
+            "AUTHORS": "Erastus Chami",
+            "URL": "https://ambcrypto.com/tron-how-a-714-whale-inflow-surge-may-push-trx-past-0-2752/",
+            "SOURCE_ID": 32,
+            "BODY": "TRON sees growing on-chain activity and whale accumulation as price nears critical breakout level.",
+            "KEYWORDS": "Altcoin|News|News 1|Social|Trading View",
+            "LANG": "EN",
+            "UPVOTES": 0,
+            "DOWNVOTES": 0,
+            "SCORE": 0,
+            "SENTIMENT": "POSITIVE",
+            "STATUS": "ACTIVE",
+            "CREATED_ON": 1747843310,
+            "UPDATED_ON": null,
+            "SOURCE_DATA": {
+                "TYPE": "120",
+                "ID": 32,
+                "SOURCE_KEY": "ambcrypto",
+                "NAME": "AMB Crypto",
+                "IMAGE_URL": "https://images.cryptocompare.com/news/default/ambcrypto.png",
+                "URL": "https://ambcrypto.com/feed/",
+                "LANG": "EN",
+                "SOURCE_TYPE": "RSS",
+                "LAUNCH_DATE": null,
+                "SORT_ORDER": 0,
+                "BENCHMARK_SCORE": 0,
+                "STATUS": "ACTIVE",
+                "LAST_UPDATED_TS": 1747841932,
+                "CREATED_ON": 1657730129,
+                "UPDATED_ON": 1674467937
+            },
+            "CATEGORY_DATA": [
+                {
+                    "TYPE": "122",
+                    "ID": 5,
+                    "NAME": "ALTCOIN",
+                    "CATEGORY": "ALTCOIN"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 50,
+                    "NAME": "TRADING",
+                    "CATEGORY": "TRADING"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 51,
+                    "NAME": "TRX",
+                    "CATEGORY": "TRX"
+                }
+            ]
+        },
+        {
+            "TYPE": "121",
+            "ID": 44911741,
+            "GUID": "https://www.cryptopolitan.com/?p=731427",
+            "PUBLISHED_ON": 1747843200,
+            "IMAGE_URL": "https://resources.cryptocompare.com/news/43/44911741.jpeg",
+            "TITLE": "Is Mutuum Finance About to Surprise Everyone? What MUTM’s Impressive Momentum Means for Investors in 2025",
+            "SUBTITLE": null,
+            "AUTHORS": "Cryptopolitan Media",
+            "URL": "https://www.cryptopolitan.com/is-mutuum-finance-about-to-surprise-everyone-what-mutms-impressive-momentum-means-for-investors-in-2025/",
+            "SOURCE_ID": 43,
+            "BODY": "In a year already packed with surprises, Mutuum Finance (MUTM) is emerging as one of the most unexpected contenders in the crypto market. What began as a quiet presale has now snowballed into serious market momentum, with analysts and early investors alike taking notice. With its unique approach to decentralized finance, low entry price, and rapidly growing community, Mutuum Finance is performing as one of the best cryptos to buy now for those looking to capitalize on breakout potential. The project is in phase 5 of its presale priced at $0.03. Mutuum Finance’s presale surges past $9 million with over 11,000 investors already onboard. As Mutuum Finance enters Phase 6, the price will jump 16.67% to $0.035. MUTM could be the next big winner for those who seek greater gains and long term investment. As 2025 unfolds, and more eyes turn toward what crypto to invest in, Mutuum’s rise could become one of the defining stories of this bull cycle, possibly catching many off guard in the best way. Transforming DeFi Lending with a Hybrid Model Mutuum Finance is revolutionizing decentralized lending by merging both Peer-to-Contract (P2C) and Peer-to-Peer (P2P) models. The P2C model allows users to lock stablecoins like USDT in liquidity pools backed by smart contracts, receiving passive income while making it easy for borrowers to borrow money easily. Meanwhile, the P2P model eliminates middlemen, allowing lenders and borrowers to directly negotiate with each other. This two-pronged approach maximizes security, efficiency, and decentralization and positions Mutuum Finance at the forefront of the DeFi universe. By giving users full control over their lending decisions, the platform is appealing to conservative and high-yield investors, and facilitates a more open and flexible financial system. A DeFi Disruptor Drawing Massive Investor Interest Mutuum Finance is rapidly generating buzz in the DeFi community with its game-changing lending solutions. Despite being in presale, it has already surpassed more than $9 million in funding and has amassed nearly 11,000 investors, making it a solid altcoin ready to experience a major breakthrough. With Phase 5 price at $0.03 and with an impending 16.67% price boost in the next phase, early investors stand to gain good returns in terms of bagging their highest returns. At launch, with an anticipated price of $0.06, profits will be 100%, and for the next bull cycle, projections see the leap over $2. A Secure and Sustainable DeFi Ecosystem In order to bring stability, Mutuum Finance is launching a fully collateralized, USD-backed stablecoin on the Ethereum blockchain. In contrast to algorithmic stablecoins that are susceptible to volatility, this framework involves over-collateralization, which eliminates the chances of liquidation. With open and completely audited smart contracts, the platform roots investor trust while eliminating the vulnerabilities seen in other DeFi lending platforms. This uncompromising focus on security and sustainability makes Mutuum Finance a secure choice for long-term investment. Exclusive Rewards and Community Incentives Early adopters of Mutuum Finance all have enticing incentives, including a $100,000 giveaway in which 10 people will win $10,000 value of MUTM tokens. There is also a referral program that encourages community development as it rewards clients for recruiting new investors. Early backers also receive VIP access to platform updates. All these incentives not only drive early usage but also ensure long-term hold among token holders. Mutuum Finance (MUTM) is gaining serious traction, over $9M raised and 11,000+ investors strong. Now in Phase 5 at $0.03, the price will jump 16.67% to $0.035, with a launch price of $0.06 promising 100% gains out the gate. Analysts are eyeing $2–$5 targets in the next bull run. With its dual-lending model, strong tokenomics, and a $100K giveaway, MUTM is quickly becoming 2025’s breakout DeFi contender. Secure your spot now. For more information about Mutuum Finance (MUTM) visit the links below: Website: https://www.mutuum.finance/ Linktree: https://linktr.ee/mutuumfinance",
+            "KEYWORDS": "Press Release",
+            "LANG": "EN",
+            "UPVOTES": 0,
+            "DOWNVOTES": 0,
+            "SCORE": 0,
+            "SENTIMENT": "POSITIVE",
+            "STATUS": "ACTIVE",
+            "CREATED_ON": 1747843727,
+            "UPDATED_ON": 1747843728,
+            "SOURCE_DATA": {
+                "TYPE": "120",
+                "ID": 43,
+                "SOURCE_KEY": "cryptopolitan",
+                "NAME": "Cryptopolitan",
+                "IMAGE_URL": "https://images.cryptocompare.com/news/default/cryptopolitan.png",
+                "URL": "https://www.cryptopolitan.com/feed/",
+                "LANG": "EN",
+                "SOURCE_TYPE": "RSS",
+                "LAUNCH_DATE": null,
+                "SORT_ORDER": 0,
+                "BENCHMARK_SCORE": 0,
+                "STATUS": "ACTIVE",
+                "LAST_UPDATED_TS": 1747841932,
+                "CREATED_ON": 1657730129,
+                "UPDATED_ON": 1681205909
+            },
+            "CATEGORY_DATA": [
+                {
+                    "TYPE": "122",
+                    "ID": 5,
+                    "NAME": "ALTCOIN",
+                    "CATEGORY": "ALTCOIN"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 13,
+                    "NAME": "BLOCKCHAIN",
+                    "CATEGORY": "BLOCKCHAIN"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 15,
+                    "NAME": "BUSINESS",
+                    "CATEGORY": "BUSINESS"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 37,
+                    "NAME": "MARKET",
+                    "CATEGORY": "MARKET"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 50,
+                    "NAME": "TRADING",
+                    "CATEGORY": "TRADING"
+                }
+            ]
+        },
+        {
+            "TYPE": "121",
+            "ID": 44911260,
+            "GUID": "https://cryptopotato.com/?p=397288",
+            "PUBLISHED_ON": 1747842955,
+            "IMAGE_URL": "https://resources.cryptocompare.com/news/27/44911260.jpeg",
+            "TITLE": "XRP and DOGE ETFs Face SEC Review Extension as Public Comment Sought",
+            "SUBTITLE": null,
+            "AUTHORS": "Chayanika Deka",
+            "URL": "https://cryptopotato.com/xrp-and-doge-etfs-face-sec-review-extension-as-public-comment-sought/",
+            "SOURCE_ID": 27,
+            "BODY": "The US Securities and Exchange Commission (SEC) has extended its review timeline for proposed spot cryptocurrency exchange-traded funds (ETFs), tied to XRP and DOGE. After temporarily halting decisions originally slated for May 21 and 22, the Commission is now seeking public comments on them. Ruling on XRP, DOGE ETFs The delay affects the 21Shares Core XRP Trust, Grayscale XRP Trust , and Grayscale Dogecoin Trust. All three aim to offer investors exposure to their respective digital assets via ETF shares backed exclusively by XRP or DOGE, with index tracking and custodial services provided by industry-standard partners such as Coinbase Custody and CoinDesk Indices. While the SEC has stated that this move does not suggest a leaning toward approval or denial, it is calling for public comments to assess better whether the proposals meet the standards of investor protection and market integrity outlined in the Exchange Act. In the filings, the agency explained, “Institution of proceedings is appropriate at this time in view of the legal and policy issues raised by the proposed rule change. The institution of proceedings does not indicate that the Commission has reached any conclusions with respect to any of the issues involved. Rather, the Commission seeks and encourages interested persons to provide comments on the proposed rule change.” Besides, the agency also postponed a decision on Bitwise’s proposal to allow staking in its Ethereum ETF, continuing a trend of extended timelines as the SEC sifts through an increasing number of crypto-related filings. ETF Delays Are Routine, Not Surprising Industry observers, including Bloomberg ETF analyst James Seyffart, weighed in on the SEC’s latest delay and noted that such extensions are routine. According to Seyffart, while several XRP-related products have upcoming review dates, early approvals are unlikely. He added that the securities watchdog typically uses the full allotted time to evaluate 19b-4 filings, making October the more realistic window for final decisions. Seyffart also said that any approvals before late June or early July would be considered unusual, regardless of the SEC’s current stance toward crypto. In his view, early action, not delays, would be the real deviation from standard regulatory procedure. Seyffart even went on to say that Litecoin ETF has a “higher likelihood” of getting approved first before all the other crypto ETFs. The post XRP and DOGE ETFs Face SEC Review Extension as Public Comment Sought appeared first on CryptoPotato .",
+            "KEYWORDS": "AA News|Crypto News|Crypto ETF|Dogecoin|Ripple (XRP) Price|SEC",
+            "LANG": "EN",
+            "UPVOTES": 0,
+            "DOWNVOTES": 0,
+            "SCORE": 0,
+            "SENTIMENT": "NEUTRAL",
+            "STATUS": "ACTIVE",
+            "CREATED_ON": 1747842958,
+            "UPDATED_ON": 1747842959,
+            "SOURCE_DATA": {
+                "TYPE": "120",
+                "ID": 27,
+                "SOURCE_KEY": "cryptopotato",
+                "NAME": "Crypto Potato",
+                "IMAGE_URL": "https://images.cryptocompare.com/news/default/cryptopotato.png",
+                "URL": "https://cryptopotato.com/category/crypto-news/feed/",
+                "LANG": "EN",
+                "SOURCE_TYPE": "RSS",
+                "LAUNCH_DATE": 1458086400,
+                "SORT_ORDER": 0,
+                "BENCHMARK_SCORE": 57,
+                "STATUS": "ACTIVE",
+                "LAST_UPDATED_TS": 1747841913,
+                "CREATED_ON": 1657730129,
+                "UPDATED_ON": 1711621041
+            },
+            "CATEGORY_DATA": [
+                {
+                    "TYPE": "122",
+                    "ID": 15,
+                    "NAME": "BUSINESS",
+                    "CATEGORY": "BUSINESS"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 20,
+                    "NAME": "DOGE",
+                    "CATEGORY": "DOGE"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 25,
+                    "NAME": "EXCHANGE",
+                    "CATEGORY": "EXCHANGE"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 41,
+                    "NAME": "REGULATION",
+                    "CATEGORY": "REGULATION"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 58,
+                    "NAME": "XRP",
+                    "CATEGORY": "XRP"
+                }
+            ]
+        },
+        {
+            "TYPE": "121",
+            "ID": 44911443,
+            "GUID": "https://cryptodaily.co.uk/2025/05/the-bitcoin-strategic-reserve-explained-and-what-bsr-means-for-the-us-economy",
+            "PUBLISHED_ON": 1747842731,
+            "IMAGE_URL": "https://resources.cryptocompare.com/news/75/44911443.jpeg",
+            "TITLE": "The Bitcoin Strategic Reserve Explained and What BSR Means for the US Economy",
+            "SUBTITLE": null,
+            "AUTHORS": "Laurie Dunn",
+            "URL": "https://cryptodaily.co.uk/2025/05/the-bitcoin-strategic-reserve-explained-and-what-bsr-means-for-the-us-economy",
+            "SOURCE_ID": 75,
+            "BODY": "The United States government is considering alternative “budget neutral” methods of funding its new bitcoin strategic reserve, creating lots of excitement worldwide in the cryptocurrency world. The radical shift in monetary policy—a reserve supply of bitcoin—dramatically changes how the U.S. approaches financial negotiations. This all comes after President Donald Trump's Executive Order of March 6, which established the U.S. Strategic Bitcoin Reserve. His order put a freeze on any further sales of the U.S. 's bitcoin—a move some feel could ensure the U.S. becoming the dominant force in the worldwide cryptocurrency market. Our comprehensive analysis goes back to the origins of the U.S. strategic bitcoin reserve: we examine the economic rationale for the reserve and its potential implications. We also explore the legislative framework, its funding mechanisms, and the macroeconomic impact of the U.S.’s groundbreaking bitcoin initiative. There’s also some key concerns the reserve raises, and it has some limitations to consider. Let’s go! The Strategic Bitcoin Reserve: Origins and Legislative Framework Legislative efforts beginning back in mid-2024, mark both the origins of the bitcoin strategic reserve, and an incredibly significant shift in how the U.S. government views and handles digital assets. Unlike current traditional monetary policies, the bitcoin initiative represents a deliberate attempt to integrate cryptocurrency into the national financial strategy. The BITCOIN Act of 2024 and its core provisions Republican Senator Cynthia Lummis of Wyoming introduced The Boosting Innovation, Technology, and Competitiveness through Optimized Investment Nationwide (BITCOIN) Act in 2024, establishing the foundation for the U.S.’s national bitcoin policy. Her legislation aims to create a comprehensive framework for management of government bitcoin holdings by authorizing multiple key provisions: Establishment of a decentralized network of secure bitcoin storage facilities spread across multiple U.S. locations Implementation of purchasing program to purchase 200,000 over five years, totaling 1 million Acquisition of approximately 5% of the world’s total bitcoin supply—a goal mirroring U.S. gold reserves’ percentile Funding by diversifying existing resources already within the Federal Reserve System Protection of the rights of bitcoin holders to self-custody their asset without a third party Additionally, the legislation mandated that quarterly reports via an auditing practice known as \"proof of reserves\" are maintained, which is to ensure transparency and accountability of government-held bitcoin’s management. Furthermore, the sale of bitcoin under federal control became prohibited by Trump’s March 6 executive order, requiring all bitcoin to be transferred to the Strategic Bitcoin Reserve once legal title has been secured. President Trump's executive order and political motivations When Trump formalized the bitcoin strategic reserve via signature on the executive order titled \"Establishment of the Strategic Bitcoin Reserve and United States Digital Asset Stockpile,” the order directed the Treasury Department to establish an office to administer the reserve. Bitcoin seized through criminal and civil asset forfeiture proceedings and currently held by the government formed the strategic reserve’s initial capital. Trump’s executive order contained several key directives: Government-owned bitcoin would not be sold, but instead held as a reserve asset Both the U.S. Treasury and Commerce departments were authorized to develop \"budget-neutral\" strategies for acquiring additional bitcoin without tax dollars All federal agencies were required to provide a complete accounting of digital assets in their possession within 30 days A separate \"Digital Asset Stockpile\" would be created for cryptocurrencies and digital assets other than bitcoin The initiative moves towards fulfillment of Trump’s various cryptocurrency-related campaign promises, including to make America \"the undisputed bitcoin superpower and the crypto capital of the world.\" According to Trump's digital assets advisor, aka “Crypto Czar David Sacks, previous government sales of approximately 195,000 bitcoin have cost taxpayers an estimated $17 billion in lost value. The reserve now represents an attempt to transform this perceived mismanagement into strategic advantage. Role of Senator Cynthia Lummis and state-level initiatives A years-long bitcoin advocate, Senator Cynthia Lummis emerged as the primary congressional spokesperson and champion of the bitcoin strategic reserve. She reintroduced the BITCOIN Act following Trump’s executive order to codify the initiative into permanent law. Lummis framed the reserve as addressing America's \"$36 trillion national debt\" and strengthening the country's \"economic foundation for generations.\" State-level initiatives are also gaining momentum. By early 2025, twenty-eight states had proposed allocating public funds to bitcoin, with eighteen actively progressing through legislative channels 6. Notable examples include: Texas: Considering Senate Bill 21 to create a state-managed investment fund for Bitcoin and high market cap cryptocurrencies 7 Kentucky: Enacted legal protections for Bitcoin users, exempting node operators from money transmitter licensing 6 Arizona: Advanced its Bitcoin Reserve Bill through the House Committee 6 Oklahoma: Passed House Bill 1203 establishing a state Bitcoin reserve by a 77-15 vote 6 The Texas Strategic Bitcoin Reserve proposal, operating under the authority of the state Comptroller, would be financed through legislative appropriations, dedicated revenue sources, and private donations 7. This initiative reflects growing interest in cryptocurrency as a potential hedge against inflation and economic volatility at both federal and state levels. Economic Rationale Behind a Bitcoin Reserve Beyond politics, economic justification for the bitcoin strategic reserve rests on three main ideas: inflation protection, reserve diversification, and debt reduction. These aspects form the foundation of what proponents describe as a forward-thinking monetary strategy. Bitcoin as a deflationary hedge against inflation The core economic rationale behind the bitcoin strategic reserve lies in its inherent design as a deflationary asset. With a permanently capped supply of 21 million, bitcoin stands in stark contrast to traditional fiat currency, which gets printed indefinitely, causing inflation. This artificial digital scarcity gives bitcoin intrinsic value and positions it as a potential shield against price and dollar depreciation. The only potential caveat at the moment, is how long it takes Bitcoin to send and receive , with some estimators ranging from 1 to 1.5 hours. Bitcoin's deflationary mechanisms, including a fixed supply and halving events reducing its issuance totals, make it resistant to inflationary norms. Bitcoin is widely considered a viable store of value, just like gold. Being a digital asset with proven scarcity and this hard limit means bitcoin could increase its value as demand rises worldwide, a counterbalance to the declining purchasing power of fiat currencies. Bitcoin notably operates independently of geopolitical tension and the economic policies typically affecting traditional assets. This independence provides a unique security layer for national reserves during periods of inflation, economic uncertainty or currency debasement. Diversification of U.S. national reserves For the federal reserve, bitcoin represents the opportunity to extend its portfolio beyond traditional assets like gold and foreign currencies. Diversifying into bitcoin offers the nation enhanced economic resilience through exposure to different asset classes, each of course with varying risk profiles. Holding, or “hodling,” bitcoin follows the same logic as maintaining national gold reserves, foreign currencies, and other assets. However, bitcoin offers many distinct advantages: 24/7 market liquidity, fast cross-border transactions, and lower transaction costs make bitcoin a highly flexible reserve asset 1. Despite its volatility, bitcoin's value has surged over 10,000% since inception, consistently outperforming every other traditional asset in existence. This growth potential makes bitcoin an attractive addition to the federal reserve bitcoin strategy, and some suggest it could be used to strengthen the dollar's role as the world’s reserve currency. Potential to reduce long-term federal debt burden Perhaps the most compelling reason for the reserve is bitcoin's potential impact on the U.S.’s national debt. Asset management firm VanEck projects that the U.S. establishing a strategic bitcoin reserve could cut the national debt by up to 35% by 2049. $42 trillion of the projected $119.3 trillion national debt in 2049 could be offset through this strategy, according to estimates from the firm. Optimistic assessments continue to come from Senator Cynthia Lummis (R-WY) who believes a strategic bitcoin reserve could cut the national debt in half by 2045—a projection which aligns with analysis suggesting that if bitcoin growth continues to be strong, by 2045 the U.S. Treasury could reduce its federal debt by as much as $50.8 trillion. The mechanism for this debt reduction could involve innovative financial instruments like \"BitBonds,\" which would allow the government to finance debt for around 1% interest instead, opposed to the typical 4.5% for 10-year Treasury notes—a shift which would translate to roughly $70 billion in savings annually, or $700 billion in the first decade. The U.S. Strategic Bitcoin Reserve represents more than a technological initiative, but proof of a burgeoning economic paradigm shift. Bitcoin offers inflation protection, reserve diversification, plus a pathway toward addressing America's substantial debt—all without taxpayers footing the bill. Materials and Methods: Funding and Acquisition Strategy The bitcoin strategic reserve seeks out novel ways to acquire the asset without placing any further burden on the taxpayers. The U.S. government was previously said to be holding approximately 200,000 bitcoin, worth roughly $18.5 billion, primarily obtained through law enforcement seizures. A scheduled audit of the government’s holdings has to date failed to materialize, and the held bitcoin may have suffered mismanagement by various parties unfamiliar with the technology, but whatever remains of the existing stockpile forms the foundation for an ambitious expansion plan. Use of seized crypto assets by federal agencies Several federal agencies have historically auctioned off any seized cryptocurrency assets, placing the sales’ proceeds into the Department of Justice’s Asset Forfeiture Fund. The establishment of the Strategic Bitcoin Reserve has changed this approach dramatically, as the executive order mandates that all cryptocurrency seized through criminal or civil forfeiture proceedings must now be transferred to the Treasury Department instead of the general fund where it had normally been flowing to eventually. The U.S. Marshals Service previously managed the auctions of similarly forfeited assets in the past—like artwork, vehicles, etc. This fragmented approach, however, led to several inefficiencies: The captured digital assets were scattered across multiple federal agencies among people who may not have been familiar with the new technology. The reserve’s new centralized management structure addresses these issues, originally by requiring agencies to provide a complete accounting of all of the varying digital assets each had in their possession within 30 days. To date however, the accounting of the nation’s bitcoin is still a grey area. Annual acquisition cap of 200,000 BTC The BITCOIN Act proposed by Senator Lummis calls for a “structured acquisition program” targeting the purchase of 200,000 bitcoin per year over the next five years. This carefully calibrated approach aims to accumulate 1 million bitcoin in total. If successful, these acquisitions would leave the U.S. holding about 5% of all bitcoin that can ever exist. To implement the bitcoin reserve strategy, the Treasury Secretary is directed to \"establish a decentralized network of secure bitcoin storage facilities distributed across the U.S.” These facilities are said to be selected based on comprehensive risk assessments that prioritize geographic diversity, security, and accessibility. This structured approach could allow the government to add to its holdings without also disrupting markets. Reallocation of Federal Reserve surplus and gold certificates To fund the bitcoin strategic reserve, the government is turning to some innovative sources that do not require any additional taxation, including: Reduction of Federal Reserve banks' discretionary surplus funds from $6.83 billion to $2.40 billion Allocation of $6 billion from Federal Reserve annual net earnings for fiscal years 2025-2029 Revaluation of Federal Reserve gold certificates to reflect current market values By far, reevaluation of the gold certificates represents reserve’s the most substantial proposed funding source. Currently, the certificates are valued at their 1974 price of $42.22 per ounce; spot gold trades above $3,000 per ounce today however. Simply updating these certificates to reflect their current fair market value, the reserve could generate nearly $700 billion and not increase the national debt. Senator Lummis has emphasized that this approach is entirely “budget neutral” because it would not use any additional taxpayer funds to acquire bitcoin. Similarly, presidential advisor Bo Hines described the strategy as realizing unrealized gains on existing holdings, effectively just repurposing assets already on government balance sheets. Results and Discussion: Macroeconomic Implications Establishment of the bitcoin strategic reserve creates far-reaching consequences beyond mere asset accumulation, with effects rippling through domestic and international economic landscapes. Monetary policy dynamics and geopolitical relationships are being reshaped. Impact on U.S. dollar stability and inflation control Dollar stability could significantly be affected by the U.S. introduction of bitcoin as a reserve asset. Some proponents argue that a strategic bitcoin reserve would strengthen the dollar's position, but there are also critics suggesting that such bitcoin adoption might signal weakening confidence in traditional monetary systems in general. Indeed, such a reserve could lead to a broad depreciation and underperformance of U.S. financial assets on the global market. Moreover, the impact of bitcoin on inflation remains contested. Bitcoin's deflationary nature theoretically offers protection against excessive inflation, a weakening dollar could create inflationary pressure by raising imported goods costs. However, benchmark estimates suggest these effects may be relatively small. Geopolitical leverage and global digital leadership By establishing a strategic Bitcoin reserve, the U.S. aims to position itself as the \"crypto capital of the world,” securing geopolitical advantages amid growing competition from China. This move represents a calibrated action that embraces cryptocurrency's future influence without undermining confidence in the dollar. Certainly, such leadership could enhance America's standing in global financial diplomacy, providing additional leverage over foreign adversaries. Furthermore, the initiative sends a clear message that the United States intends to lead in crypto innovation while maintaining the dollar's central role. Potential risks of de-dollarization and market manipulation Dangers of publicizing bitcoin must account for the fact that new payment systems, facilitating cross-border transactions and already without U.S. bank involvement, have been rapidly evolving, potentially undermining dollar hegemony. Despite having clear benefits, the bitcoin strategic reserve also faces substantial risks, among the most substantial, sparking global de-dollarization trends. This will no doubt accelerate the pace at which nations increasingly diversify away from the U.S.-engineered dollar-centric system. There are also legitimate concerns about market manipulation because government purchases or sales of bitcoin may have great psychological impact on bitcoin's already volatile price swings. Senator Warren has brought some questions about possible market manipulation, following price surges right after the reserve announcements. Finally, if the U.S. and a few other major powers accumulate significant amounts of bitcoin, they will effectively control the market, in contradiction of bitcoin's foundational principle: decentralization. Limitations and Criticisms of the Bitcoin Reserve Plan The bitcoin strategic reserve’s ambitious vision will never overcome its criticisms for some, unless “time tells” them otherwise. Dissenting economists and financial experts fuel policymakers, who, new to bitcoin, question both the reserve’s economic viability and its overall governance structure. Volatility and lack of intrinsic value concerns Critics highlight that bitcoin's known price volatility is a—perhaps the—most fundamental obstacle to accepting it as a reserve asset. Historically, bitcoin has experienced violent drops in price, sometimes seeing 50%+ drawbacks in short periods. Despite always recovering and rebounding even higher to date, many still call into question its reliability for a federal reserves fund. This volatility prompted the UK Treasury to reject a bitcoin reserve themselves. \"Bitcoin and other crypto assets have been historically volatile, relative to stable fiat currencies like the U.S. dollar and commodities, such as gold,\" they stated. Beyond volatility, critics also challenge—or perhaps, misunderstand—bitcoin's fundamental value proposition, citing: Lack of intrinsic utility: Unlike the American Strategic Petroleum Reserve, bitcoin lacks any known “utility”---a use or purpose—likely to be found helpful in critical infrastructure, defense, or disaster response scenarios Speculative nature: Some financial experts characterize bitcoin as a “high-beta” speculative asset, and not a true inflation hedge by any means No backing: Unlike dollars or gold certificates, bitcoin is not backed by physical assets or government guarantees, which inspire confidence in stores of value The Swiss National Bank, National Bank of Poland, and Singapore's central bank have all rejected the asset class for their own reserves. Singapore additionally stated that cryptocurrencies \"do not align with long-term investment strategies due to their speculative nature.” ==== Political conflicts of interest and transparency issues Senator Warren has raised continuous concerns about potential conflicts of interest in the strategic reserve's implementation, particularly regarding Trump and his administration officials with cryptocurrency investments and, in trump’s case, memecoins. The strategic reserve’s announcement triggered not-unexpected market volatility—initially causing surges in trading value then sharp drops—leaving some asking questions about the obvious potential for market manipulation inherent. Bloomberg news once characterized the bitcoin reserve as an \"abysmally bad idea\" creating a \"ready-made vehicle for corruption.\" Critics argue the reserve effectively functions as a wealth transfer mechanism, which will merely enrich current large bitcoin holders (aka “whales”) and at taxpayer expense. Transparency remains problematic; critics point to the Trump administration's close ties to the cryptocurrency industry. His businesses create undeniable conflicts when establishing regulations for the industry; his administration officials have their own clearly stated financial interests. The inclusion of cryptocurrencies beyond bitcoin—a commodity, not a security— in the reserve has been described as wide open to influence by even more special interest influence groups. Conclusion A United States of America strategic bitcoin reserve represents a watershed moment in U.S. and world monetary policy, marking a bold sovereign step into federal management of digital assets. Through careful acquisition of up to 200,000 new bitcoin per year for five years, the U.S. initiative aims to strengthen its own national economic security and address its long-term national debt challenges as well. Despite stated objections, several other economic projections suggest significant potential benefits of the U.S. bitcoin reserve, especially to reduce national debt. VanEck research firm estimates a possible debt reduction of 35% by the year 2049, while new financial mechanisms, like BitBonds, could save another $70 billion annually. Bitcoin's deflationary nature is yet another compelling argument for the bitcoin national strategic reserve. Yet substantial challenges remain. Bitcoin's still-eyebrow-raising price volatility, transparency concerns, plus the political conflicts of interest outlined above demand scrutiny. Critics rightfully question whether cryptocurrency holdings align with traditional reserve asset requirements, particularly given their speculative nature and lack of intrinsic value, Ultimately success depends on the balanced addressing of these valid concerns, while not ignoring a focus on potential—some say probable, others inevitable—long-term economic benefits for the United States of going through with their strategic reserve plan, and fully funding their 1 million bitcoin target—a move which will reshape financial dynamics worldwide and for decades to come. Disclaimer: This article is provided for informational purposes only. It is not offered or intended to be used as legal, tax, investment, financial, or other advice.",
+            "KEYWORDS": "Breaking News",
+            "LANG": "EN",
+            "UPVOTES": 0,
+            "DOWNVOTES": 0,
+            "SCORE": 0,
+            "SENTIMENT": "POSITIVE",
+            "STATUS": "ACTIVE",
+            "CREATED_ON": 1747843219,
+            "UPDATED_ON": 1747843219,
+            "SOURCE_DATA": {
+                "TYPE": "120",
+                "ID": 75,
+                "SOURCE_KEY": "cryptodaily",
+                "NAME": "Crypto Daily",
+                "IMAGE_URL": "https://resources.cryptocompare.com/news/75/default.png",
+                "URL": "https://cryptodaily.co.uk/feed",
+                "LANG": "EN",
+                "SOURCE_TYPE": "RSS",
+                "LAUNCH_DATE": null,
+                "SORT_ORDER": 0,
+                "BENCHMARK_SCORE": 0,
+                "STATUS": "ACTIVE",
+                "LAST_UPDATED_TS": 1747841953,
+                "CREATED_ON": 1685543991,
+                "UPDATED_ON": 1685544026
+            },
+            "CATEGORY_DATA": [
+                {
+                    "TYPE": "122",
+                    "ID": 14,
+                    "NAME": "BTC",
+                    "CATEGORY": "BTC"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 26,
+                    "NAME": "FIAT",
+                    "CATEGORY": "FIAT"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 37,
+                    "NAME": "MARKET",
+                    "CATEGORY": "MARKET"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 41,
+                    "NAME": "REGULATION",
+                    "CATEGORY": "REGULATION"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 50,
+                    "NAME": "TRADING",
+                    "CATEGORY": "TRADING"
+                }
+            ]
+        },
+        {
+            "TYPE": "121",
+            "ID": 44911170,
+            "GUID": "https://www.cryptonewsz.com/asic-seeks-high-court-review-in-block-earner/",
+            "PUBLISHED_ON": 1747842683,
+            "IMAGE_URL": "https://images.cryptocompare.com/news/default/cryptonewsz.png",
+            "TITLE": "ASIC Seeks High Court Review in Block Earner Crypto Yield Case",
+            "SUBTITLE": null,
+            "AUTHORS": "Maxwell Mutuma",
+            "URL": "https://www.cryptonewsz.com/asic-seeks-high-court-review-in-block-earner/",
+            "SOURCE_ID": 40,
+            "BODY": "Australia’s corporate regulator, the Australian Securities and Investments Commission (ASIC), has officially requested special leave from the High…",
+            "KEYWORDS": "Crypto Regulations",
+            "LANG": "EN",
+            "UPVOTES": 0,
+            "DOWNVOTES": 0,
+            "SCORE": 0,
+            "SENTIMENT": "NEUTRAL",
+            "STATUS": "ACTIVE",
+            "CREATED_ON": 1747842781,
+            "UPDATED_ON": null,
+            "SOURCE_DATA": {
+                "TYPE": "120",
+                "ID": 40,
+                "SOURCE_KEY": "cryptonewsz",
+                "NAME": "CryptoNewsZ",
+                "IMAGE_URL": "https://images.cryptocompare.com/news/default/cryptonewsz.png",
+                "URL": "https://www.cryptonewsz.com/feed/",
+                "LANG": "EN",
+                "SOURCE_TYPE": "RSS",
+                "LAUNCH_DATE": null,
+                "SORT_ORDER": 0,
+                "BENCHMARK_SCORE": 0,
+                "STATUS": "ACTIVE",
+                "LAST_UPDATED_TS": 1747841942,
+                "CREATED_ON": 1657730129,
+                "UPDATED_ON": 1680683988
+            },
+            "CATEGORY_DATA": [
+                {
+                    "TYPE": "122",
+                    "ID": 63,
+                    "NAME": "OTHER",
+                    "CATEGORY": "OTHER"
+                }
+            ]
+        },
+        {
+            "TYPE": "121",
+            "ID": 44911146,
+            "GUID": "https://coinpedia.org/?p=459066",
+            "PUBLISHED_ON": 1747842679,
+            "IMAGE_URL": "https://images.cryptocompare.com/news/default/coinpedia.png",
+            "TITLE": "Cardano Price Targeting $1.50 After Growing Whale Accumulation; The Same Can Be Said For This $0.07 Crypto",
+            "SUBTITLE": null,
+            "AUTHORS": "PR Manager",
+            "URL": "https://coinpedia.org/press-release/whales-dont-swim-they-wire-why-remittix-is-their-next-big-splash/",
+            "SOURCE_ID": 53,
+            "BODY": "The post Cardano Price Targeting $1.50 After Growing Whale Accumulation; The Same Can Be Said For This $0.07 Crypto appeared first on Coinpedia Fintech News Cardano (ADA) has always played the long game. While flashier projects chased hype cycles, Cardano focused on building slowly, methodically and with purpose. Now, after months of quiet accumulation, the whales are back and the charts are whispering what long-time holders have waited to hear: $1.50 may finally be in sight. But ADA isn’t the only one catching the attention of deep-pocketed investors. Remittix (RTX) , a rising $0.0781 crypto in the PayFi space, is showing eerily similar accumulation patterns, except it’s doing so during its presale. With over $15.1 million raised and a real-world use case centered around instant crypto-to-fiat transfers, some are wondering if RTX is Cardano 2.0 in its early, high-upside days. As the smart money circles both projects, the big question isn’t just about ADA’s breakout; it’s whether Remittix is quietly preparing one of its own. Whales are circling as Cardano eyes $1.50 breakout Cardano’s never been the fastest mover in the crypto world, but it’s often one of the most deliberate. While others rush to market with half-baked promises, Cardano keeps building brick by brick. That patience may finally be paying off, as Cardano’s price targets $1.50, powered by a quiet surge in whale accumulation and solid network fundamentals. ADA monthly price movement. Source: CoinMarketCap As seen in the chart above, over the past month, ADA’s price action has been anything but boring. Starting at $0.6245 in late April, it climbed steadily, peaking near $0.85 on May 10, a 36% rally, before correcting to $0.74. While some see the drop as weakness, others see consolidation and preparation for the next leg up. Supporting this optimism is Cardano’s growing ecosystem. From Hydra, its Layer-2 scaling solution, to Mithril, a stake-based innovation for faster data verification, the tech under the hood is catching up to the platform’s ambitions. DeFi and NFTs continue to gain traction, adding real use cases to the chain. If Bitcoin approaches its $150K forecast, analysts believe altcoins like Cardano could ride the wave, and for ADA, that means a realistic push toward $1.50. The Cardano price may move slowly, but when it rallies, it tends to do so with conviction. Whales don’t swim, they wire. Why Remittix is their next big splash In a market flooded with hype and half-measures, whales are moving with precision and they’re moving toward Remittix. Why? Because Remittix isn’t just another crypto project. It’s a direct shot at the inefficiencies of traditional finance, bridging a $183 trillion banking sector with blockchain in a way that’s fast, cheap and built for the world, not just the privileged few. Source: Youtube While Stripe, Wise and Coinbase dabble in fiat and crypto, Remittix goes all-in on crypto-to-fiat remittances, integrating directly with local payment networks. That means instant or near-instant transactions, no middlemen and transparent fees that put banks to shame. For high-net-worth investors, that’s not just innovative, it’s irresistible. Then there’s the VIP Program. With annual staking rewards as high as 18%, platinum debit cards, and personal account managers, Remittix rewards conviction. The higher your investment, the greater your influence, literally. VIPs gain enhanced governance rights and insider access, making them architects of the ecosystem, not just passengers. Add in the Remittix Wallet; secure, non-custodial and sleekly designed and you’ve got a platform where whales don’t just park capital; they grow it. In a landscape where privacy, speed and control matter more than ever, Remittix is the smart money’s next move. Conclusion Cardano’s path to $1.50 is paved with strong fundamentals and growing whale appetite. Remittix is attracting the same kind of early interest from deep-pocketed investors, thanks to its bold vision for crypto-to-fiat remittances. With a real-world use case, a rewards-rich VIP program and growing momentum, RTX may be carving out a parallel success story. If ADA is the legacy builder, Remittix could be its high-speed, modern counterpart in the making. Discover the future of PayFi with Remittix by checking out their presale here: Website: https://remittix.io/ Socials: https://linktr.ee/remittix",
+            "KEYWORDS": "Press Release",
+            "LANG": "EN",
+            "UPVOTES": 0,
+            "DOWNVOTES": 0,
+            "SCORE": 0,
+            "SENTIMENT": "POSITIVE",
+            "STATUS": "ACTIVE",
+            "CREATED_ON": 1747842757,
+            "UPDATED_ON": null,
+            "SOURCE_DATA": {
+                "TYPE": "120",
+                "ID": 53,
+                "SOURCE_KEY": "coinpedia",
+                "NAME": "coinpedia",
+                "IMAGE_URL": "https://images.cryptocompare.com/news/default/coinpedia.png",
+                "URL": "https://coinpedia.org/feed/",
+                "LANG": "EN",
+                "SOURCE_TYPE": "RSS",
+                "LAUNCH_DATE": 1404691200,
+                "SORT_ORDER": 0,
+                "BENCHMARK_SCORE": 46,
+                "STATUS": "ACTIVE",
+                "LAST_UPDATED_TS": 1747841919,
+                "CREATED_ON": 1657730129,
+                "UPDATED_ON": 1711621282
+            },
+            "CATEGORY_DATA": [
+                {
+                    "TYPE": "122",
+                    "ID": 3,
+                    "NAME": "ADA",
+                    "CATEGORY": "ADA"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 13,
+                    "NAME": "BLOCKCHAIN",
+                    "CATEGORY": "BLOCKCHAIN"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 15,
+                    "NAME": "BUSINESS",
+                    "CATEGORY": "BUSINESS"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 37,
+                    "NAME": "MARKET",
+                    "CATEGORY": "MARKET"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 50,
+                    "NAME": "TRADING",
+                    "CATEGORY": "TRADING"
+                }
+            ]
+        },
+        {
+            "TYPE": "121",
+            "ID": 44911227,
+            "GUID": "70752585-0198-469b-a4a0-3e2821bd1dc1",
+            "PUBLISHED_ON": 1747842653,
+            "IMAGE_URL": "https://resources.cryptocompare.com/news/102/default.png",
+            "TITLE": "Bitcoin passes January peak to hit new record high",
+            "SUBTITLE": null,
+            "AUTHORS": "",
+            "URL": "https://www.ft.com/content/70752585-0198-469b-a4a0-3e2821bd1dc1",
+            "SOURCE_ID": 102,
+            "BODY": "Price rises to $109,481 on hopes US lawmakers will soon agree first digital assets regulations",
+            "KEYWORDS": "",
+            "LANG": "EN",
+            "UPVOTES": 0,
+            "DOWNVOTES": 0,
+            "SCORE": 0,
+            "SENTIMENT": "POSITIVE",
+            "STATUS": "ACTIVE",
+            "CREATED_ON": 1747842871,
+            "UPDATED_ON": null,
+            "SOURCE_DATA": {
+                "TYPE": "120",
+                "ID": 102,
+                "SOURCE_KEY": "financialtimes_crypto_",
+                "NAME": "Financial Times (Crypto)",
+                "IMAGE_URL": "https://resources.cryptocompare.com/news/102/default.png",
+                "URL": "https://www.ft.com/cryptofinance?format=rss",
+                "LANG": "EN",
+                "SOURCE_TYPE": "RSS",
+                "LAUNCH_DATE": 1307318400,
+                "SORT_ORDER": 0,
+                "BENCHMARK_SCORE": 0,
+                "STATUS": "ACTIVE",
+                "LAST_UPDATED_TS": 1747841943,
+                "CREATED_ON": 1719248005,
+                "UPDATED_ON": 1719248073
+            },
+            "CATEGORY_DATA": [
+                {
+                    "TYPE": "122",
+                    "ID": 14,
+                    "NAME": "BTC",
+                    "CATEGORY": "BTC"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 50,
+                    "NAME": "TRADING",
+                    "CATEGORY": "TRADING"
+                }
+            ]
+        },
+        {
+            "TYPE": "121",
+            "ID": 44911115,
+            "GUID": "https://en.coinotag.com/breakingnews/michael-saylor-urges-investors-to-buy-the-dip-on-bitcoin-amid-market-fluctuations/",
+            "PUBLISHED_ON": 1747842562,
+            "IMAGE_URL": "https://resources.cryptocompare.com/news/77/44911115.jpeg",
+            "TITLE": "Michael Saylor Urges Investors to ‘Buy the Dip’ on Bitcoin Amid Market Fluctuations",
+            "SUBTITLE": null,
+            "AUTHORS": "Sheila Belson",
+            "URL": "https://en.coinotag.com/breakingnews/michael-saylor-urges-investors-to-buy-the-dip-on-bitcoin-amid-market-fluctuations/",
+            "SOURCE_ID": 77,
+            "BODY": "In a recent statement on social media, strategy founder Michael Saylor emphasized the importance of capitalizing on market fluctuations by advocating for investors to buy the dip. He highlighted a",
+            "KEYWORDS": "BTC",
+            "LANG": "EN",
+            "UPVOTES": 0,
+            "DOWNVOTES": 0,
+            "SCORE": 0,
+            "SENTIMENT": "POSITIVE",
+            "STATUS": "ACTIVE",
+            "CREATED_ON": 1747842681,
+            "UPDATED_ON": 1747842682,
+            "SOURCE_DATA": {
+                "TYPE": "120",
+                "ID": 77,
+                "SOURCE_KEY": "coinotag",
+                "NAME": "CoinOtag",
+                "IMAGE_URL": "https://resources.cryptocompare.com/news/77/default.png",
+                "URL": "https://en.coinotag.com/feed/",
+                "LANG": "EN",
+                "SOURCE_TYPE": "RSS",
+                "LAUNCH_DATE": null,
+                "SORT_ORDER": 0,
+                "BENCHMARK_SCORE": 0,
+                "STATUS": "ACTIVE",
+                "LAST_UPDATED_TS": 1747841922,
+                "CREATED_ON": 1686819961,
+                "UPDATED_ON": 1717748924
+            },
+            "CATEGORY_DATA": [
+                {
+                    "TYPE": "122",
+                    "ID": 14,
+                    "NAME": "BTC",
+                    "CATEGORY": "BTC"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 15,
+                    "NAME": "BUSINESS",
+                    "CATEGORY": "BUSINESS"
+                },
+                {
+                    "TYPE": "122",
+                    "ID": 37,
+                    "NAME": "MARKET",
+                    "CATEGORY": "MARKET"
+                }
+            ]
+        }
+    ],
+    "Err": {}
+}

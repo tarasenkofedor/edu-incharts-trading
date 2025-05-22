@@ -1,0 +1,4 @@
+// Backend cmd: uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+// Frontend cmdL npm run serve 
+// ESLint quick fix: npm run lint -- --fix 
+// Connecting to timescaledb in Docker: docker exec -it inchart_postgres_timescaledb psql -U inchart_admin -d inchart_db;

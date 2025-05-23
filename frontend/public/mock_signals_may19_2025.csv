@@ -1,0 +1,13 @@
+timestamp,type,price,label
+1747612800000,buy,100050.20,Buy Signal Alpha
+1747616400000,sell,100100.75,Sell Signal Beta
+1747620000000,buy,99900.10,Buy Signal Gamma
+1747623600000,buy,99950.50,Buy Signal Delta
+1747627200000,sell,100200.00,Sell Signal Epsilon
+1747630800000,buy,100150.30,Buy Signal Zeta
+1747634400000,sell,100300.90,Sell Signal Eta
+1747638000000,buy,100250.60,Buy Signal Theta
+1747641600000,sell,100400.15,Sell Signal Iota
+1747645200000,buy,100350.80,Buy Signal Kappa
+1747648800000,sell,100500.25,Sell Signal Lambda
+1747652400000,buy,100450.40,Buy Signal Mu 

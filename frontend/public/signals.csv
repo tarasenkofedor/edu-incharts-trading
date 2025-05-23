@@ -1,0 +1,4 @@
+timestamp,type,price,label,color,icon
+1735603200000,BUY,58700,Buy Zone Start,green,arrowUp
+1735776000000,SELL,62000,Sell Top,red,arrowDown
+1735948800000,INFO,61500,Hold,blue, 

@@ -1,0 +1,4 @@
+timestamp,type,price,label,color,icon
+1546473600000,BUY,3540.00,Buy,green,arrowUp
+1547078400000,SELL,3755.00,Sell,red,arrowDown
+1547683200000,INFO,3840.00,Info,blue, 
